@@ -8,7 +8,7 @@ const Blog = () => {
 	return (
 		<section id='recent-blog'>
 			<h2 className='section-heading custom-underline'>
-				<AnimatedText text='Recent Posts' />
+				<AnimatedText text='Recent Project' />
 			</h2>
 			{/* 			<BlogList
 				blogs={allBlogs
@@ -23,7 +23,7 @@ const Blog = () => {
 			<div className='mt-6'>
 				<Link href='/blog'>
 					<button className='flex items-center'>
-						<span className='link'>See All Blog Posts&nbsp;</span>
+						<span className='link'>See Project Details&nbsp;</span>
 						<span className='animate-bounce-right'>
 							<FiArrowRight />
 						</span>
