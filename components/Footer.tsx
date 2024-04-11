@@ -5,7 +5,7 @@ const navigation = {
 	general: [
 		{ name: 'Home', title: 'Home Page', href: '/' },
 		{ name: 'About', title: 'About Page', href: '/about' },
-		{ name: 'Blog', title: 'Blog Page', href: '/blog' },
+		{ name: 'Project', title: 'Project Page', href: '/project' },
 	],
 	extra: [
 		{
