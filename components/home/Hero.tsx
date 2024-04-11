@@ -1,0 +1,55 @@
+'use client'
+import { ReactElement } from 'react'
+import { FiArrowRight } from 'react-icons/fi'
+import Link from 'next/link'
+
+import RoundedImage from '../RoundedImage'
+import AnimatedText from '../AnimatedText'
+
+export default function Hero(): ReactElement {
+	return (
+		<section>
+			<h1 className='sr-only'>
+				Hi I&apos;m Nour-Eddine Benkerroum, I&apos;m a full-stack Developer and
+				I craft things for the web.
+			</h1>
+			<div className='flex cursor-default flex-col justify-center'>
+				<div className='flex gap-8'>
+					<RoundedImage
+						src='/Nourcartonn.png'
+						alt='profile picture'
+						quality={95}
+						priority={true}
+						width={64}
+						height={64}
+						style={{ objectFit: 'contain' }}
+					/>
+					<div className='flex flex-col justify-center'>
+						<h1 className='text-3xl lg:text-4xl font-medium text-dark dark:text-light name-highlight'>
+							<AnimatedText text='Benkerroum Nour-Eddine' />
+						</h1>
+						<h4 className='text-base lg:text-lg'>
+							Full-Stack Developer @ <b>Nour</b>
+						</h4>
+					</div>
+				</div>
+				<div className='flex flex-col gap-8 pt-8'>
+					<p className='text-base md:text-lg'>
+						Hi there! I'm a <strong> full-stack developer </strong>
+						with a zest for all things digital. Leveraging my IT project
+						management background, I bring a blend of leadership and technical
+						savvy to the vibrant world of software development.
+					</p>
+					<Link href='/about'>
+						<div className='flex items-center'>
+							<span className='link'>Learn more&nbsp;</span>
+							<span className='animate-bounce-right'>
+								<FiArrowRight />
+							</span>
+						</div>
+					</Link>
+				</div>
+			</div>
+		</section>
+	)
+}
