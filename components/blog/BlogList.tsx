@@ -1,4 +1,4 @@
-import { parseISO, format } from 'date-fns'
+/* import { parseISO, format } from 'date-fns'
 import Link from 'next/link'
 
 // import type { Blog } from 'contentlayer/generated'
@@ -48,3 +48,4 @@ const BlogList: React.FC<Props> = ({ blogs }) => {
 }
 
 export default BlogList
+ */

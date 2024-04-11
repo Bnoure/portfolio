@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 // import { allBlogs } from 'contentlayer/generated'
 import AnimatedText from '../AnimatedText'
-import BlogList from '../blog/BlogList'
 
 const Blog = () => {
 	return (

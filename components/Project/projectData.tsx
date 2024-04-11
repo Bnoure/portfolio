@@ -1,4 +1,4 @@
-export const projectData = (t) => [
+export const projectData = (t: (key: string) => string) => [
 	{
 		img: '/SecondRound.svg',
 		title: '',
