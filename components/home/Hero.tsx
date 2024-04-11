@@ -35,7 +35,7 @@ export default function Hero(): ReactElement {
 				</div>
 				<div className='flex flex-col gap-8 pt-8'>
 					<p className='text-base md:text-lg'>
-						Hi there! I'm a <strong> full-stack developer </strong>
+						Hi there! I&apos;m a <strong> full-stack developer </strong>
 						with a zest for all things digital. Leveraging my IT project
 						management background, I bring a blend of leadership and technical
 						savvy to the vibrant world of software development.

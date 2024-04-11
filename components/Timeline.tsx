@@ -38,10 +38,10 @@ const FullTimeline = () => (
 		<ul>
 			<Checkpoint title='Full-Stack Developer Graduation from Le Wagon 🎓'>
 				Successfully completed a rigorous bootcamp at Le Wagon, earning a
-				Bachelor’s level certification in web development. Now fully equipped
-				with skills in Ruby on Rails, JavaScript, React, HTML, and CSS, I'm
-				diving into the world of full-stack development with enthusiasm and a
-				rich background in IT project management.
+				Bachelor&apos;s level certification in web development. Now fully
+				equipped with skills in Ruby on Rails, JavaScript, React, HTML, and CSS,
+				I&apos;m diving into the world of full-stack development with enthusiasm
+				and a rich background in IT project management.
 			</Checkpoint>
 		</ul>
 		<Year>2020 - 2024</Year>
@@ -62,9 +62,9 @@ const FullTimeline = () => (
 		</ul>
 		<Year>2019</Year>
 		<ul>
-			<Checkpoint title='Master’s in Aeronautics and Industrial Management from Toulouse Business School'>
-				Graduated with a Master’s degree, sharpening my management skills and
-				laying a solid foundation for my career in the high-stakes world of
+			<Checkpoint title="Master's in Aeronautics and Industrial Management from Toulouse Business School">
+				Graduated with a Master&apos;s degree, sharpening my management skills
+				and laying a solid foundation for my career in the high-stakes world of
 				aeronautics and industry.
 			</Checkpoint>
 		</ul>
