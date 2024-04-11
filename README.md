@@ -1,12 +1,25 @@
-# Portfolio V2
 
-This is my personal <a href="https://niteshseram.in" target="_blank">website</a> built with <a href="https://nextjs.org/" target="_blank">NextJs 13</a>, <a href="https://tailwindcss.com/">Tailwind CSS</a>, <a href="https://mdxjs.com/">MDX</a> and <a href="https://vercel.com" target="_blank">Vercel</a>.
+# Portoflio
 
-![Banner](https://github.com/niteshseram/niteshseram.in/blob/main/public/og.png)
+Bienvenue ! Ici, je combine ma curiosité pour le développement full-stack et mon expérience en gestion de projets IT. C'est un peu mon terrain de jeu numérique. Venez voir !
 
-# Overview
+<details>
+<summary> Lire en français</summary>
 
-This is 2nd iteration of my personal website built using NextJs, Tailwind CSS, and Vercel. This will be my digital corner where I will be sharing my thoughts, learning, and random stuff. This was not built with the intention to be a template but feel free to fork and customize it for your own use. If you find any issues in the website, feel free to open an issue and if you want, you can open a pull request for it too.
+## 🚀 Commencer
+
+Ces instructions vous permettront d'obtenir une copie du projet et de l'exécuter sur votre machine locale à des fins de développement et de test.
+
+### 🛠 Installation
+
+Assurez-vous d'avoir la dernière version de [Node.js](https://nodejs.org/) et [Git](https://git-scm.com/downloads) installée sur votre ordinateur.
+
+Pour commencer, forkez ce dépôt sur votre compte GitHub puis clonez-le sur votre machine locale.
+
+```sh
+git clone https://github.com/Bnoure/portfolio.git
+cd nom-du-depot
+```
 
 ## Main folder structure
 
