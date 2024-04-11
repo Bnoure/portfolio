@@ -11,7 +11,7 @@ const Blog = () => {
 			<h2 className='section-heading custom-underline'>
 				<AnimatedText text='Recent Posts' />
 			</h2>
-			<BlogList
+			{/* 			<BlogList
 				blogs={allBlogs
 					.sort((a, b) => {
 						if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
@@ -20,7 +20,7 @@ const Blog = () => {
 						return 1
 					})
 					.slice(0, 4)}
-			/>
+			/> */}
 			<div className='mt-6'>
 				<Link href='/blog'>
 					<button className='flex items-center'>
