@@ -1,7 +1,7 @@
 import { parseISO, format } from 'date-fns'
 import Link from 'next/link'
 
-import type { Blog } from 'contentlayer/generated'
+// import type { Blog } from 'contentlayer/generated'
 import FadeUp from '../animations/FadeUp'
 import ViewCounter from '@/app/blog/view-counter'
 

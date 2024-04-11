@@ -2,7 +2,7 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import RoundedImage from './RoundedImage'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+// import { useMDXComponent } from 'next-contentlayer/hooks'
 
 const CustomLink = (props: any) => {
 	const href = props.href

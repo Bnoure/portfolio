@@ -22,7 +22,7 @@
 		],
 		"paths": {
 			"@/*": ["./*"],
-			"contentlayer/generated": ["./.contentlayer/generated"]
+
 		}
 	},
 	"include": [
@@ -31,7 +31,7 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"lib/renderCanvas.js",
-		".contentlayer/generated"
-, "lib/prisma.js"	],
+
+     "lib/prisma.js"	],
 	"exclude": ["node_modules"]
 }

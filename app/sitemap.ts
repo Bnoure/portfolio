@@ -1,4 +1,4 @@
-import { allBlogs } from 'contentlayer/generated'
+/* import { allBlogs } from 'contentlayer/generated'
 
 export default async function sitemap() {
 	const blogs = allBlogs.map((post) => ({
@@ -15,3 +15,4 @@ export default async function sitemap() {
 
 	return [...routes, ...blogs]
 }
+ */

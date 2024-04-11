@@ -1,7 +1,7 @@
 import { FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 
-import { allBlogs } from 'contentlayer/generated'
+// import { allBlogs } from 'contentlayer/generated'
 import AnimatedText from '../AnimatedText'
 import BlogList from '../blog/BlogList'
 
@@ -9,7 +9,7 @@ const Blog = () => {
 	return (
 		<section id='recent-blog'>
 			<h2 className='section-heading custom-underline'>
-				<AnimatedText text="Recent Posts" />
+				<AnimatedText text='Recent Posts' />
 			</h2>
 			<BlogList
 				blogs={allBlogs
