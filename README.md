@@ -32,10 +32,10 @@ cd nom-du-depot
 
 ```bash
 # Clone this repository
-git clone https://github.com/niteshseram/niteshseram.in.git
+
 
 # Go into the repository folder
-cd niteshseram.in
+
 
 # Install dependencies
 yarn
