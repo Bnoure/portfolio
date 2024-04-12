@@ -1,5 +1,5 @@
 import Hero from '@/components/home/Hero'
-import Blog from '@/components/home/Blog'
+import ProjectsSection from '@/components/home/Project'
 import Contact from '@/components/home/Contact'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
@@ -11,7 +11,7 @@ export default function Home() {
 				<Hero />
 			</FadeDown>
 			<FadeUp duration={0.4} delay={0}>
-				<Blog />
+				<ProjectsSection />
 			</FadeUp>
 			<Contact />
 		</main>
