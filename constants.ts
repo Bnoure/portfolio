@@ -17,7 +17,7 @@ export const NAV_ITEMS: Array<NavItem> = [
 	},
 	{
 		label: 'Projects',
-		page: '/Projects',
+		page: '/projects',
 	},
 ]
 
