@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import AnimatedText from '../AnimatedText'
 import ProjectList from '../Project/projectList'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const ProjectsSection = () => {
+	const { t } = useTranslation('common')
 	return (
 		<section id='recent-blog'>
 			<h2 className='section-heading custom-underline'>
@@ -29,10 +30,11 @@ const ProjectsSection = () => {
 
 export default ProjectsSection
 
-export async function getStaticProps({ locale }: { locale: string }) {
+/* export async function getStaticProps({ locale }: { locale: string }) {
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
 		},
 	}
 }
+ */
