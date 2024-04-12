@@ -1,0 +1,47 @@
+{
+
+  "Projects": "Projects",
+  "About": "About",
+  "Contact": "Contact",
+  "Resume": "Resume",
+  "Scroll": "Scroll Down",
+
+
+  "heroIntroduction": "Hi, I'm Nour-Eddine Benkerroum.",
+    "sequenceDeveloper": "Full-Stack Developer, previously an IT Project Manager for 5 years.",
+    "sequenceEducation": "Holding degrees in Web & Mobile App Development and Project Management.",
+    "sequenceAdapt": "Continuously learning and evolving with every new challenge.",
+    "sequenceThinker": "A problem-solver who enjoys unraveling complexity.",
+    "sequenceGeek": "Just a genuine tech enthusiast at heart. Yep!",
+    "sequenceHangOn": "Hang on...",
+    "sequenceMoreThanCode": "I'm more than just code and debug logs.",
+    "sequenceCheckProjects": "Maybe it's time to check out my projects below?",
+    "sequenceWorthScroll": "Trust me, they're worth a scroll !",
+    "sequenceStillHere": "Still here, huh?",
+    "sequenceCaughtInterest": "I must've caught your interest.",
+    "sequenceLoopTime": "Well, it's loop time again...",
+    "sequenceReachOut": "Why not reach out? Let's create something great together!",
+    "sequenceCatchYou": "Catch you on the flip side! :)",
+
+
+  "aboutTitle": "About Me",
+  "aboutMePart1": "Hello! My name is <0>Nour-Eddine Benkerroum</0>. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
+  "aboutMePart2": "My pivot to full-stack development was driven by a desire to tackle new challenges and a commitment to innovation. My training equipped me with a robust command of technologies such as Ruby on Rails, JavaScript, React, HTML, and CSS. This journey didn't just arm me with technical skills but also integrated me into a vibrant and supportive community.",
+  "aboutMePart3": "Building on my experience as an IT project manager, where I successfully led complex IT system migration programs, I am well-prepared to handle significant software development projects. I have a keen interest in deepening my expertise within the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development is not just a career path for me; it's a passion I am eager to explore and expand further.",
+  "technosentence" : "I am now confident in my use of the following technologies:",
+
+
+  "projectTitle2ndRound": "2ndRound",
+    "projectDescription2ndRound": "SecondRound revolutionizes the pre-owned video game market with a mobile web app born from a 10-day development challenge, streamlining the trade for sellers and gamers alike.",
+  "projectTitleKoalapp": "Koalapp",
+    "projectDescriptionKoalapp": "Visit stackkoala.online to explore Koalapp: Dynamic, personalized news articles. Articles are fetched from the News API and modified with AI to be more personalized.",
+  "projectTitleArc": "Arc",
+    "projectDescriptionArc": "Explore unique stays with Arc, your go-to for easy hotel bookings in France, crafted in a 24-hour coding sprint.",
+  "projectTitleRental": "Rental",
+    "projectDescriptionRental": "Explore Rental on stackrental.online: Easy, intuitive car rentals from sedans to SUVs, designed for a seamless online journey.",
+
+
+
+  "contact": "Get In Touch",
+  "sendEmail": "Send Email"
+}

@@ -1,5 +1,3 @@
-import useTrans from '../../hooks/useTrans'
-
 export interface Project {
 	img: string
 	title: string
@@ -14,7 +12,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 	return [
 		{
 			img: '/SecondRound.svg',
-			title: '',
+			title: t('projectTitle2ndRound'),
 			description: t('projectDescription2ndRound'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/2ndRound.git',
@@ -22,7 +20,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 		},
 		{
 			img: '/Koalapp.svg',
-			title: '',
+			title: t('projectTitleKoalapp'),
 			description: t('projectDescriptionKoalapp'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/koala.git',
@@ -30,7 +28,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 		},
 		{
 			img: '/Arc.svg',
-			title: '',
+			title: t('projectTitleArc'),
 			description: t('projectDescriptionArc'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/Arc.git',
@@ -38,7 +36,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 		},
 		{
 			img: '/Rental.svg',
-			title: '',
+			title: t('projectTitleRental'),
 			description: t('projectDescriptionRental'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/rental.git',

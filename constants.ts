@@ -1,5 +1,5 @@
 import { IconType } from 'react-icons'
-import { FiLinkedin, FiTwitter, FiGithub } from 'react-icons/fi'
+import { FiLinkedin, FiGithub } from 'react-icons/fi'
 
 type NavItem = {
 	label: string
@@ -40,8 +40,3 @@ export const SOCIAL: Array<SocialItem> = [
 		icon: FiGithub,
 	},
 ]
-
-export const REACTION = {
-	like: "LIKE",
-	love: "LOVE"
-}

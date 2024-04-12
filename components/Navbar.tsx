@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import ThemeSwitch from './ThemeSwitch'
 import AnimatedText from './AnimatedText'
 import Logo from './Logo'
+import LanguageSwitcher from '../lang/LanguageSwitcher'
 
 import { NAV_ITEMS } from '@/constants'
 
@@ -14,12 +15,14 @@ const NavBar = () => {
 	const pathname = usePathname()
 
 	return (
-		<nav className='
+		<nav
+			className='
 			fixed top-2 left-1/2 max-w-[44em] w-[96vw]
 			sm:w-[96vw] mx-auto -translate-x-1/2 flex flex-col
-			transition-all rounded-lg p-[10px] bg-primary/10 backdrop-blur-[10px] backdrop-saturate-150 
+			transition-all rounded-lg p-[10px] bg-primary/10 backdrop-blur-[10px] backdrop-saturate-150
 			hover:shadow-dark border border-secondary/20 z-10
-		'>
+		'
+		>
 			<div className='h-[40px] bg-transparent py-5 flex items-center justify-between'>
 				<Link
 					href='/'
@@ -49,6 +52,7 @@ const NavBar = () => {
 						})}
 					</div>
 					<ThemeSwitch />
+					<LanguageSwitcher />
 				</div>
 			</div>
 		</nav>

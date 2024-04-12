@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { metadata } from '../lib/metadata'
 import clsx from 'clsx'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
@@ -15,44 +15,6 @@ const inter = Inter({
 	variable: '--font-inter',
 	display: 'swap',
 })
-
-export const metadata: Metadata = {
-	title: {
-		default: 'Benkerroum Nour-Eddine',
-		template: '%s | Benkerroum Nour-Eddine',
-	},
-	description: 'Software Engineer and Enthusiast geek',
-	openGraph: {
-		title: 'Benkerroum Nour-Eddine',
-		description: 'Software Engineer and Enthusiast geek',
-		url: 'https://niteshseram.in',
-		siteName: 'Benkerroum Nour-Eddine',
-		locale: 'en-US',
-		type: 'website',
-	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-	twitter: {
-		title: 'Benkerroum Nour-Eddine',
-		card: 'summary_large_image',
-	},
-	icons: {
-		shortcut: '/favicon.ico',
-	},
-	verification: {
-		google: 'cTvq0i7fkRjh7wtvWKlnG42rayvxZBES7MzLl8CoC4k',
-		yandex: '75318e4097177399',
-	},
-}
 
 export default function RootLayout({
 	children,

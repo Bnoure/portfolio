@@ -3,10 +3,12 @@ import ProjectsSection from '@/components/home/Project'
 import Contact from '@/components/home/Contact'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
+import Head from '../components/Head'
 
 export default function Home() {
 	return (
 		<main className='flex flex-col gap-20 my-10'>
+			<Head title='Home' />
 			<FadeDown duration={0.4} delay={0}>
 				<Hero />
 			</FadeDown>
