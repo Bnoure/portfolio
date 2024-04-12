@@ -1,4 +1,3 @@
-import { metadata } from '../lib/metadata'
 import clsx from 'clsx'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'

@@ -5,16 +5,10 @@ const LanguageSwitcher = () => {
 
 	const toggleLanguage = () => {
 		const newLang = i18n.language === 'en' ? 'fr' : 'en'
-		i18n.changeLanguage(newLang).then(() => {
-			window.location.reload() // Force reload to ensure all components re-render
-		})
+		i18n.changeLanguage(newLang)
 	}
 
-	return (
-		<button onClick={toggleLanguage}>
-			Switch to {i18n.language === 'en' ? 'French' : 'English'}
-		</button>
-	)
+	return <button onClick={toggleLanguage}>Switch Language</button>
 }
 
 export default LanguageSwitcher
