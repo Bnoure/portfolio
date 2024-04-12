@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import AnimatedText from '../AnimatedText'
 import ProjectList from '../Project/projectList'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const ProjectsSection = () => {
 	return (
@@ -27,3 +28,11 @@ const ProjectsSection = () => {
 }
 
 export default ProjectsSection
+
+export async function getStaticProps({ locale }: { locale: string }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	}
+}

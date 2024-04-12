@@ -4,6 +4,7 @@ import Contact from '@/components/home/Contact'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
 import Head from '../components/Head'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Home() {
 	return (
@@ -18,4 +19,12 @@ export default function Home() {
 			<Contact />
 		</main>
 	)
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	}
 }

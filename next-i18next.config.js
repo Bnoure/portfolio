@@ -2,7 +2,7 @@
 
 module.exports = {
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'fr',
     locales: ['en', 'fr'],
     localeDetection: false  // Désactiver la détection automatique de la langue
   },

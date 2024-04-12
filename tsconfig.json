@@ -32,6 +32,6 @@
 		".next/types/**/*.ts",
 		"lib/renderCanvas.js",
 
-     "lib/prisma.js"	],
+    "lib/prisma.js"	],
 	"exclude": ["node_modules"]
 }
