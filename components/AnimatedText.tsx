@@ -8,7 +8,7 @@ const AnimatedText = ({ text }: { text: string }) => {
 	const animatingTime = text.length * 100 > 1000 ? 1000 : text.length * 100
 
 	const generateGibberish = useCallback(
-		(index: any, timeElapsed: Number) => {
+		(index: number, timeElapsed: number) => {
 			if (text[index] === ' ') return ' '
 			const characters =
 				'A-B*CD_EF-GH_JK*LM-NOP_QRS*TU-VWX_YZa*bcd_ef-gh_jkm_nopq_rstu_vw-xyz_023_456*789_'
@@ -23,14 +23,14 @@ const AnimatedText = ({ text }: { text: string }) => {
 
 	useEffect(() => {
 		let interval: NodeJS.Timeout
-		setTimeout(() => {
+		const timeout = setTimeout(() => {
 			let timeElapsed = 0
 			interval = setInterval(() => {
 				timeElapsed += 100
 				setRandomizeText(
 					text
 						.split('')
-						.map((_, index: Number) => generateGibberish(index, timeElapsed))
+						.map((_, index) => generateGibberish(index, timeElapsed))
 						.join('')
 				)
 			}, 100)
@@ -40,9 +40,14 @@ const AnimatedText = ({ text }: { text: string }) => {
 			clearInterval(interval)
 			setIsAnimating(false)
 		}, animatingTime + 50)
+
+		return () => {
+			clearInterval(interval)
+			clearTimeout(timeout)
+		}
 	}, [text, animatingTime, generateGibberish])
 
-	return <>{isAnimating ? randomizeText : text}</>
+	return <span>{isAnimating ? randomizeText : text}</span>
 }
 
 export default AnimatedText
