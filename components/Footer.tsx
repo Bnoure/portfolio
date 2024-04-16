@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import NowPlaying from './NowPlaying'
 
 const navigation = {
 	general: [
@@ -85,7 +84,6 @@ const Footer = () => (
 				</div>
 			</div>
 			<div className='flex items-start flex-col mt-12'>
-				<NowPlaying />
 				<p className='text-base font-medium'>
 					&copy; {new Date().getFullYear()} Benkerroum Nour-Eddine
 				</p>
