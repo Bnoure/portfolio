@@ -34,6 +34,7 @@
 		"date-fns": "^2.30.0",
 		"eslint": "8.39.0",
 		"eslint-config-next": "13.3.1",
+		"flag-icons": "^7.2.1",
 		"i18next": "^23.11.1",
 		"i18next-browser-languagedetector": "^7.2.1",
 		"i18next-http-backend": "^2.5.0",
