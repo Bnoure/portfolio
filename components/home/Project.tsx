@@ -5,6 +5,7 @@ import { FiArrowRight } from 'react-icons/fi'
 import AnimatedText from '../AnimatedText'
 import ProjectList from '../Project/projectList'
 import { useTranslation } from 'next-i18next'
+import { BentoDemo } from '@/components/bento/bento'
 
 const ProjectsSection = () => {
 	const { t } = useTranslation('common')
@@ -13,6 +14,7 @@ const ProjectsSection = () => {
 			<h2 className='section-heading custom-underline'>
 				<AnimatedText text='Recent Projects' />
 			</h2>
+			<BentoDemo />
 			<ProjectList />
 			<div className='mt-6'>
 				<Link href='/projects'>

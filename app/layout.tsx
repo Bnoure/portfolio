@@ -1,4 +1,3 @@
-
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -21,6 +20,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 			<Navbar />
 			<div className='max-w-2xl w-[92vw] sm:w-[90vw] mx-auto pt-20'>
 				<StickySocial />
+
 				{children}
 				<Footer />
 				<Analytics />
