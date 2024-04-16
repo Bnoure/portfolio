@@ -2,14 +2,8 @@ import AnimatedText from '@/components/AnimatedText'
 import Timeline from '@/components/Timeline'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-	title: 'About',
-	description: 'Full-Stack Developer and enthusiast geek',
-}
-
-const About = () => {
+const Projects = () => {
 	return (
 		<section className='prose  prose-neutral dark:prose-invert my-10'>
 			<FadeDown duration={0.4}>
@@ -52,4 +46,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default Projects

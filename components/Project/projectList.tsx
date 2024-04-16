@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { Project, getProjectData } from './projectData'
-import { useLanguage } from '../../lang/LanguageProvider'
 
 const FadeUp = dynamic(() => import('../animations/FadeUp'), {
 	ssr: false,

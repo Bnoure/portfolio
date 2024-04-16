@@ -5,13 +5,21 @@ import Link from 'next/link'
 
 import RoundedImage from '../RoundedImage'
 import AnimatedText from '../AnimatedText'
+import { useTranslation } from 'next-i18next'
+import { Trans } from 'react-i18next'
+import { useRouter } from 'next/router'
 
 export default function Hero(): ReactElement {
+	const { t } = useTranslation('common')
+	const { locale } = useRouter()
+	const aboutUrl = `/${locale}/about`
 	return (
 		<section>
 			<h1 className='sr-only'>
-				Hi I&apos;m Nour-Eddine Benkerroum, I&apos;m a full-stack Developer and
-				I craft things for the web.
+				<Trans
+					i18nKey='common.hero.introductionSmallScreen'
+					components={{ 0: <strong style={{ color: 'red !important' }} /> }}
+				/>
 			</h1>
 			<div className='flex cursor-default flex-col justify-center'>
 				<div className='flex gap-8'>
@@ -29,20 +37,20 @@ export default function Hero(): ReactElement {
 							<AnimatedText text='Benkerroum Nour-Eddine' />
 						</h1>
 						<h4 className='text-base lg:text-lg'>
-							Full-Stack Developer @ <b>Nour</b>
+							{t('common.navigation.About')}
 						</h4>
 					</div>
 				</div>
 				<div className='flex flex-col gap-8 pt-8'>
 					<p className='text-base md:text-lg'>
-						Hi there! I&apos;m a <strong> full-stack developer </strong>
-						with a zest for all things digital. Leveraging my IT project
-						management background, I bring a blend of leadership and technical
-						savvy to the vibrant world of software development.
+						<Trans
+							i18nKey='common.hero.introduction'
+							components={{ 0: <b /> }}
+						/>
 					</p>
-					<Link href='/about'>
+					<Link href={aboutUrl}>
 						<div className='flex items-center'>
-							<span className='link'>Learn more&nbsp;</span>
+							<span className='link'>{t('common.navigation.Learn')}&nbsp;</span>
 							<span className='animate-bounce-right'>
 								<FiArrowRight />
 							</span>
