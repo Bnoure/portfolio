@@ -31,7 +31,7 @@ const ProjectList = () => {
 								/>
 								<div>
 									<h3 className='text-lg font-semibold'>
-										<Link href={project.github_url} passHref>
+										<Link href={project.github_url} passHref legacyBehavior>
 											<a className='hover:text-primary transition'>
 												{project.title}
 											</a>

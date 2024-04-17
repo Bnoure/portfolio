@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FiTwitter, FiMail, FiArrowRight } from 'react-icons/fi'
+import { FiMail, FiArrowRight } from 'react-icons/fi'
 
 const Contact = () => {
 	return (
@@ -11,18 +11,19 @@ const Contact = () => {
 				drop me an email !
 			</p>
 			<div className='flex gap-16 mt-6'>
-				<Link
-					href='mailto:noureddine.benkerroum@gmail.com'
-					className='flex items-center gap-2 hover:text-primary transition'
-					title='Compose an email to Nitesh'
-				>
-					<FiMail />
-					<div className='flex items-center'>
-						<span>Email Me&nbsp;</span>
-						<span className='animate-bounce-right'>
-							<FiArrowRight />
-						</span>
-					</div>
+				<Link href='mailto:noureddine.benkerroum@gmail.com' legacyBehavior>
+					<a
+						className='flex items-center gap-2 hover:text-primary transition'
+						title='Compose an email to Nitesh'
+					>
+						<FiMail />
+						<div className='flex items-center'>
+							<span>Email Me&nbsp;</span>
+							<span className='animate-bounce-right'>
+								<FiArrowRight />
+							</span>
+						</div>
+					</a>
 				</Link>
 			</div>
 		</section>

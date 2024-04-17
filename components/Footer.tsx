@@ -3,8 +3,8 @@ import Link from 'next/link'
 const navigation = {
 	general: [
 		{ name: 'Home', title: 'Home Page', href: '/' },
-		{ name: 'About', title: 'About Page', href: '/about' },
-		{ name: 'Projects', title: 'Project Page', href: '/projects' },
+		{ name: 'About', title: 'About Page', href: '/fr/about' },
+		{ name: 'Projects', title: 'Project Page', href: '/fr/projects' },
 	],
 	extra: [
 		{
@@ -100,17 +100,21 @@ interface FooterLinkProps {
 }
 
 const FooterLink = ({ href, name, title, newTab }: FooterLinkProps) => (
-	<Link
-		href={href}
-		className='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mt-2 horizontal-underline tracking-wide'
-		aria-label={name}
-		title={title}
-		{...(newTab && {
-			target: '_blank',
-			rel: 'noopener noreferrer',
-		})}
-	>
-		{name}
+	<Link href={href} legacyBehavior>
+		<a
+			className='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mt-2 horizontal-underline tracking-wide'
+			aria-label={name}
+			title={title}
+			{...(newTab
+				? {
+						target: '_blank',
+						rel: 'noopener noreferrer',
+				  }
+				: {})}
+		>
+			{name}
+		</a>
 	</Link>
 )
+
 export default Footer

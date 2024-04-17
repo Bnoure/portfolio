@@ -48,13 +48,17 @@ export default function Hero(): ReactElement {
 							components={{ 0: <b /> }}
 						/>
 					</p>
-					<Link href={aboutUrl}>
-						<div className='flex items-center'>
-							<span className='link'>{t('common.navigation.Learn')}&nbsp;</span>
-							<span className='animate-bounce-right'>
-								<FiArrowRight />
-							</span>
-						</div>
+					<Link href={aboutUrl} legacyBehavior>
+						<a>
+							<div className='flex items-center'>
+								<span className='link'>
+									{t('common.navigation.Learn')}&nbsp;
+								</span>
+								<span className='animate-bounce-right'>
+									<FiArrowRight />
+								</span>
+							</div>
+						</a>
 					</Link>
 				</div>
 			</div>
