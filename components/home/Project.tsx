@@ -17,15 +17,13 @@ const ProjectsSection = () => {
 			<BentoDemo />
 			<ProjectList />
 			<div className='mt-6'>
-				<Link href='/projects'>
-					<button className='flex items-center'>
+				<Link href='/projects' legacyBehavior>
+					<a className='flex items-center gap-2 hover:text-primary transition'>
 						<span className='link'>
 							{t('common.navigation.Projects')}&nbsp;
 						</span>
-						<span className='animate-bounce-right'>
-							<FiArrowRight />
-						</span>
-					</button>
+						<FiArrowRight className='animate-bounce-right' />
+					</a>
 				</Link>
 			</div>
 		</section>

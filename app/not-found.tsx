@@ -11,8 +11,8 @@ export default function NotFound() {
 			<p>
 				This page may not exist on my website, but that doesn&apos;t mean we
 				can&apos;t still connect. Feel free to explore the rest of my{' '}
-				<Link className='link' href='/'>
-					site
+				<Link href='/' legacyBehavior>
+					<a className='link'>site</a>
 				</Link>
 				. Let&apos;s turn this little detour into a fun and exciting adventure!
 			</p>
