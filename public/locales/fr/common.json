@@ -9,8 +9,9 @@
       "Projects": "Pour voir le détail des projets"
     },
     "hero": {
-      "introductionSmallScreen": "Salut, je suis <0>Développeur Full-Stack</0> et je crée des choses pour le web.",
-      "introduction": "Bonjour ! Je suis <0>Développeur Full-Stack</0> passionné par le numérique. Fort de mon expérience en gestion de projets informatiques, j'apporte ma compétence technique et un esprit collaboratif au service de projets innovants.",
+      "introductionSmallScreen": "Salut, je suis {{bold}} et je crée des choses pour le web.",
+      "introduction": "Bonjour ! Je suis {{bold}} passionné par le numérique. Fort de mon expérience en gestion de projets informatiques, j'apporte ma compétence technique et un esprit collaboratif au service de projets innovants.",
+      "introductionBold": "Développeur Full-Stack",
 
       "developer": "Développeur Full-Stack, auparavant chef de projet IT pendant 5 ans.",
       "education": "Titulaire de diplômes en Développement d'Applications Web & Mobile et en Gestion de Projets.",

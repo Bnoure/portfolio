@@ -9,8 +9,9 @@
       "Projects": "See Project Details"
     },
     "hero": {
-      "introductionSmallScreen": "Hi, I'm a <0>Full-stack Developer</0> and I craft things for the web.",
-      "introduction": "Hi there! I'm a <0>Full-stack developer</0> with a zest for all things digital. Leveraging my IT project management background, I bring a blend of leadership and technical savvy to the vibrant world of software development.",
+      "introductionSmallScreen": "Hi, I'm a {{bold}} and I craft things for the web.",
+      "introduction": "Hi there! I'm a {{bold}} with a zest for all things digital. Leveraging my IT project management background, I bring a blend of leadership and technical savvy to the vibrant world of software development.",
+      "introductionBold": "Full-Stack Developer",
 
       "education": "Holding degrees in Web & Mobile App Development and Project Management.",
       "adapt": "Continuously learning and evolving with every new challenge.",

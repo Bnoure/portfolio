@@ -1,36 +1,40 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 
-const AnimatedText = ({ text }: { text: string }) => {
+// Ajoutez style dans les props et donnez-lui un type approprié.
+const AnimatedText = ({
+	text,
+	style = {},
+}: {
+	text: string
+	style: React.CSSProperties
+}) => {
 	const [randomizeText, setRandomizeText] = useState(text)
 	const [isAnimating, setIsAnimating] = useState(true)
 	const animatingTime = text.length * 100 > 1000 ? 1000 : text.length * 100
 
-	const generateGibberish = useCallback(
-		(index: number, timeElapsed: number) => {
-			if (text[index] === ' ') return ' '
-			const characters =
-				'A-B*CD_EF-GH_JK*LM-NOP_QRS*TU-VWX_YZa*bcd_ef-gh_jkm_nopq_rstu_vw-xyz_023_456*789_'
+	const generateGibberish = (index: any, timeElapsed: Number) => {
+		if (text[index] === ' ') return ' '
+		const characters =
+			'A-B*CD_EF-GH_JK*LM-NOP_QRS*TU-VWX_YZa*bcd_ef-gh_jkm_nopq_rstu_vw-xyz_023_456*789_'
 
-			const randomChar = Math.floor(Math.random() * characters.length)
-			return Number(timeElapsed) >= Math.floor(Math.random() * animatingTime)
-				? text[index]
-				: characters[randomChar]
-		},
-		[text, animatingTime]
-	)
+		const randomChar = Math.floor(Math.random() * characters.length)
+		return Number(timeElapsed) >= Math.floor(Math.random() * animatingTime)
+			? text[index]
+			: characters[randomChar]
+	}
 
 	useEffect(() => {
 		let interval: NodeJS.Timeout
-		const timeout = setTimeout(() => {
+		setTimeout(() => {
 			let timeElapsed = 0
 			interval = setInterval(() => {
 				timeElapsed += 100
 				setRandomizeText(
 					text
 						.split('')
-						.map((_, index) => generateGibberish(index, timeElapsed))
+						.map((_, index: Number) => generateGibberish(index, timeElapsed))
 						.join('')
 				)
 			}, 100)
@@ -41,13 +45,11 @@ const AnimatedText = ({ text }: { text: string }) => {
 			setIsAnimating(false)
 		}, animatingTime + 50)
 
-		return () => {
-			clearInterval(interval)
-			clearTimeout(timeout)
-		}
-	}, [text, animatingTime, generateGibberish])
+		return () => clearInterval(interval) // Ajout pour nettoyer l'intervalle lors du démontage du composant
+	}, [text, animatingTime])
 
-	return <span>{isAnimating ? randomizeText : text}</span>
+	// Appliquer le style passé aux props sur le texte rendu.
+	return <span style={style}>{isAnimating ? randomizeText : text}</span>
 }
 
 export default AnimatedText

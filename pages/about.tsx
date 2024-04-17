@@ -10,7 +10,7 @@ const About = () => {
 		<section className='prose  prose-neutral dark:prose-invert my-10'>
 			<FadeDown duration={0.4}>
 				<h1 className='heading custom-underline'>
-					<AnimatedText text='About Me' />
+					<AnimatedText text='About me' />
 				</h1>
 				<p>
 					Hello! I&apos;m <b>Nour-Eddine Benkerroum</b>, deeply fascinated by
@@ -27,6 +27,7 @@ const About = () => {
 					React, HTML, and CSS, integrating me into a vibrant and supportive
 					community.
 				</p>
+
 				<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
 					When I&apos;m not at my desk...
 				</h4>
@@ -41,7 +42,6 @@ const About = () => {
 				<h2 className='text-xl md:text-2xl text-dark dark:text-light'>
 					<AnimatedText text='Timeline' />
 				</h2>
-				{/* Ensure Timeline component is implemented here */}
 				<Timeline />
 			</FadeUp>
 		</section>

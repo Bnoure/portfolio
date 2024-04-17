@@ -48,8 +48,9 @@ body {
 		@apply mb-8 md:mb-12 text-xl md:text-3xl font-bold dark:text-light text-dark;
 	}
 	.section-heading {
-		@apply mb-5 md:mb-8 md:text-xl font-bold dark:text-light text-dark;
+		@apply mb-5 md:mb-8 mt-3 md:mt-6 lg:mt-6 md:text-xl font-bold dark:text-light text-dark;
 	}
+
 	.link {
 		@apply underline;
 	}
@@ -79,11 +80,6 @@ body {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	animation: gradient 3s ease infinite;
-}
-
-.important-text.important-text {
-	color: red !important;
-	font-weight: bold;
 }
 
 .horizontal-underline {
