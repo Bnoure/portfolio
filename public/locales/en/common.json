@@ -48,7 +48,19 @@
 
     "contact": {
       "title": "Get In Touch",
+      "bottomtext": "Wooh! You have reached the bottom of the page. Looking to collaborate, discuss an opportunity, or just want to say hi? I'm all in! Just drop me an email !",
       "sendEmail": "Send Email"
+    },
+
+    "footer": {
+      "navigation": {
+        "link1": "Home",
+        "link2": "About",
+        "link3": "Projects"
+      },
+      "reseau": "Socials",
+      "cv":"Resume"
+
     }
   }
 }

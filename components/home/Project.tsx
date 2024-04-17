@@ -6,9 +6,12 @@ import AnimatedText from '../AnimatedText'
 import ProjectList from '../Project/projectList'
 import { useTranslation } from 'next-i18next'
 import { BentoDemo } from '@/components/bento/bento'
+import { useRouter } from 'next/router'
 
 const ProjectsSection = () => {
 	const { t } = useTranslation('common')
+	const { locale } = useRouter()
+	const aboutUrl = `/${locale}/projets`
 	return (
 		<section id='recent-blog'>
 			<h2 className='section-heading custom-underline'>
@@ -17,7 +20,7 @@ const ProjectsSection = () => {
 			<BentoDemo />
 			<ProjectList />
 			<div className='mt-6'>
-				<Link href='/projects' legacyBehavior>
+				<Link href={aboutUrl} legacyBehavior>
 					<a className='flex items-center gap-2 hover:text-primary transition'>
 						<span className='link'>
 							{t('common.navigation.Projects')}&nbsp;

@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import { FiMail, FiArrowRight } from 'react-icons/fi'
+import { useTranslation } from 'next-i18next'
 
 const Contact = () => {
+	const { t } = useTranslation('common')
 	return (
 		<section id='contact' className='pt-10'>
-			<h2 className='section-heading custom-underline'>Get In Touch</h2>
+			<h2 className='section-heading custom-underline'>
+				{t('common.contact.title')}{' '}
+			</h2>
 			<p>
-				Wooh! You have reached the bottom of the page. Looking to collaborate,
-				discuss an opportunity, or just want to say hi? I&apos;m all in! Just
-				drop me an email !
+				<span>{t('common.contact.bottomtext')} </span>
 			</p>
 			<div className='flex gap-16 mt-6'>
 				<Link href='mailto:noureddine.benkerroum@gmail.com' legacyBehavior>
@@ -18,7 +20,7 @@ const Contact = () => {
 					>
 						<FiMail />
 						<div className='flex items-center'>
-							<span>Email Me&nbsp;</span>
+							<span>{t('common.contact.sendEmail')}&nbsp;</span>
 							<span className='animate-bounce-right'>
 								<FiArrowRight />
 							</span>

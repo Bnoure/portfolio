@@ -46,7 +46,18 @@
     },
     "contact": {
       "title": "Contactez-moi",
+      "bottomtext":"Wooh! Vous avez atteint le bas de la page. Vous cherchez à collaborer, discuter d'une opportunité, ou simplement dire bonjour ? Je suis tout ouïe ! Envoyez-moi simplement un email !",
       "sendEmail": "Envoyer un Email"
+    },
+
+    "footer": {
+      "navigation": {
+        "link1": "Accueil",
+        "link2": "À propos",
+        "link3": "Projets"
+      },
+      "reseau": "Réseaux Sociaux",
+      "cv": "CV"
     }
   }
 }

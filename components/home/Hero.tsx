@@ -18,7 +18,7 @@ export default function Hero(): ReactElement {
 			<h1 className='sr-only'>
 				<Trans
 					i18nKey='common.hero.introductionSmallScreen'
-					components={{ 0: <strong style={{ color: 'red !important' }} /> }}
+					components={{ 0: <strong className='important-text' /> }}
 				/>
 			</h1>
 			<div className='flex cursor-default flex-col justify-center'>
