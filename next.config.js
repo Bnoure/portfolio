@@ -79,5 +79,3 @@ const securityHeaders = [
 		value: 'camera=(), microphone=(), geolocation=()',
 	},
 ]
-
-module.exports = nextConfig;

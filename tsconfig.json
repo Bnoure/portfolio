@@ -34,5 +34,4 @@
 
     "lib/prisma.js", "lang/LanguageProvider.tsx"	],
 	"exclude": ["node_modules"]
-
 }

@@ -100,21 +100,17 @@ interface FooterLinkProps {
 }
 
 const FooterLink = ({ href, name, title, newTab }: FooterLinkProps) => (
-	<Link href={href} legacyBehavior>
-		<a
-			className='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mt-2 horizontal-underline tracking-wide'
-			aria-label={name}
-			title={title}
-			{...(newTab
-				? {
-						target: '_blank',
-						rel: 'noopener noreferrer',
-				  }
-				: {})}
-		>
-			{name}
-		</a>
+	<Link
+		href={href}
+		className='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 mt-2 horizontal-underline tracking-wide'
+		aria-label={name}
+		title={title}
+		{...(newTab && {
+			target: '_blank',
+			rel: 'noopener noreferrer',
+		})}
+	>
+		{name}
 	</Link>
 )
-
 export default Footer

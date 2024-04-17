@@ -13,8 +13,6 @@ export default function Hero(): ReactElement {
 	const { t } = useTranslation('common')
 	const { locale } = useRouter()
 	const aboutUrl = `/${locale}/about`
-	console.log('Current locale: ', locale)
-	console.log('Constructed URL: ', aboutUrl)
 	return (
 		<section>
 			<h1 className='sr-only'>
@@ -50,11 +48,13 @@ export default function Hero(): ReactElement {
 							components={{ 0: <b /> }}
 						/>
 					</p>
-					<Link href={aboutUrl} legacyBehavior>
-						<a className='flex items-center'>
+					<Link href={aboutUrl}>
+						<div className='flex items-center'>
 							<span className='link'>{t('common.navigation.Learn')}&nbsp;</span>
-							<FiArrowRight className='animate-bounce-right' />
-						</a>
+							<span className='animate-bounce-right'>
+								<FiArrowRight />
+							</span>
+						</div>
 					</Link>
 				</div>
 			</div>

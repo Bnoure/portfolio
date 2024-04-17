@@ -14,7 +14,7 @@ const ProjectList = () => {
 
 	useEffect(() => {
 		setProjects(getProjectData(t))
-	}, [t]) // t is a dependency of useEffect
+	}, [t]) // t est une dépendance de useEffect
 
 	return (
 		<ul>
@@ -31,7 +31,7 @@ const ProjectList = () => {
 								/>
 								<div>
 									<h3 className='text-lg font-semibold'>
-										<Link href={project.github_url} passHref legacyBehavior>
+										<Link href={project.github_url} passHref>
 											<a className='hover:text-primary transition'>
 												{project.title}
 											</a>

@@ -37,7 +37,6 @@
 		"flag-icons": "^7.2.1",
 		"i18next": "^23.11.1",
 		"i18next-browser-languagedetector": "^7.2.1",
-		"i18next-fs-backend": "^2.3.1",
 		"i18next-http-backend": "^2.5.0",
 		"mdx-bundler": "^9.2.1",
 		"next": "^13.5.6",
