@@ -12,7 +12,9 @@ const BentoGrid = ({
 	className?: string
 }) => {
 	return (
-		<div className={cn('grid grid-cols-4 gap-3 ', className)}>{children}</div>
+		<div className={cn('grid grid-cols-1 md:grid-cols-4 gap-3', className)}>
+			{children}
+		</div>
 	)
 }
 
