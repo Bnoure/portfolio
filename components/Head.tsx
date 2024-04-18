@@ -1,6 +1,6 @@
 import React from 'react'
 import NextHead from 'next/head'
-import { metadata } from '../lib/metadata' // Assurez-vous que le chemin est correct
+import { metadata } from '../lib/metadata'
 
 interface HeadProps {
 	title?: string

@@ -16,7 +16,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #8353E2;
+	background: #8353e2;
 	border-radius: 20px;
 	height: 10px;
 }
@@ -30,8 +30,8 @@ body {
 }
 
 ::selection {
-  background-color: #05B19A30;
-  color: #fefefe;
+	background-color: #05b19a30;
+	color: #fefefe;
 }
 
 @layer base {
@@ -48,8 +48,9 @@ body {
 		@apply mb-8 md:mb-12 text-xl md:text-3xl font-bold dark:text-light text-dark;
 	}
 	.section-heading {
-		@apply mb-5 md:mb-8 md:text-xl font-bold dark:text-light text-dark;
+		@apply mb-5 md:mb-8 mt-3 md:mt-6 lg:mt-6 md:text-xl font-bold dark:text-light text-dark;
 	}
+
 	.link {
 		@apply underline;
 	}
@@ -70,7 +71,7 @@ body {
 }
 
 .timeline p {
-	margin: 0 0 0 1.25rem; 
+	margin: 0 0 0 1.25rem;
 }
 
 .name-highlight {
@@ -102,7 +103,7 @@ body {
 }
 
 .underline {
-	@apply transition-all text-dark dark:text-light decoration-primary underline-offset-2 decoration-[0.1em]
+	@apply transition-all text-dark dark:text-light decoration-primary underline-offset-2 decoration-[0.1em];
 }
 
 .custom-underline {
@@ -192,16 +193,16 @@ body {
 }
 
 .prose pre {
-  @apply border border-neutral-100 border-neutral-800 ;
+	@apply border border-neutral-100 border-neutral-800;
 }
 
 .prose pre code {
-  @apply grid p-0 rounded-lg border border-neutral-100 border-neutral-800;
-  border: initial;
+	@apply grid p-0 rounded-lg border border-neutral-100 border-neutral-800;
+	border: initial;
 }
 
 .prose code:not(pre code) {
-  @apply px-1 py-0.5 after:content-[''] before:content-[''] font-normal border border-neutral-400 dark:border-neutral-700 rounded bg-dark/10 dark:bg-dark/10;
+	@apply px-1 py-0.5 after:content-[''] before:content-[''] font-normal border border-neutral-400 dark:border-neutral-700 rounded bg-dark/10 dark:bg-dark/10;
 }
 
 code[class*='language-'],
@@ -217,7 +218,6 @@ pre {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
-
 
 [data-rehype-pretty-code-fragment] code {
 	@apply grid min-w-full break-words rounded-none border-0 p-0 text-sm text-black;

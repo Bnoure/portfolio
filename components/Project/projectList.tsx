@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { Project, getProjectData } from './projectData'
-import { useLanguage } from '../../lang/LanguageProvider'
 
 const FadeUp = dynamic(() => import('../animations/FadeUp'), {
 	ssr: false,
@@ -32,7 +31,7 @@ const ProjectList = () => {
 								/>
 								<div>
 									<h3 className='text-lg font-semibold'>
-										<Link href={project.github_url} passHref>
+										<Link href={project.github_url} passHref legacyBehavior>
 											<a className='hover:text-primary transition'>
 												{project.title}
 											</a>

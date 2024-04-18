@@ -8,51 +8,49 @@ import ThemeSwitch from './ThemeSwitch'
 import AnimatedText from './AnimatedText'
 import Logo from './Logo'
 import LanguageSwitcher from '../lang/LanguageSwitcher'
+import { useTranslation } from 'next-i18next'
 
 import { NAV_ITEMS } from '@/constants'
 
 const NavBar = () => {
 	const pathname = usePathname()
+	const { t } = useTranslation('common')
 
 	return (
-		<nav
-			className='
-			fixed top-2 left-1/2 max-w-[44em] w-[96vw]
-			sm:w-[96vw] mx-auto -translate-x-1/2 flex flex-col
-			transition-all rounded-lg p-[10px] bg-primary/10 backdrop-blur-[10px] backdrop-saturate-150
-			hover:shadow-dark border border-secondary/20 z-10
-		'
-		>
+		<nav className='fixed top-2 left-1/2 max-w-[44em] w-[96vw] sm:w-[96vw] mx-auto -translate-x-1/2 flex flex-col transition-all rounded-lg p-[10px] bg-primary/10 backdrop-blur-[10px] backdrop-saturate-150 hover:shadow-dark border border-secondary/20 z-10'>
 			<div className='h-[40px] bg-transparent py-5 flex items-center justify-between'>
-				<Link
-					href='/'
-					className='flex items-center justify-between'
-					aria-label='Home'
-				>
-					<Logo />
+				<Link href='/' legacyBehavior>
+					<a className='flex items-center justify-between' aria-label='Home'>
+						<LanguageSwitcher />
+					</a>
 				</Link>
-				<div className='flex items-center gap-8 text-base leading-5'>
+				<div className='flex items-center gap-8'>
 					<div className='flex gap-8'>
 						{NAV_ITEMS.map((item, idx) => {
 							const active = pathname === item.page
 							return (
-								<Link
-									key={idx}
-									href={item.page}
-									className={clsx('horizontal-underline text-base', {
-										'horizontal-underline-active font-bold': active,
-									})}
-									aria-label={item.label}
-								>
-									<span className='tracking-wide text-gray-900 dark:text-gray-100'>
-										<AnimatedText text={item.label} />
-									</span>
+								<Link key={idx} href={item.page} legacyBehavior>
+									<a
+										className={clsx('horizontal-underline', {
+											'horizontal-underline-active font-bold': active,
+										})}
+										aria-label={item.label}
+									>
+										<span
+											className={clsx('tracking-wide', {
+												'text-xs sm:text-sm md:text-base': !active, // Smaller text for non-active links on small and medium screens
+												'text-base sm:text-lg': active, // Larger text for active link on small and medium screens
+												'text-gray-900 dark:text-gray-100': true,
+											})}
+										>
+											<AnimatedText text={t(item.label)} />
+										</span>
+									</a>
 								</Link>
 							)
 						})}
 					</div>
 					<ThemeSwitch />
-					<LanguageSwitcher />
 				</div>
 			</div>
 		</nav>

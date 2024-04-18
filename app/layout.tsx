@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -15,26 +14,19 @@ const inter = Inter({
 	display: 'swap',
 })
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<html lang='en'>
-			<body
-				className={clsx('antialiased bg-light dark:bg-dark', inter.variable)}
-			>
-				<Provider>
-					<Navbar />
-					<div className='max-w-2xl w-[92vw] sm:w-[90vw] mx-auto pt-20'>
-						<StickySocial />
-						{children}
-						<Footer />
-						<Analytics />
-					</div>
-				</Provider>
-			</body>
-		</html>
+		<Provider>
+			<Navbar />
+			<div className='max-w-2xl w-[92vw] sm:w-[90vw] mx-auto pt-20'>
+				<StickySocial />
+
+				{children}
+				<Footer />
+				<Analytics />
+			</div>
+		</Provider>
 	)
 }
+
+export default RootLayout

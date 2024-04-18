@@ -1,22 +1,24 @@
 import { IconType } from 'react-icons'
 import { FiLinkedin, FiGithub } from 'react-icons/fi'
 
+
 type NavItem = {
 	label: string
 	page: string
 }
 
 export const NAV_ITEMS: Array<NavItem> = [
+
 	{
-		label: 'Home',
+		label: 'common.footer.navigation.link1',
 		page: '/',
 	},
 	{
-		label: 'About',
+		label: 'common.footer.navigation.link2',
 		page: '/about',
 	},
 	{
-		label: 'Projects',
+		label: 'common.footer.navigation.link3',
 		page: '/projects',
 	},
 ]

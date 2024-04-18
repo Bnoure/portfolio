@@ -1,67 +1,71 @@
 import { BentoCard, BentoGrid } from './bento-grid'
-import {
-	BellIcon,
-	CalendarIcon,
-	FileTextIcon,
-	GlobeIcon,
-	InputIcon,
-} from '@radix-ui/react-icons'
 
 const features = [
+	// Grande carte en haut à gauche
 	{
-		Icon: FileTextIcon,
-		name: 'Save your files',
-		description: 'We automatically save your files as you type.',
+		iconPath: '/images/Arc.svg',
+		name: 'common.projects.titlePortfolio',
+		description: 'common.projects.descriptionPortfolio',
 		href: '/',
 		cta: 'Learn more',
-		background: <img className='absolute -right-20 -top-20 opacity-60' />,
-		className: 'lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3',
+
+		className:
+			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-2 lg:row-span-2',
 	},
+	// Petite carte en haut à droite
 	{
-		Icon: InputIcon,
-		name: 'Full text search',
-		description: 'Search through all your files in one place.',
-		href: '/',
+		iconPath: 'images/SecondRound.svg',
+		name: 'common.projects.title2ndRound',
+		description: 'common.projects.description2ndRound',
+		href: 'https://github.com/Bnoure/2ndRound.git',
 		cta: 'Learn more',
-		background: <img className='absolute -right-20 -top-20 opacity-60' />,
-		className: 'lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3',
+
+		className:
+			'grid md:auto-rows-[6rem] grid-cols-1 md:grid-cols-2  max-w-7xl mx-auto lg:col-span-2 lg:row-span-1',
 	},
+	// Petite carte au milieu à droite
 	{
-		Icon: GlobeIcon,
-		name: 'Multilingual',
-		description: 'Supports 100+ languages and counting.',
-		href: '/',
+		iconPath: 'images/Arc.svg',
+		name: 'common.projects.titleArc',
+		description: 'common.projects.descriptionArc',
+		href: 'https://github.com/Bnoure/Arc.git',
 		cta: 'Learn more',
-		background: <img className='absolute -right-20 -top-20 opacity-60' />,
-		className: 'lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4',
+
+		className:
+			'grid md:auto-rows-[6rem] grid-cols-1  max-w-7xl mx-auto lg:relative lg:col-span-2 lg:row-span-1',
 	},
+	// Petite carte en bas à droite
 	{
-		Icon: CalendarIcon,
-		name: 'Calendar',
-		description: 'Use the calendar to filter your files by date.',
-		href: '/',
+		iconPath: 'images/Rental.svg',
+		name: 'common.projects.titleRental',
+		description: 'common.projects.descriptionRental',
+		href: 'https://github.com/Bnoure/rental.git',
 		cta: 'Learn more',
-		background: <img className='absolute -right-20 -top-20 opacity-60' />,
-		className: 'lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2',
+
+		className:
+			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-1',
 	},
+	// Petite carte en bas à gauche sous la grande carte
 	{
-		Icon: BellIcon,
-		name: 'Notifications',
-		description:
-			'Get notified when someone shares a file or mentions you in a comment.',
-		href: '/',
+		iconPath: 'images/Koalapp.svg',
+		name: 'common.projects.titleKoalapp',
+		description: 'common.projects.descriptionKoalapp',
+		href: 'https://github.com/Bnoure/koala.git',
 		cta: 'Learn more',
-		background: <img className='absolute -right-20 -top-20 opacity-60' />,
-		className: 'lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4',
+
+		className:
+			'grid md:auto-rows-[18rem] grid-cols-2  max-w-7xl mx-auto lg:col-span-3',
 	},
 ]
 
 export function BentoDemo() {
 	return (
-		<BentoGrid className='lg:grid-rows-3'>
-			{features.map((feature) => (
-				<BentoCard key={feature.name} {...feature} />
-			))}
-		</BentoGrid>
+		<div className='container '>
+			<BentoGrid className='lg:grid-rows-2'>
+				{features.map((feature) => (
+					<BentoCard key={feature.name} {...feature} />
+				))}
+			</BentoGrid>
+		</div>
 	)
 }
