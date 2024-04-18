@@ -29,6 +29,8 @@
     },
 
     "projects": {
+      "titlePortfolio": "Portfolio",
+        "descriptionPortfolio": "My Portfolio is a responsive web application, designed to showcase my skills and projects. Created with React, it is an example of my determination to learn new technology as a full-stack developer.",
       "title2ndRound": "2ndRound",
       "description2ndRound": "SecondRound revolutionizes the pre-owned video game market with a mobile web app born from a 10-day development challenge, streamlining the trade for sellers and gamers alike.",
       "titleKoalapp": "Koalapp",

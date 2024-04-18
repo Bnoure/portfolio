@@ -18,7 +18,7 @@ const ProjectsSection = () => {
 				<AnimatedText text={t('common.navigation.Project')} />
 			</h2>
 			<BentoDemo />
-			<ProjectList />
+
 			<div className='mt-6'>
 				<Link href={aboutUrl} legacyBehavior>
 					<a className='flex items-center gap-2 hover:text-primary transition'>
