@@ -11,7 +11,6 @@ const features = [
 
 		className:
 			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-2 lg:row-span-2',
-		imgStyle: { width: '100%', height: '100%', right: '10px', top: '10px' },
 	},
 	// Petite carte en haut à droite
 	{
@@ -22,8 +21,7 @@ const features = [
 		cta: 'Learn more',
 
 		className:
-			'grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-2  max-w-7xl mx-auto lg:col-span-1',
-		imgStyle: { width: '100%', height: '100%', right: '10px', top: '10px' },
+			'grid md:auto-rows-[6rem] grid-cols-1 md:grid-cols-2  max-w-7xl mx-auto lg:col-span-2 lg:row-span-1',
 	},
 	// Petite carte au milieu à droite
 	{
@@ -34,8 +32,7 @@ const features = [
 		cta: 'Learn more',
 
 		className:
-			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:relative lg:col-span-1 lg:row-span-2',
-		imgStyle: { width: '100%', height: '100%', right: '10px', top: '10px' },
+			'grid md:auto-rows-[6rem] grid-cols-1  max-w-7xl mx-auto lg:relative lg:col-span-2 lg:row-span-1',
 	},
 	// Petite carte en bas à droite
 	{
@@ -46,8 +43,7 @@ const features = [
 		cta: 'Learn more',
 
 		className:
-			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-2',
-		imgStyle: { width: '100%', height: '100%', right: '10px', top: '10px' },
+			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-1',
 	},
 	// Petite carte en bas à gauche sous la grande carte
 	{
@@ -59,16 +55,17 @@ const features = [
 
 		className:
 			'grid md:auto-rows-[18rem] grid-cols-2  max-w-7xl mx-auto lg:col-span-3',
-		imgStyle: { width: '100%', height: '100%', right: '10px', top: '10px' },
 	},
 ]
 
 export function BentoDemo() {
 	return (
-		<BentoGrid className='lg:grid-rows-2'>
-			{features.map((feature) => (
-				<BentoCard key={feature.name} {...feature} />
-			))}
-		</BentoGrid>
+		<div className='container '>
+			<BentoGrid className='lg:grid-rows-2'>
+				{features.map((feature) => (
+					<BentoCard key={feature.name} {...feature} />
+				))}
+			</BentoGrid>
+		</div>
 	)
 }
