@@ -1,69 +1,75 @@
-import { BentoCard, BentoGrid } from './bento-grid'
+import { BentoGridItem, BentoGrid } from '../ui/bento-grid'
+
+const Skeleton = () => (
+	<div className='flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black'></div>
+)
 
 const features = [
 	// Grande carte en haut à gauche
 	{
+		header: <Skeleton />,
 		iconPath: '/images/Arc.svg',
 		name: 'common.projects.titlePortfolio',
 		description: 'common.projects.descriptionPortfolio',
 		href: '/',
 		cta: 'Learn more',
-
-		className:
-			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-2 lg:row-span-2',
+		className: 'md:col-span-2',
+		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
 	// Petite carte en haut à droite
 	{
+		header: <Skeleton />,
+
 		iconPath: 'images/SecondRound.svg',
 		name: 'common.projects.title2ndRound',
 		description: 'common.projects.description2ndRound',
 		href: 'https://github.com/Bnoure/2ndRound.git',
 		cta: 'Learn more',
-
-		className:
-			'grid md:auto-rows-[6rem] grid-cols-1 md:grid-cols-2  max-w-7xl mx-auto lg:col-span-2 lg:row-span-1',
+		className: 'md:col-span-1',
+		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
-	// Petite carte au milieu à droite
+	// Petite carte  à gauche
 	{
+		header: <Skeleton />,
 		iconPath: 'images/Arc.svg',
 		name: 'common.projects.titleArc',
 		description: 'common.projects.descriptionArc',
 		href: 'https://github.com/Bnoure/Arc.git',
 		cta: 'Learn more',
-
-		className:
-			'grid md:auto-rows-[6rem] grid-cols-1  max-w-7xl mx-auto lg:relative lg:col-span-2 lg:row-span-1',
+		className: 'md:col-span-1',
+		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
-	// Petite carte en bas à droite
+	// Grande carte milieu à droite
 	{
+		header: <Skeleton />,
+
 		iconPath: 'images/Rental.svg',
 		name: 'common.projects.titleRental',
 		description: 'common.projects.descriptionRental',
 		href: 'https://github.com/Bnoure/rental.git',
 		cta: 'Learn more',
 
-		className:
-			'grid md:auto-rows-[18rem] grid-cols-1  max-w-7xl mx-auto lg:col-span-1',
+		className: 'md:col-span-2',
 	},
-	// Petite carte en bas à gauche sous la grande carte
+	// Grande carte dernière ligne
 	{
+		header: <Skeleton />,
 		iconPath: 'images/Koalapp.svg',
 		name: 'common.projects.titleKoalapp',
 		description: 'common.projects.descriptionKoalapp',
 		href: 'https://github.com/Bnoure/koala.git',
 		cta: 'Learn more',
-
-		className:
-			'grid md:auto-rows-[18rem] grid-cols-2  max-w-7xl mx-auto lg:col-span-3',
+		className: 'md:col-span-3',
+		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
 ]
 
 export function BentoDemo() {
 	return (
 		<div className='container '>
-			<BentoGrid className='lg:grid-rows-2'>
+			<BentoGrid className='max-w-4xl mx-auto md:auto-rows-[20rem]'>
 				{features.map((feature) => (
-					<BentoCard key={feature.name} {...feature} />
+					<BentoGridItem key={feature.name} {...feature} />
 				))}
 			</BentoGrid>
 		</div>
