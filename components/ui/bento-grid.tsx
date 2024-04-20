@@ -1,6 +1,8 @@
 import { cn } from '@/lib/utils'
 import { useTranslation } from 'next-i18next'
 import { Button } from './button'
+import { FiGithub } from 'react-icons/fi'
+
 export const BentoGrid = ({
 	className,
 	children,
@@ -21,25 +23,23 @@ export const BentoGrid = ({
 }
 
 export const BentoGridItem = ({
-	header,
 	name,
 	className,
 	iconPath,
 	description,
 	href,
-	cta,
+
 	imgStyle,
 	textStyle,
 }: {
-	header: React.ReactNode
 	name: string
 	className?: string
 	iconPath: string
 	description: string
 	href: string
-	cta: string
-	imgStyle?: { [key: string]: string } // Ajouter imgStyle dans les props
-	textStyle?: { [key: string]: string }
+
+	imgStyle?: any // Ajouter imgStyle dans les props
+	textStyle?: any
 }) => {
 	const { t } = useTranslation()
 	return (
@@ -52,15 +52,19 @@ export const BentoGridItem = ({
 			<img src={iconPath} style={imgStyle} />
 
 			<div className='group-hover/bento:translate-x-2 transition duration-200'>
-				<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2'>
+				<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 flex justify-between'>
 					{t(name)}
+
+					<a href={href}>
+						<FiGithub />
+					</a>
 				</div>
-				<div className='font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300'>
+				<div
+					className='font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300'
+					style={textStyle}
+				>
 					{t(description)}
 				</div>
-				<Button>
-					<a href={href}>{t(cta)}</a>
-				</Button>
 			</div>
 		</div>
 	)

@@ -8,13 +8,19 @@ const features = [
 	// Grande carte en haut à gauche
 	{
 		header: <Skeleton />,
-		iconPath: '/images/Arc.svg',
+		iconPath: '/images/Arcgrand.png',
 		name: 'common.projects.titlePortfolio',
 		description: 'common.projects.descriptionPortfolio',
 		href: '/',
-		cta: 'Learn more',
+
 		className: 'md:col-span-2',
-		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
+		imgStyle: {
+			width: '90%',
+			height: '60%',
+			margin: 'auto',
+			borderRadius: '14px',
+		},
+		textSyle: { fontSize: '1.5rem' },
 	},
 	// Petite carte en haut à droite
 	{
@@ -24,7 +30,7 @@ const features = [
 		name: 'common.projects.title2ndRound',
 		description: 'common.projects.description2ndRound',
 		href: 'https://github.com/Bnoure/2ndRound.git',
-		cta: 'Learn more',
+
 		className: 'md:col-span-1',
 		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
@@ -35,7 +41,7 @@ const features = [
 		name: 'common.projects.titleArc',
 		description: 'common.projects.descriptionArc',
 		href: 'https://github.com/Bnoure/Arc.git',
-		cta: 'Learn more',
+
 		className: 'md:col-span-1',
 		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
@@ -47,7 +53,8 @@ const features = [
 		name: 'common.projects.titleRental',
 		description: 'common.projects.descriptionRental',
 		href: 'https://github.com/Bnoure/rental.git',
-		cta: 'Learn more',
+
+		imgStyle: { width: '90%', height: '50%', margin: 'auto' },
 
 		className: 'md:col-span-2',
 	},
@@ -58,9 +65,9 @@ const features = [
 		name: 'common.projects.titleKoalapp',
 		description: 'common.projects.descriptionKoalapp',
 		href: 'https://github.com/Bnoure/koala.git',
-		cta: 'Learn more',
+
 		className: 'md:col-span-3',
-		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
+		imgStyle: { width: '90%', height: '50%', margin: 'auto' },
 	},
 ]
 
