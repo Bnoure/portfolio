@@ -37,13 +37,13 @@ const features = [
 	// Petite carte  à gauche
 	{
 		header: <Skeleton />,
-		iconPath: 'images/Arc.svg',
+		iconPath: '/images/Arcgrand.png',
 		name: 'common.projects.titleArc',
 		description: 'common.projects.descriptionArc',
 		href: 'https://github.com/Bnoure/Arc.git',
 
 		className: 'md:col-span-1',
-		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
+		imgStyle: { width: '70%', height: '30%', margin: 'auto' },
 	},
 	// Grande carte milieu à droite
 	{
