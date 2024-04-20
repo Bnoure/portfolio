@@ -18,14 +18,14 @@ const PortfolioPage = () => {
 				<h1 className='text-3xl font-bold'>Portfolio de Nour-Eddine</h1>
 				<p className='mt-4 text-lg text-gray-700'>
 					Bienvenue sur la page de mon portfolio, où vous pouvez découvrir tous
-					les projets sur lesquels j'ai travaillé.
+					les projets sur lesquels j&apos;ai travaillé.
 				</p>
 
 				<div className='mt-8'>
 					<Image src='' alt='Portfolio Cover' width={800} height={450} />
 					<p className='mt-4'>
 						Mon portfolio présente une large gamme de projets dans différents
-						domaines de l'informatique, y compris le développement web, les
+						domaines de l&apos;informatique, y compris le développement web, les
 						applications mobiles et bien plus encore.
 					</p>
 					<Link
