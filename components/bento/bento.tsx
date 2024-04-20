@@ -12,7 +12,7 @@ const features = [
 		name: 'common.projects.titlePortfolio',
 		description: 'common.projects.descriptionPortfolio',
 		href: '/',
-
+		projetSlug: '/projects/portfolio',
 		className: 'md:col-span-2',
 		imgStyle: {
 			width: '90%',
@@ -25,12 +25,11 @@ const features = [
 	// Petite carte en haut à droite
 	{
 		header: <Skeleton />,
-
 		iconPath: 'images/SecondRound.svg',
 		name: 'common.projects.title2ndRound',
 		description: 'common.projects.description2ndRound',
 		href: 'https://github.com/Bnoure/2ndRound.git',
-
+		projetSlug: '/projects/portfolio',
 		className: 'md:col-span-1',
 		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
 	},
@@ -41,19 +40,18 @@ const features = [
 		name: 'common.projects.titleArc',
 		description: 'common.projects.descriptionArc',
 		href: 'https://github.com/Bnoure/Arc.git',
-
+		projetSlug: '/projects/portfolio',
 		className: 'md:col-span-1',
 		imgStyle: { width: '70%', height: '30%', margin: 'auto' },
 	},
 	// Grande carte milieu à droite
 	{
 		header: <Skeleton />,
-
 		iconPath: 'images/Rental.svg',
 		name: 'common.projects.titleRental',
 		description: 'common.projects.descriptionRental',
 		href: 'https://github.com/Bnoure/rental.git',
-
+		projetSlug: '/projects/portfolio',
 		imgStyle: { width: '90%', height: '50%', margin: 'auto' },
 
 		className: 'md:col-span-2',
@@ -65,7 +63,7 @@ const features = [
 		name: 'common.projects.titleKoalapp',
 		description: 'common.projects.descriptionKoalapp',
 		href: 'https://github.com/Bnoure/koala.git',
-
+		projetSlug: '/projects/portfolio',
 		className: 'md:col-span-3',
 		imgStyle: { width: '90%', height: '50%', margin: 'auto' },
 	},
