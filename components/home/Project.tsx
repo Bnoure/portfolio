@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import AnimatedText from '../AnimatedText'
-import ProjectList from '../Project/projectList'
+
 import { useTranslation } from 'next-i18next'
 import { BentoDemo } from '@/components/bento/bento'
 import { useRouter } from 'next/router'
@@ -17,6 +17,7 @@ const ProjectsSection = () => {
 			<h2 className='section-heading custom-underline text-3xl'>
 				<AnimatedText text={t('common.navigation.Project')} />
 			</h2>
+
 			<BentoDemo />
 
 			<div className='mt-6'>
