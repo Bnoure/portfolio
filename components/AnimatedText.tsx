@@ -7,7 +7,7 @@ const AnimatedText = ({
 	style,
 }: {
 	text: string
-	style: React.CSSProperties
+	style?: React.CSSProperties
 }) => {
 	const [randomizeText, setRandomizeText] = useState(text)
 	const [isAnimating, setIsAnimating] = useState(true)
