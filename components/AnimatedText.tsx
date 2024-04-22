@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from 'react'
 
-const AnimatedText = ({ text }: { text: string }) => {
+const AnimatedText = ({
+	text,
+	style,
+}: {
+	text: string
+	style: React.CSSProperties
+}) => {
 	const [randomizeText, setRandomizeText] = useState(text)
 	const [isAnimating, setIsAnimating] = useState(true)
 	const animatingTime = text.length * 100 > 1000 ? 1000 : text.length * 100
@@ -39,7 +45,7 @@ const AnimatedText = ({ text }: { text: string }) => {
 		}, animatingTime + 50)
 	}, [text])
 
-	return <>{isAnimating ? randomizeText : text}</>
+	return <span style={style}>{isAnimating ? randomizeText : text}</span>
 }
 
 export default AnimatedText
