@@ -29,6 +29,7 @@
       "catchYou": "À la prochaine ! :)"
     },
     "projects": {
+      "title": "Mes Projets",
       "titlePortfolio": "Portfolio",
         "descriptionPortfolio": "Mon Portfolio est une application web réactive, conçue pour présenter mes compétences et mes projets. Créée avec React, elle est un exemple de mon acharnemet à apprendre de nouvelle technologie en tant que développeur full-stack.",
       "title2ndRound": "2ndRound",

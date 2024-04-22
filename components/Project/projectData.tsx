@@ -5,6 +5,7 @@ export interface Project {
 	tech_stack: string[]
 	github_url: string
 	demo_url?: string
+	building?: string
 }
 
 // Cette fonction prend désormais une fonction `t` en paramètre pour gérer la traduction
@@ -17,6 +18,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/2ndRound.git',
 			demo_url: '',
+			building: 'Completed',
 		},
 		{
 			img: '/images/Koalapp.svg',
@@ -25,6 +27,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/koala.git',
 			demo_url: 'https://stackkoala.online/',
+			building: 'Completed',
 		},
 		{
 			img: '/images/Arc.svg',
@@ -33,6 +36,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/Arc.git',
 			demo_url: 'https://stackarc.online/',
+			building: 'Completed',
 		},
 		{
 			img: '/images/Rental.svg',
@@ -41,6 +45,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
 			github_url: 'https://github.com/Bnoure/rental.git',
 			demo_url: 'https://www.stackrental.online/',
+			building: 'Completed',
 		},
 	]
 }
