@@ -3,14 +3,20 @@ import ProjectsList from '../components/Project/projectList' // Assurez-vous que
 import { NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import AnimatedText from '@/components/AnimatedText'
 
 const ProjetPage: NextPage = () => {
 	const { t } = useTranslation('common')
 
 	return (
 		<main>
-			<h1>{t('common.projects.title')}</h1>
-			<ProjectsList />
+			<section id='recent-blog'>
+				<h1 className='heading custom-underline text-3xl'>
+					<AnimatedText text={t('common.projects.title')} />
+				</h1>
+
+				<ProjectsList />
+			</section>
 		</main>
 	)
 }

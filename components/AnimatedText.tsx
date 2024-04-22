@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-// Ajoutez style dans les props et donnez-lui un type approprié.
-const AnimatedText = ({
-	text,
-	style = {},
-}: {
-	text: string
-	style?: React.CSSProperties
-}) => {
+const AnimatedText = ({ text }: { text: string }) => {
 	const [randomizeText, setRandomizeText] = useState(text)
 	const [isAnimating, setIsAnimating] = useState(true)
 	const animatingTime = text.length * 100 > 1000 ? 1000 : text.length * 100
@@ -44,12 +37,9 @@ const AnimatedText = ({
 			clearInterval(interval)
 			setIsAnimating(false)
 		}, animatingTime + 50)
+	}, [text])
 
-		return () => clearInterval(interval) // Ajout pour nettoyer l'intervalle lors du démontage du composant
-	}, [text, animatingTime])
-
-	// Appliquer le style passé aux props sur le texte rendu.
-	return <span style={style}>{isAnimating ? randomizeText : text}</span>
+	return <>{isAnimating ? randomizeText : text}</>
 }
 
 export default AnimatedText

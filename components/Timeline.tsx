@@ -44,32 +44,28 @@ const FullTimeline = () => (
 				and a rich background in IT project management.
 			</Checkpoint>
 		</ul>
-		<Year>2020 - 2024</Year>
+		<Year>2019 - 2024</Year>
 		<ul>
 			<Checkpoint title='IT Project Manager at Atos for an External Client 🚀'>
 				Led a complex IT migration program for Opel and PCD to PSA environments,
 				managing over 40 application deployments across Europe. Excelled in
 				project coordination and team leadership in an international setting.
 			</Checkpoint>
-		</ul>
-		<Year>2019 - 2020</Year>
-		<ul>
+
 			<Checkpoint title='Product Management Officer at Atos for an External Client'>
 				Provided crucial support in cybersecurity project management for Airbus,
 				enhancing project and security processes, and facilitating effective
 				team communication.
 			</Checkpoint>
 		</ul>
-		<Year>2019</Year>
+		<Year>2015 - 2019</Year>
 		<ul>
 			<Checkpoint title="Master's in Aeronautics and Industrial Management from Toulouse Business School">
 				Graduated with a Master&apos;s degree, sharpening my management skills
 				and laying a solid foundation for my career in the high-stakes world of
 				aeronautics and industry.
 			</Checkpoint>
-		</ul>
-		<Year>2015</Year>
-		<ul>
+
 			<Checkpoint title='BTS in International Trade at Cahors'>
 				Completed my BTS in International Trade, gaining crucial knowledge and
 				experience in global commerce dynamics.

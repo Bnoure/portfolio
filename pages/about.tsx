@@ -3,8 +3,6 @@ import Timeline from '@/components/Timeline'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
 
-// voici le chemin de metada /home/bnoure/code/nourport/lib/metadata.js
-
 const About = () => {
 	return (
 		<section className='prose  prose-neutral dark:prose-invert my-10'>
@@ -12,6 +10,7 @@ const About = () => {
 				<h1 className='heading custom-underline'>
 					<AnimatedText text='About me' />
 				</h1>
+
 				<p>
 					Hello! I&apos;m <b>Nour-Eddine Benkerroum</b>, deeply fascinated by
 					the digital world and fully committed to the journey of being a
@@ -31,6 +30,7 @@ const About = () => {
 				<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
 					When I&apos;m not at my desk...
 				</h4>
+
 				<p>
 					Don&apos;t be fooled by all the coding talk—I firmly believe in the
 					importance of balancing work and play. That&apos;s why you might find
@@ -42,6 +42,7 @@ const About = () => {
 				<h2 className='text-xl md:text-2xl text-dark dark:text-light'>
 					<AnimatedText text='Timeline' />
 				</h2>
+
 				<Timeline />
 			</FadeUp>
 		</section>

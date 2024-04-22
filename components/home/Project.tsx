@@ -14,7 +14,7 @@ const ProjectsSection = () => {
 	const aboutUrl = `/${locale}/projets`
 	return (
 		<section id='recent-blog'>
-			<h2 className='section-heading custom-underline'>
+			<h2 className='section-heading custom-underline text-3xl'>
 				<AnimatedText text={t('common.navigation.Project')} />
 			</h2>
 			<BentoDemo />
