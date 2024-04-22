@@ -4,6 +4,7 @@ import { NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import AnimatedText from '@/components/AnimatedText'
+import '../app/globals.css'
 
 const ProjetPage: NextPage = () => {
 	const { t } = useTranslation('common')
@@ -11,7 +12,7 @@ const ProjetPage: NextPage = () => {
 	return (
 		<main>
 			<section id='recent-blog'>
-				<h1 className='heading custom-underline text-3xl'>
+				<h1 className='section-heading custom-underline'>
 					<AnimatedText text={t('common.projects.title')} />
 				</h1>
 

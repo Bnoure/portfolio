@@ -1,4 +1,4 @@
-import { nextJs, tailwind } from 'components/icons'
+import { nextJs, tailwind } from '@/components/icons'
 
 /* eslint-disable max-len */
 interface Skill {

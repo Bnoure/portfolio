@@ -8,9 +8,10 @@ import { Skills } from '@/components/ui/about/skills'
 export default function About() {
 	return (
 		<>
+			<Skills />
 			<section className='prose  prose-neutral dark:prose-invert my-10'>
 				<FadeDown duration={0.4}>
-					<h1 className='heading custom-underline'>
+					<h1 className='section-heading custom-underline'>
 						<AnimatedText text='About me' />
 					</h1>
 
@@ -29,11 +30,11 @@ export default function About() {
 						JavaScript, React, HTML, and CSS, integrating me into a vibrant and
 						supportive community.
 					</p>
-
+					<br />
 					<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
 						When I&apos;m not at my desk...
 					</h4>
-
+					<br />
 					<p>
 						Don&apos;t be fooled by all the coding talk—I firmly believe in the
 						importance of balancing work and play. That&apos;s why you might
@@ -43,15 +44,13 @@ export default function About() {
 					</p>
 				</FadeDown>
 				<FadeUp duration={0.4}>
-					<h2 className='text-xl md:text-2xl text-dark dark:text-light'>
+					<h2 className=' section-heading custom-underline text-xl md:text-2xl text-dark dark:text-light'>
 						<AnimatedText text='Timeline' />
 					</h2>
 
 					<Timeline />
 				</FadeUp>
 			</section>
-
-			<Skills />
 		</>
 	)
 }

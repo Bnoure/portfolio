@@ -30,6 +30,7 @@
 		"canvas-confetti": "^1.6.0",
 		"class-variance-authority": "^0.7.0",
 		"colord": "^2.9.3",
+		"colored": "^0.0.15",
 		"contentlayer": "^0.3.2",
 		"crypto": "^1.0.1",
 		"date-fns": "^2.30.0",
