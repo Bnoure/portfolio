@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 import ThemeSwitch from './ThemeSwitch'
 import AnimatedText from './AnimatedText'
-import Logo from './Logo'
+
 import LanguageSwitcher from '../lang/LanguageSwitcher'
 import { useTranslation } from 'next-i18next'
 

@@ -16,7 +16,7 @@ const navigation = {
 		{
 			name: 'common.footer.navigation.link3',
 			title: 'Project Page',
-			href: '/fr/projects',
+			href: '/fr/projets',
 		},
 	],
 	extra: [

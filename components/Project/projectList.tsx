@@ -1,8 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 import ProjectCard from './projectCard'
-import { getProjectData } from './projectData' // Assurez-vous que le chemin est correct
-
+import { getProjectData } from './projectData'
 const ProjectsList = () => {
 	const { t } = useTranslation('common')
 	const projects = getProjectData(t)

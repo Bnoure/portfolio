@@ -61,6 +61,7 @@
 		"remark-gfm": "^3.0.1",
 		"sass": "^1.75.0",
 		"shiki": "^0.14.2",
+		"sitemap": "^7.1.1",
 		"sortablejs": "^1.15.2",
 		"swr": "^2.1.5",
 		"tailwindcss-hocus": "^0.0.7",

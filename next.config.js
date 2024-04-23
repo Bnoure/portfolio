@@ -1,34 +1,29 @@
-
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-	images: {
-		formats: ['image/avif', 'image/webp'],
-	},
-	redirects() {
-		try {
-			return get('redirects')
-		} catch {
-			return []
-		}
-	},
-	headers() {
-		return [
-			{
-				source: '/(.*)',
-				headers: securityHeaders,
-			},
-		]
-	},
-}
-
-
-// i18n
 const { i18n } = require('./next-i18next.config');
 
-module.exports = {
-  i18n,
+const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+  redirects() {
+    try {
+      return get('redirects');
+    } catch {
+      return [];
+    }
+  },
+  headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
+  i18n,  // Intégrer la configuration i18n ici
+  // Autres configurations de sécurité ou optimisations spécifiques peuvent être ajoutées ici.
 };
+
+module.exports = nextConfig;
 
 
 // https://nextjs.org/docs/advanced-features/security-headers

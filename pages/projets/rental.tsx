@@ -29,7 +29,7 @@ const PortfolioPage = () => {
 						applications mobiles et bien plus encore.
 					</p>
 					<Link
-						href='/projects'
+						href='/projets'
 						className='mt-4 inline-block px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600'
 					>
 						<p>Retour à la liste des projets</p>
