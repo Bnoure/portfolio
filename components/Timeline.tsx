@@ -1,5 +1,5 @@
 import { HiBadgeCheck } from 'react-icons/hi'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 interface YearProps {
 	children: React.ReactNode
@@ -31,40 +31,40 @@ const Checkpoint = ({ title, children }: CheckpointProps) => (
 		</li>
 	</>
 )
-
 const FullTimeline = () => {
 	const { t } = useTranslation()
+
 	return (
 		<div className='text-gray-900 dark:text-gray-400 timeline'>
 			<Year>2024</Year>
 			<ul>
-				<Checkpoint title={t('common.education.checkpoints.title1')}>
-					{t('common.education.checkpoints.description1')}
+				<Checkpoint title={t('common.checkpoints.title1')}>
+					{t('common.checkpoints.description1')}
 				</Checkpoint>
 			</ul>
 			<Year>2019 - 2024</Year>
 			<ul>
-				<Checkpoint title={t('common.education.checkpoints.title2')}>
-					{t('common.education.checkpoints.description2')}
+				<Checkpoint title={t('common.checkpoints.title2')}>
+					{t('common.checkpoints.description2')}
 				</Checkpoint>
 
-				<Checkpoint title={t('common.education.checkpoints.title3')}>
-					{t('common.education.checkpoints.description3')}
+				<Checkpoint title={t('common.checkpoints.title3')}>
+					{t('common.checkpoints.description3')}
 				</Checkpoint>
 			</ul>
 			<Year>2015 - 2019</Year>
 			<ul>
-				<Checkpoint title={t('common.education.checkpoints.title4')}>
-					{t('common.education.checkpoints.description4')}
+				<Checkpoint title={t('common.checkpoints.title4')}>
+					{t('common.checkpoints.description4')}
 				</Checkpoint>
 
-				<Checkpoint title={t('common.education.checkpoints.title5')}>
-					{t('common.education.checkpoints.description5')}
+				<Checkpoint title={t('common.checkpoints.title5')}>
+					{t('common.checkpoints.description5')}
 				</Checkpoint>
 			</ul>
 			<Year>1995</Year>
 			<ul>
-				<Checkpoint title={t('common.education.checkpoints.title6')} />
+				<Checkpoint title={t('common.checkpoints.title6')} />
 			</ul>
 		</div>
 	)

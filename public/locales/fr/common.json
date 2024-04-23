@@ -52,41 +52,38 @@
     },
 
 
-    "education": {
-      "title":  "Timeline",
-      "checkpoints": [
-        {
+    "checkpoints": {
+
+
+
           "title1": "Diplômé Développeur Full-Stack de Le Wagon 🎓",
 
-          "description1":"Obtention d'une certification de niveau Bachelor en développement web. Maintenant parfaitement équipé de compétences en Ruby on Rails, JavaScript, React, HTML et CSS, je me lance avec enthousiasme dans le monde du développement full-stack avec une expérience riche en gestion de projet informatique."
-        },
-        {
+          "description1":"Obtention d'une certification de niveau Bachelor en développement web. Maintenant parfaitement équipé de compétences en Ruby on Rails, JavaScript, React, HTML et CSS, je me lance avec enthousiasme dans le monde du développement full-stack avec une expérience riche en gestion de projet informatique.",
+
+
           "title2":"Chef de projet informatique chez Atos pour un client externe 🚀",
 
-          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cible suite à une fusion, gérant plus de 10 déploiements à travers l'Europe."
+          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cible suite à une fusion, gérant plus de 10 déploiements à travers l'Europe.",
 
-        },
-        {
+
+
           "title3":"Product Management Officer chez Atos pour un client externe",
 
-          "description3":"Accompagnement dans la gestion de projet de cybersécurité pour Airbus, améliorant les processus de projet et de sécurité, et facilitant la communication,la gestion et les projets de l'équipe."
-        },
-        {
+          "description3":"Accompagnement dans la gestion de projet de cybersécurité pour Airbus, améliorant les processus de projet et de sécurité, et facilitant la communication,la gestion et les projets de l'équipe.",
+
+
           "title4":"Master en Aéronautique et Gestion Industrielle de Toulouse Business School",
 
-          "description4":"Titulaire d'un Master, renforçant mes compétences en gestion et établissant les bases solides de ma carrière dans les domaines exigeants de l'aéronautique et de l'industrie."
-        },
-        {
+          "description4":"Titulaire d'un Master, renforçant mes compétences en gestion et établissant les bases solides de ma carrière dans les domaines exigeants de l'aéronautique et de l'industrie.",
+
           "title5":"BTS en Commerce International à Cahors",
 
-          "description5":"Obtention d'un BTS en Commerce International, acquérant des connaissances dans la dynamique du commerce mondial."
-        },
-        {
+          "description5":"Obtention d'un BTS en Commerce International, acquérant des connaissances dans la dynamique du commerce mondial.",
+
           "title6": "Naissance d'un Nouveau-Né 👶"
-          }
 
 
-      ]
+
   },
     "contact": {
       "title": "Contactez-moi",
