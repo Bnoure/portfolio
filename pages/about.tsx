@@ -8,9 +8,13 @@ import { Skills } from '@/components/ui/about/skills'
 export default function About() {
 	return (
 		<>
-			<Skills />
 			<section className='prose  prose-neutral dark:prose-invert my-10'>
 				<FadeDown duration={0.4}>
+					<h1 className='section-heading custom-underline'>
+						<AnimatedText text='Skills' />
+					</h1>
+					<Skills />
+
 					<h1 className='section-heading custom-underline'>
 						<AnimatedText text='About me' />
 					</h1>

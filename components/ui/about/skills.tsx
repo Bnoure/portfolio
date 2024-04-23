@@ -10,7 +10,6 @@ import { skills } from './data'
 export const Skills = () => {
 	return (
 		<Section id={'skills'}>
-			<h2>Skills</h2>
 			<ul className={'flex items-center gap-2.5 flex-wrap'}>
 				{skills
 					.filter((skill) => !skill.hide)
@@ -22,7 +21,7 @@ export const Skills = () => {
 									className={cx(
 										'flex items-center gap-1.5 rounded-full',
 										'pl-3 pr-3.5 py-1.5 min-h-9',
-										'border border-divider',
+										' border-divider',
 										'text-3xs font-medium cursor-default',
 										'transition-colors',
 										'bg-brand-200/5 dark:bg-brand-700/10',
