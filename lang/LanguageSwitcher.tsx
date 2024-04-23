@@ -12,11 +12,21 @@ const LanguageSwitcher = () => {
 	]
 
 	const changeLanguage = (code: string) => {
+		console.log('Current pathname:', router.pathname)
+		console.log('Current asPath:', router.asPath)
+		console.log('Switching to locale:', code)
+
 		router
-			.push(router.pathname, router.asPath, {
-				locale: code,
-				shallow: true,
-			})
+			.push(
+				{
+					pathname: router.pathname,
+					query: router.query,
+				},
+				undefined,
+				{
+					locale: code,
+				}
+			)
 			.then(() => i18n.changeLanguage(code))
 	}
 

@@ -2,8 +2,8 @@ import AnimatedText from '@/components/AnimatedText'
 import Timeline from '@/components/Timeline'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
+import Photo from '../app/about/photo'
 
-import { Skills } from '@/components/ui/about/skills'
 import { useTranslation } from 'react-i18next'
 
 export default function About() {
@@ -26,13 +26,9 @@ export default function About() {
 			<section className='prose  prose-neutral dark:prose-invert my-10'>
 				<FadeDown duration={0.4}>
 					<h1 className='section-heading custom-underline'>
-						<AnimatedText text='Skills' />
-					</h1>
-					<Skills />
-
-					<h1 className='section-heading custom-underline'>
 						<AnimatedText text={t('common.about.title')} />
 					</h1>
+					<Photo />
 
 					<p className='text-justify'>{getHighlightedText(intro, boldtext)}</p>
 					<p className='text-justify'>{t('common.about.mePart2')}</p>

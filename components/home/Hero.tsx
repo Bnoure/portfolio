@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes'
 import RoundedImage from '../RoundedImage'
 import AnimatedText from '../AnimatedText'
 import { useTranslation } from 'next-i18next'
+import { Skills } from '@/app/about/skills'
 
 import { useRouter } from 'next/router'
 
@@ -90,6 +91,13 @@ export default function Hero(): ReactElement {
 					<p className='text-base md:text-lg'>
 						{getHighlightedText(introduction, boldText)}
 					</p>
+					<div className='justify-items-center'>
+						<h1 className='section-heading custom-underline'>
+							<AnimatedText text='Stack' />
+						</h1>
+						<Skills />
+					</div>
+
 					<Link href={aboutUrl} legacyBehavior>
 						<a>
 							<div className='flex items-center'>

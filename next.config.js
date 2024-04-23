@@ -19,8 +19,7 @@ const nextConfig = {
       },
     ];
   },
-  i18n,  // Intégrer la configuration i18n ici
-  // Autres configurations de sécurité ou optimisations spécifiques peuvent être ajoutées ici.
+  i18n,
 };
 
 module.exports = nextConfig;

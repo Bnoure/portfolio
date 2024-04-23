@@ -13,6 +13,7 @@ export default function Home() {
 			<FadeDown duration={0.4} delay={0}>
 				<Hero />
 			</FadeDown>
+
 			<FadeUp duration={0.4} delay={0}>
 				<ProjectsSection />
 			</FadeUp>
