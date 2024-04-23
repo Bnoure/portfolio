@@ -43,11 +43,51 @@
     },
     "about": {
       "title": "À Propos",
-      "mePart1": "Bonjour ! Je m'appelle <0>Nour-Eddine Benkerroum</0>. Avec une curiosité profonde et une passion fervente pour le monde numérique, je me suis pleinement lancé dans un voyage en tant que développeur full-stack. Mon expérience antérieure en gestion de projets IT, dans un contexte international, a aiguisé mes compétences en leadership et en communication - des atouts que je suis maintenant impatient d'appliquer dans le domaine dynamique du développement logiciel.",
-      "mePart2": "Mon pivot vers le développement full-stack a été motivé par le désir de relever de nouveaux défis et un engagement envers l'innovation. Ma formation m'a équipé d'une maîtrise solide de technologies telles que Ruby on Rails, JavaScript, React, HTML et CSS. Ce voyage ne m'a pas seulement armé de compétences techniques, mais m'a également intégré dans une communauté dynamique et solidaire.",
-      "mePart3": "Fort de mon expérience en tant que chef de projet IT, où j'ai réussi à diriger des programmes de migration de systèmes informatiques complexes, je suis bien préparé à gérer d'importants projets de développement logiciel. Je suis très intéressé à approfondir mon expertise dans l'écosystème JavaScript, en me concentrant sur React, TypeScript, Node.js et au-delà. Le développement full-stack n'est pas juste une voie professionnelle pour moi ; c'est une passion que je suis impatient d'explorer et d'élargir davantage.",
-      "technosentence" : "Je suis maintenant confiant dans l'utilisation des technologies suivantes :"
+      "mePart1": "Bonjour ! Je m'appelle {{bold}}. Avec une curiosité profonde et une passion fervente pour le monde numérique, je me suis pleinement lancé dans un voyage en tant que développeur full-stack. Mon expérience antérieure en gestion de projets IT, dans un contexte international, a aiguisé mes compétences en leadership et en communication - des atouts que je suis maintenant impatient d'appliquer dans le domaine dynamique du développement logiciel.",
+      "namebold" : "Nour-Eddine Benkerroum",
+      "mePart2": "Ma transition vers le développement full-stack découle d'un désir de nouveaux défis et d'un engagement envers l'innovation. Grâce à ma formation, j'ai acquis une maîtrise des technologies telles que Ruby on Rails, JavaScript, React, HTML et CSS. Fort de mon expérience en tant que chef de projet informatique, où j'ai dirigé des programmes de migration de systèmes complexes, je suis bien équipé pour superviser d'importants projets de développement logiciel. Je suis particulièrement impatient d'approfondir mon expertise dans l'écosystème JavaScript, en me concentrant sur React, TypeScript, Node.js, et au-delà. Le développement full-stack n'est pas seulement une voie professionnelle pour moi ; c'est une passion que je suis enthousiaste à explorer et à développer davantage.",
+
+      "not_at_desk":"Quand je ne suis pas à mon bureau..",
+      "balance_work_play" : "Ne vous laissez pas tromper par toute cette discussion sur le codage, je crois fermement à l'importance d'équilibrer le travail et le jeu. C'est pourquoi vous pourriez me trouver à la salle de sport pour rester en forme, traîner avec des amis ou profiter d'une bonne séance Netflix. Je suis toujours partant pour une aventure."
     },
+
+
+    "education": {
+      "title":  "Timeline",
+      "checkpoints": [
+        {
+          "title1": "Diplômé Développeur Full-Stack de Le Wagon 🎓",
+
+          "description1":"Obtention d'une certification de niveau Bachelor en développement web. Maintenant parfaitement équipé de compétences en Ruby on Rails, JavaScript, React, HTML et CSS, je me lance avec enthousiasme dans le monde du développement full-stack avec une expérience riche en gestion de projet informatique."
+        },
+        {
+          "title2":"Chef de projet informatique chez Atos pour un client externe 🚀",
+
+          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cible suite à une fusion, gérant plus de 10 déploiements à travers l'Europe."
+
+        },
+        {
+          "title3":"Product Management Officer chez Atos pour un client externe",
+
+          "description3":"Accompagnement dans la gestion de projet de cybersécurité pour Airbus, améliorant les processus de projet et de sécurité, et facilitant la communication,la gestion et les projets de l'équipe."
+        },
+        {
+          "title4":"Master en Aéronautique et Gestion Industrielle de Toulouse Business School",
+
+          "description4":"Titulaire d'un Master, renforçant mes compétences en gestion et établissant les bases solides de ma carrière dans les domaines exigeants de l'aéronautique et de l'industrie."
+        },
+        {
+          "title5":"BTS en Commerce International à Cahors",
+
+          "description5":"Obtention d'un BTS en Commerce International, acquérant des connaissances dans la dynamique du commerce mondial."
+        },
+        {
+          "title6": "Naissance d'un Nouveau-Né 👶"
+          }
+
+
+      ]
+  },
     "contact": {
       "title": "Contactez-moi",
       "bottomtext":"Wooh! Vous avez atteint le bas de la page. Vous cherchez à collaborer, discuter d'une opportunité, ou simplement dire bonjour ? Je suis tout ouïe ! Envoyez-moi simplement un email !",

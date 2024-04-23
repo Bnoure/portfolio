@@ -9,7 +9,6 @@ import AnimatedText from '../AnimatedText'
 import { useTranslation } from 'next-i18next'
 
 import { useRouter } from 'next/router'
-import { color } from 'framer-motion'
 
 export default function Hero(): ReactElement {
 	const { t } = useTranslation('common')

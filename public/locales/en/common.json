@@ -44,10 +44,48 @@
 
     "about": {
       "title": "About Me",
-      "mePart1": "Hello! My name is <0>Nour-Eddine Benkerroum</0>. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
-      "mePart2": "My pivot to full-stack development was driven by a desire to tackle new challenges and a commitment to innovation. My training equipped me with a robust command of technologies such as Ruby on Rails, JavaScript, React, HTML, and CSS. This journey didn't just arm me with technical skills but also integrated me into a vibrant and supportive community.",
-      "mePart3": "Building on my experience as an IT project manager, where I successfully led complex IT system migration programs, I am well-prepared to handle significant software development projects. I have a keen interest in deepening my expertise within the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development is not just a career path for me; it's a passion I am eager to explore and expand further.",
-      "technosentence" : "I am now confident in my use of the following technologies:"
+      "mePart1": "Hello! My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
+      "namebold" : "Nour-Eddine Benkerroum",
+      "mePart2": "My transition to full-stack development stemmed from a desire for fresh challenges and a commitment to innovation. Through my training, I've gained proficiency in technologies like Ruby on Rails, JavaScript, React, HTML, and CSS. Drawing on my experience as an IT project manager, where I led complex system migration programs, I'm well-equipped to oversee significant software development projects. I'm particularly eager to deepen my expertise in the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development isn't just a career path for me; it's a passion that I'm excited to explore and expand upon.",
+      "not_at_desk":"When I'm not at my desk...",
+      "balance_work_play" : "Don't be fooled by all the coding talk—I firmly believe in the importance of balancing work and play. That's why you might find me at the gym staying fit, hanging out with friends, or enjoying a good Netflix session. I'm always up for an adventure."
+    },
+
+    "education": {
+        "title":  "Timeline",
+        "checkpoints": [
+          {
+            "title1": "Full-Stack Developer Graduation from Le Wagon 🎓",
+
+            "description1":"Earning a Bachelor's level certification in web development. Now fully equipped with skills in Ruby on Rails, JavaScript, React, HTML, and CSS, I'm diving into the world of full-stack development with enthusiasm and a rich background in IT project management."
+          },
+          {
+            "title2":"IT Project Manager at Atos for an External Client 🚀",
+
+            "description2":"Leading an IT migration program for Opel and PCD to target environments following a merger, managing over 10 deployments across Europe."
+
+          },
+          {
+            "title3":"Product Management Officer at Atos for an External Client",
+
+            "description3":"Supporting in cybersecurity project management for Airbus, enhancing project and security processes, and facilitating effective team communication and management."
+          },
+          {
+            "title4":"Master's in Aeronautics and Industrial Management from Toulouse Business School",
+
+            "description4":"Graduated with a Master's degree, sharpening my management skills and laying a solid foundation for my career in the high-stakes world of aeronautics and industry."
+          },
+          {
+            "title5":"BTS in International Trade at Cahors",
+
+            "description5":"Completed my BTS in International Trade, gaining crucial knowledge and experience in global commerce dynamics."
+          },
+          {
+            "title6": "Birth of a Newbie 👶"
+            }
+
+
+        ]
     },
 
     "contact": {

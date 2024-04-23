@@ -4,8 +4,23 @@ import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
 
 import { Skills } from '@/components/ui/about/skills'
+import { useTranslation } from 'react-i18next'
 
 export default function About() {
+	const getHighlightedText = (fullText: string, highlight: string) => {
+		const parts = fullText.split(highlight)
+		return (
+			<>
+				{parts[0]}
+				<strong className='font-bold'>{highlight}</strong>
+				{parts[1]}
+			</>
+		)
+	}
+
+	const { t } = useTranslation()
+	const boldtext = t('common.about.namebold')
+	const intro = t('common.about.mePart1', { bold: boldtext })
 	return (
 		<>
 			<section className='prose  prose-neutral dark:prose-invert my-10'>
@@ -16,36 +31,17 @@ export default function About() {
 					<Skills />
 
 					<h1 className='section-heading custom-underline'>
-						<AnimatedText text='About me' />
+						<AnimatedText text={t('common.about.title')} />
 					</h1>
 
-					<p>
-						Hello! I&apos;m <b>Nour-Eddine Benkerroum</b>, deeply fascinated by
-						the digital world and fully committed to the journey of being a
-						full-stack developer. Formerly an IT project manager in an
-						international setting, I&apos;ve honed my leadership and
-						communication skills—assets I&apos;m now eager to leverage in the
-						dynamic field of software development.
-					</p>
-					<p>
-						My shift to full-stack development was driven by a desire for new
-						challenges and a dedication to innovation. My training has equipped
-						me with a solid grasp of technologies like Ruby on Rails,
-						JavaScript, React, HTML, and CSS, integrating me into a vibrant and
-						supportive community.
-					</p>
+					<p className='text-justify'>{getHighlightedText(intro, boldtext)}</p>
+					<p className='text-justify'>{t('common.about.mePart2')}</p>
 					<br />
 					<h4 className='text-lg md:text-xl font-medium dark:text-light text-dark'>
-						When I&apos;m not at my desk...
+						{t('common.about.not_at_desk')}
 					</h4>
 					<br />
-					<p>
-						Don&apos;t be fooled by all the coding talk—I firmly believe in the
-						importance of balancing work and play. That&apos;s why you might
-						find me at the gym staying fit, hanging out with friends, or
-						enjoying a good Netflix session. I&apos;m always up for an
-						adventure.
-					</p>
+					<p className='text-justify'>{t('common.about.balance_work_play')}</p>
 				</FadeDown>
 				<FadeUp duration={0.4}>
 					<h2 className=' section-heading custom-underline text-xl md:text-2xl text-dark dark:text-light'>

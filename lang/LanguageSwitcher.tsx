@@ -1,37 +1,40 @@
+import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
-import 'flag-icons/css/flag-icons.min.css' // Assurez-vous que cela est bien importé dans _app.tsx si ce n'est pas déjà fait
+import 'flag-icons/css/flag-icons.min.css'
 
 const LanguageSwitcher = () => {
 	const { i18n } = useTranslation()
+	const router = useRouter()
 
-	// Définition des langues disponibles et de leurs codes de pays respectifs pour les drapeaux
 	const languages = [
-		{ code: 'gb', country: 'gb' }, // Great Britain for English
-		{ code: 'fr', country: 'fr' }, // France for French
-		// Ajoutez d'autres langues ici
+		{ code: 'en', country: 'gb' },
+		{ code: 'fr', country: 'fr' },
 	]
 
-	const currentLang = i18n.language?.toLowerCase()
-
-	const toggleLanguage = (code: string) => {
-		i18n.changeLanguage(code)
+	const changeLanguage = (code: string) => {
+		router
+			.push(router.pathname, router.asPath, {
+				locale: code,
+				shallow: true,
+			})
+			.then(() => i18n.changeLanguage(code))
 	}
 
 	return (
-		<div className='flex gap-2 p-2 '>
+		<div className='flex gap-2 p-2'>
 			{languages.map((lang) => (
 				<button
 					key={lang.code}
-					onClick={() => toggleLanguage(lang.code)}
+					onClick={() => changeLanguage(lang.code)}
 					className={`fi fi-${
 						lang.country
 					} rounded-full inline-flex items-center justify-center w-8 h-8 ${
-						currentLang?.startsWith(lang.code)
-							? 'text-3xl' // Langue sélectionnée (plus grande)
-							: 'text-xl' // Langue non sélectionnée (plus petite)
+						i18n.language && i18n.language.startsWith(lang.code)
+							? 'text-3xl'
+							: 'text-xl'
 					} transition-transform duration-300 ease-in-out`}
 					aria-label={`Change language to ${lang.code}`}
-				></button>
+				/>
 			))}
 		</div>
 	)
