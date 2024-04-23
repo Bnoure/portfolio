@@ -29,21 +29,21 @@ export default {
         secondary: '#05B19A',
         brand: {
           DEFAULT: '#3867D6',
-          950: '#060A15',
-          900: '#0B152B',
-          800: '#162956',
-          700: '#223E80',
-          600: '#2D52AB',
+          950: '#050f20', // Plus foncé
+          900: '#0C1833', // Plus foncé
+          800: '#193476', // Plus saturé
+          700: '#2948A0', // Plus saturé
+          600: '#3B60D4', // Plus saturé
           500: '#3867D6',
-          400: '#6085DE',
-          300: '#88A4E6',
-          200: '#AFC2EF',
-          100: '#D7E1F7',
-          50: '#EBF0FB',
+          400: '#6098FF', // Plus clair et saturé
+          300: '#8AB4FF', // Plus clair et saturé
+          200: '#B3D1FF', // Plus clair et saturé
+          100: '#DAEDFF', // Plus clair et saturé
+          50: '#F0F8FF',  // Plus clair
         },
         tint: {
-          bg: `rgba(var(--tint)/var(--opacity-tint-bg))`,
-          border: `rgba(var(--tint)/var(--opacity-tint-border))`,
+          bg: `rgba(var(--tint)/0.8)`, // Augmentation de la visibilité
+          border: `rgba(var(--tint)/0.5)`, // A
         },
         black: twColors.black,
         white: twColors.white,
@@ -92,7 +92,7 @@ export default {
         relaxed: '1.75',
       },
       saturate: {
-        125: '1.25',
+        155: '1.5',
       },
       boxShadow: {
         'toolbar-hover': '0 0 8px 2px var(--tw-shadow-color)',
