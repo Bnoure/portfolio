@@ -4,11 +4,16 @@ import plugin from 'tailwindcss/plugin';
 import twColors from 'tailwindcss/colors';
 import typography from '@tailwindcss/typography';
 
+
+
+
+
 export default {
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './content/**/*.mdx',
+    './pages/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {

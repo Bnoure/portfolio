@@ -4,7 +4,6 @@ import { Icon } from '@/components/atoms/icon'
 import { Section } from '@/components/atoms/section'
 import { hexToRgb } from '@/utils/color'
 import cx from '@/utils/cx'
-import { cn } from 'lib/utils'
 
 import { skills } from './data'
 
@@ -21,8 +20,8 @@ export const Skills = () => {
 							<li className={'block'} key={skill.name}>
 								<span
 									className={cx(
-										'flex items-center gap-1.5',
-										'rounded-2 pl-3 pr-3.5 py-1.5 min-h-9',
+										'flex items-center gap-1.5 rounded-full',
+										'pl-3 pr-3.5 py-1.5 min-h-9',
 										'border border-divider',
 										'text-3xs font-medium cursor-default',
 										'transition-colors',

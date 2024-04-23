@@ -29,7 +29,11 @@ body {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
-
+:root {
+	--tint: 255, 0, 0;
+	--opacity-tint-bg: 0.05;
+	--opacity-tint-border: 0.1;
+}
 ::selection {
 	background-color: #05b19a30;
 	color: #fefefe;
