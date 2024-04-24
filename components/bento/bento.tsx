@@ -38,10 +38,10 @@ export const features = (t = (key: string) => key): Feature[] => [
 		projetSlug: '/projets/portfolio',
 		className: 'md:col-span-2',
 		imgStyle: {
-			width: '90%',
+			width: '100%',
 			height: '60%',
 			margin: 'auto',
-			borderRadius: '14px',
+			borderRadius: '8px',
 		},
 		longDescription:
 			'Portfolio de Nour-Eddine, développeur web fullstack. Vous y trouverez mes projets, mes compétences et mes coordonnées.',
@@ -51,13 +51,18 @@ export const features = (t = (key: string) => key): Feature[] => [
 	// Petite carte en haut à droite
 	{
 		header: <Skeleton />,
-		iconPath: 'images/SecondRound.svg',
+		iconPath: '/images/2nd.jpeg',
 		name: t('common.projects.title2ndRound'),
 		description: t('common.projects.description2ndRound'),
 		href: 'https://github.com/Bnoure/2ndRound.git',
 		projetSlug: '/projets/portfolio',
 		className: 'md:col-span-1',
-		imgStyle: { width: '50%', height: '50%', margin: 'auto' },
+		imgStyle: {
+			width: '120%',
+			height: '50%',
+			margin: 'auto',
+			borderRadius: '12px',
+		},
 		techStack: ['React', 'Node.js', 'CSS'],
 	},
 	// Petite carte  à gauche

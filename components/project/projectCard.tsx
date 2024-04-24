@@ -3,6 +3,7 @@ import { Feature } from '../bento/bento'
 import Image from 'next/image'
 import { TechIcons } from '../teckstack'
 import { TfiAngleDoubleDown, TfiAngleDoubleUp } from 'react-icons/tfi'
+import { Img } from '@/components/atoms/img'
 
 interface ProjectCardProps {
 	project: Feature
@@ -18,11 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	return (
 		<div className='row-span-1 rounded-xl group hover:shadow-xl transition-shadow duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4'>
 			<div className='md:flex-shrink-0'>
-				<Image
+				<Img
 					className='h-48 w-full object-cover md:h-full md:w-48 rounded-t-lg'
 					src={project.iconPath}
 					alt={project.name}
-					width={500}
+					width={800}
 					height={300}
 				/>
 			</div>

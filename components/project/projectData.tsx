@@ -11,7 +11,7 @@ export interface Project {
 export const getProjectData = (t: (key: string) => string): Project[] => {
 	return [
 		{
-			img: '/images/SecondRound.svg',
+			img: '/images/2nd.jpeg',
 			title: t('common.projects.title2ndRound'),
 			description: t('common.projects.description2ndRound'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
