@@ -99,7 +99,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 ]
 
 export function BentoDemo() {
-	const { t } = useTranslation() // Assurez-vous d'importer useTranslation de 'react-i18next'
+	const { t } = useTranslation()
 	return (
 		<div className='container '>
 			<BentoGrid className='max-w-4xl mx-auto md:auto-rows-[20rem]'>
