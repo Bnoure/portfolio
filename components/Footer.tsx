@@ -11,19 +11,19 @@ const navigation = {
 		{
 			name: 'common.footer.navigation.link2',
 			title: 'About Page',
-			href: '/fr/about',
+			href: '/about',
 		},
 		{
 			name: 'common.footer.navigation.link3',
 			title: 'Project Page',
-			href: '/fr/projets',
+			href: '/projets',
 		},
 	],
 	extra: [
 		{
 			name: 'common.footer.cv',
 			title: 'View my resume',
-			href: 'https://drive.google.com/file/d/1cNP5mtvfkT9bMujyY5jqeG8IYolNLode/view',
+			href: '/cvnourF.pdf',
 		},
 	],
 	social: [
