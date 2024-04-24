@@ -6,10 +6,10 @@ import { getAboutImage } from './img'
 
 export default function Photo() {
 	const [photo, setPhoto] = useState({
-		src: '',
+		src: '/images/about/1.jpeg',
 		alt: 'me',
-		width: 100,
-		height: 100,
+		width: 600,
+		height: 600,
 	})
 
 	useEffect(() => {
@@ -29,7 +29,7 @@ export default function Photo() {
 					'-mx-3 tablet-md:-mx-4',
 					''
 				)}
-				style={{ aspectRatio: '16/9' }}
+				style={{ aspectRatio: '21/9' }}
 			>
 				<Img
 					src={photo.src}
