@@ -4,7 +4,7 @@ import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
 import Photo from '../app/about/photo'
 
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 export default function About() {
 	const getHighlightedText = (fullText: string, highlight: string) => {

@@ -2,14 +2,18 @@
 
 import Image, { type ImageProps, type StaticImageData } from 'next/image'
 import { useState } from 'react'
-
 import cx from '@/utils/cx'
+
+const defaultImage = '/images/about/1.jpeg'
 
 export const Img = (props: ImageProps) => {
 	const [errored, setErrored] = useState<boolean>(false)
+	const imageSrc = errored ? defaultImage : props.src
+
 	return (
 		<Image
 			{...props}
+			src={imageSrc}
 			placeholder={
 				typeof props.src !== 'string'
 					? (props.src as StaticImageData).blurDataURL

@@ -5,21 +5,7 @@ import { useEffect, useState } from 'react'
 import { getAboutImage } from './img'
 
 export default function Photo() {
-	const [photo, setPhoto] = useState({
-		src: '/images/about/1.jpeg',
-		alt: 'me',
-		width: 600,
-		height: 600,
-	})
-
-	useEffect(() => {
-		const fetchImage = async () => {
-			const img = await getAboutImage() // Attendre que la promesse soit résolue
-			setPhoto(img) // Ensuite, mettre à jour l'état avec les données de l'image
-		}
-
-		fetchImage() // Appeler la fonction fetchImage pour récupérer l'image
-	}, [])
+	const photo = getAboutImage()
 	return (
 		<figure className={'mt-3'}>
 			<div
