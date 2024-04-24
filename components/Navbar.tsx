@@ -8,7 +8,7 @@ import ThemeSwitch from './ThemeSwitch'
 import AnimatedText from './AnimatedText'
 
 import LanguageSwitcher from '../lang/LanguageSwitcher'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 
 import { NAV_ITEMS } from '@/constants'
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FiArrowRight } from 'react-icons/fi'
 import AnimatedText from '../AnimatedText'
 
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 import { BentoDemo } from '@/components/bento/bento'
 import { useRouter } from 'next/router'
 

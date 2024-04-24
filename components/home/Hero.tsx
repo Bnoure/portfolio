@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes'
 
 import RoundedImage from '../RoundedImage'
 import AnimatedText from '../AnimatedText'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 import { Skills } from '@/app/about/skills'
 
 import { useRouter } from 'next/router'

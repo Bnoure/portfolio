@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 
 import { FiGithub } from 'react-icons/fi'
 import { TfiZoomIn } from 'react-icons/tfi'

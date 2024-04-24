@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FiMail, FiArrowRight } from 'react-icons/fi'
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
 	const { t } = useTranslation('common')
