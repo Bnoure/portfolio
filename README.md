@@ -23,10 +23,9 @@ cd nom-du-depot
 
 ## Main folder structure
 
-- `app/*`- All the static pages
-- `pages/api/views/*`- API for handling blog views
+- `pages/*`- All the static pages
 - `components/*`- All the components like Navbar, Footer, etc are here
-- `content/*`- It contains all the mdx files for blog
+- `project/*`- It contains all the project files for bento
 
 # Running locally
 
@@ -44,14 +43,13 @@ yarn
 yarn dev
 ```
 
-Create a `.env.local` file similar to `.env.example` with the values in it. But is not absolutely necessary thing to do to run the website locally.
 
-- `DATABASE_URL` - DB URL for tracking the blog's view
+
+
 
 # Built using
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Contentlayer](https://contentlayer.dev)
-- [MDX](https://mdxjs.com/)
+
 - [Vercel](https://vercel.com)
