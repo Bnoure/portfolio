@@ -38,8 +38,8 @@ const NavBar = () => {
 									>
 										<span
 											className={clsx('tracking-wide', {
-												'text-xs sm:text-sm md:text-base': !active, // Smaller text for non-active links on small and medium screens
-												'text-base sm:text-lg': active, // Larger text for active link on small and medium screens
+												'text-xs sm:text-sm md:text-base': !active,
+												'text-base sm:text-lg': active,
 												'text-gray-900 dark:text-gray-100': true,
 											})}
 										>

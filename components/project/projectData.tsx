@@ -8,7 +8,6 @@ export interface Project {
 	building?: string
 }
 
-// Cette fonction prend désormais une fonction `t` en paramètre pour gérer la traduction
 export const getProjectData = (t: (key: string) => string): Project[] => {
 	return [
 		{

@@ -22,9 +22,9 @@ const fetchProjets = async (): Promise<Projet[]> => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { locale } = req.query; // Extraction de la locale depuis la requête
+    const { locale } = req.query;
 
-    const hostname = `https://exemple.com/${locale}`; // Ajout de la locale au hostname
+    const hostname = `https://exemple.com/${locale}`;
     const smStream = new SitemapStream({ hostname });
 
     const links: SitemapLink[] = [
@@ -43,12 +43,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
     });
 
-    // Conversion des liens en un flux XML
+
     Readable.from(links).pipe(smStream).on('end', () => {
         res.end();
     });
 
-    // Commencez à envoyer l'en-tête XML
+
     res.writeHead(200, { 'Content-Type': 'application/xml' });
     const sitemapOutput = await streamToPromise(smStream);
     res.write(sitemapOutput);

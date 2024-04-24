@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectsList from '../../components/Project/projectList' // Assurez-vous que le chemin est correct
+import ProjectsList from '../../components/project/projectList'
 import { NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'

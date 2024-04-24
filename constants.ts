@@ -1,5 +1,7 @@
 import { IconType } from 'react-icons'
 import { FiLinkedin, FiGithub } from 'react-icons/fi'
+import { TfiIdBadge } from "react-icons/tfi";
+
 
 
 type NavItem = {
@@ -41,4 +43,9 @@ export const SOCIAL: Array<SocialItem> = [
 		href: 'https://github.com/bnoure',
 		icon: FiGithub,
 	},
+  {
+    label: 'CV',
+    href: '/cvnourF.pdf',
+    icon: TfiIdBadge,
+  },
 ]

@@ -5,8 +5,8 @@ const imagesAlts = [
 ];
 
 export const getAboutImage = () => {
-    const index = Math.floor(Math.random() * imagesAlts.length); // Génère un indice de 0 à 2
-    const src = `/images/about/${index + 1}.jpeg`; // Ajoute 1 car vos fichiers sont nommés 1.jpeg, 2.jpeg, etc.
+    const index = Math.floor(Math.random() * imagesAlts.length);
+    const src = `/images/about/${index + 1}.jpeg`;
     return {
         src: src,
         alt: imagesAlts[index],

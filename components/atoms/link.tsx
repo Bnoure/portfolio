@@ -22,7 +22,6 @@ export const Link = (props: LinkProps) => {
 		...rest
 	} = otherProps
 
-	// Next.js Link does not scroll to elements with id
 	const LinkComponent =
 		href.toString().includes('#') || ignoreNextLink ? 'a' : NextLink
 

@@ -2,7 +2,8 @@ import { cn } from '@/lib/utils'
 import { useTranslation } from 'next-i18next'
 import { Button } from './button'
 import { FiGithub } from 'react-icons/fi'
-import { TiInfo } from 'react-icons/ti'
+import { TfiZoomIn } from 'react-icons/tfi'
+
 import Link from 'next/link'
 
 export const BentoGrid = ({
@@ -40,7 +41,7 @@ export const BentoGridItem = ({
 	description: string
 	href: string
 	projetSlug: string
-	imgStyle?: any // Ajouter imgStyle dans les props
+	imgStyle?: any
 	textStyle?: any
 }) => {
 	const { t } = useTranslation()
@@ -59,11 +60,11 @@ export const BentoGridItem = ({
 					<div className='flex space-x-2 items-center'>
 						<Link href={projetSlug}>
 							{' '}
-							<TiInfo size={24} />
+							<TfiZoomIn size={20} />
 						</Link>
 						<a href={href} aria-label='GitHub'>
 							{' '}
-							<FiGithub size={24} />
+							<FiGithub size={16} />
 						</a>
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Project } from './projectData' // Assurez-vous que le chemin est correct
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import { TechIcons } from '../teckstack' // Mettez à jour avec le chemin réel de vos icônes
+import { Project } from './projectData'
+
+import { TechIcons } from '../teckstack'
 
 const ProjectCard = ({ project }: { project: Project }) => {
 	const [isExpanded, setIsExpanded] = useState(false)

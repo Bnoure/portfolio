@@ -29,21 +29,21 @@ export default {
         secondary: '#05B19A',
         brand: {
           DEFAULT: '#3867D6',
-          950: '#050f20', // Plus foncé
-          900: '#0C1833', // Plus foncé
-          800: '#193476', // Plus saturé
-          700: '#2948A0', // Plus saturé
-          600: '#3B60D4', // Plus saturé
+          950: '#050f20',
+          900: '#0C1833',
+          800: '#193476',
+          700: '#2948A0',
+          600: '#3B60D4',
           500: '#3867D6',
-          400: '#6098FF', // Plus clair et saturé
-          300: '#8AB4FF', // Plus clair et saturé
-          200: '#B3D1FF', // Plus clair et saturé
-          100: '#DAEDFF', // Plus clair et saturé
-          50: '#F0F8FF',  // Plus clair
+          400: '#6098FF',
+          300: '#8AB4FF',
+          200: '#B3D1FF',
+          100: '#DAEDFF',
+          50: '#F0F8FF',
         },
         tint: {
-          bg: `rgba(var(--tint)/0.8)`, // Augmentation de la visibilité
-          border: `rgba(var(--tint)/0.5)`, // A
+          bg: `rgba(var(--tint)/0.8)`,
+          border: `rgba(var(--tint)/0.5)`,
         },
         black: twColors.black,
         white: twColors.white,
@@ -70,7 +70,7 @@ export default {
         21: '5.25rem',
         22: '5.5rem',
         30: '7.5rem',
-        nice: '69ch', // Example of adding custom values
+        nice: '69ch',
       },
       borderRadius: {
         half: '50%',
@@ -111,11 +111,11 @@ export default {
           '50%': { transform: 'translateX(20%)' },
           '100%': { transform: 'translateX(-20%)' },
         },
-        // Include other keyframes from the original configuration if needed
+
       },
       animation: {
         'bounce-right': 'bounceRight 2s linear infinite',
-        // Include other animations from the original configuration if needed
+
       },
       transitionTimingFunction: {
         in: 'ease-in',
@@ -127,10 +127,10 @@ export default {
   },
   variants: {
     extend: {
-      backgroundColor: ['hocus'],  // Active hocus pour le fond
-      borderColor: ['hocus'],      // Active hocus pour les bordures
-      textColor: ['hocus'],        // Active hocus pour la couleur du texte
-      borderWidth: ['hocus'],      // Active hocus pour la largeur de la bordure
+      backgroundColor: ['hocus'],
+      borderColor: ['hocus'],
+      textColor: ['hocus'],
+      borderWidth: ['hocus'],
     }
   },
   plugins: [
