@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
 
 import { FiGithub } from 'react-icons/fi'
 import { TfiZoomIn } from 'react-icons/tfi'
@@ -46,21 +45,9 @@ export const BentoGridItem = ({
 	textStyle?: any
 }) => {
 	const { t } = useTranslation()
-	const [isHovered, setIsHovered] = useState(false)
-	// ici : onHover, onScale, onTransition, onCursor
-	const cardStyles = {
-		transform: isHovered ? 'scale(2)' : 'scale(1)',
-		transition: 'transform 0.3s ease, z-index 0s',
-		zIndex: isHovered ? 50 : 1,
-		cursor: 'pointer',
-	}
+
 	return (
 		<div
-			// ici : onHover, onScale, onTransition, onCursor
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
-			style={cardStyles}
-			// ici : onHover, onScale, onTransition, onCursor
 			className={cn(
 				' row-span-1 rounded-xl group/bento  dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4',
 				className
