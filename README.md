@@ -15,7 +15,7 @@ I am actively working on these aspects and appreciate your patience and any feed
 While this is a personal project, I'm open to suggestions and contributions that can improve the site. If you have ideas or notice any issues, please feel free to open an issue or submit a pull request.
 
 ### Contact 📬
-For any further inquiries or suggestions, please contact me directly via [LinkedIn](https://www.linkedin.com/in/your-linkedin) or [GitHub](https://github.com/your-github).
+For any further inquiries or suggestions, please contact me directly via [LinkedIn](https://www.linkedin.com/in/nbenkerroum) or [GitHub](https://github.com/bnoure).
 
 ## Français
 
@@ -32,7 +32,7 @@ Je travaille activement sur ces aspects et j'apprécie votre patience ainsi que 
 Bien que ce soit un projet personnel, je suis ouvert aux suggestions et contributions qui peuvent améliorer le site. Si vous avez des idées ou remarquez des problèmes, n'hésitez pas à ouvrir un problème ou soumettre une demande de tirage.
 
 ### Contact 📬
-Pour toute autre question ou suggestion, veuillez me contacter directement via [LinkedIn](https://www.linkedin.com/in/your-linkedin) ou [GitHub](https://github.com/your-github).
+Pour toute autre question ou suggestion, veuillez me contacter directement via [LinkedIn](https://www.linkedin.com/in/nbenkerroum) ou [GitHub](https://github.com/bnoure).
 
 
 
@@ -44,5 +44,4 @@ Pour toute autre question ou suggestion, veuillez me contacter directement via [
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React.js]
-
 - [Vercel](https://vercel.com)
