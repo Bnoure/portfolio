@@ -19,11 +19,10 @@ const NavBar = () => {
 	return (
 		<nav className='fixed top-2 left-1/2 max-w-[44em] w-[96vw] sm:w-[96vw] mx-auto -translate-x-1/2 flex flex-col transition-all rounded-lg p-[10px] bg-primary/10 backdrop-blur-[10px] backdrop-saturate-150 hover:shadow-dark border border-secondary/20 z-10'>
 			<div className='h-[40px] bg-transparent py-5 flex items-center justify-between'>
-				<Link href='/' legacyBehavior>
-					<a className='flex items-center justify-between' aria-label='Home'>
-						<LanguageSwitcher />
-					</a>
-				</Link>
+				<div className="flex items-center justify-between'">
+					<LanguageSwitcher />
+				</div>
+
 				<div className='flex items-center gap-8'>
 					<div className='flex gap-8'>
 						{NAV_ITEMS.map((item, idx) => {
