@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
 
 interface ErrorPageProps {
 	statusCode: number | undefined
