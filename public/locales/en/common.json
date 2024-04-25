@@ -44,7 +44,7 @@
 
     "about": {
       "title": "About Me",
-      "mePart1": "Hello! My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
+      "mePart1": "My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
       "namebold" : "Nour-Eddine Benkerroum",
       "mePart2": "My transition to full-stack development stemmed from a desire for fresh challenges and a commitment to innovation. Through my training, I've gained proficiency in technologies like Ruby on Rails, JavaScript, React, HTML, and CSS. Drawing on my experience as an IT project manager, where I led complex system migration programs, I'm well-equipped to oversee significant software development projects. I'm particularly eager to deepen my expertise in the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development isn't just a career path for me; it's a passion that I'm excited to explore and expand upon.",
       "not_at_desk":"When I'm not at my desk...",
