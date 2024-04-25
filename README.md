@@ -1,47 +1,39 @@
+# Portfolio Project 📂
 
-# Portoflio
+## English
 
-Bienvenue ! Ici, je combine ma curiosité pour le développement full-stack et mon expérience en gestion de projets IT. C'est un peu mon terrain de jeu numérique. Venez voir !
+Welcome to my portfolio project! 🌟 This repository contains the source code for my personal portfolio website, currently under active development.
 
-<details>
-<summary> Lire en français</summary>
+### Project Status 🚧
+The project is nearing completion, but some pages are still being finalized:
+- The **Projects Index** page 📃 is functional but requires some additional features and final touches.
+- The **Project Detail** pages 🖼 are being enhanced to better showcase each project, including more detailed descriptions and interactive elements.
 
-## 🚀 Commencer
+I am actively working on these aspects and appreciate your patience and any feedback you might have! 🛠️
 
-Ces instructions vous permettront d'obtenir une copie du projet et de l'exécuter sur votre machine locale à des fins de développement et de test.
+### Contributing 🤝
+While this is a personal project, I'm open to suggestions and contributions that can improve the site. If you have ideas or notice any issues, please feel free to open an issue or submit a pull request.
 
-### 🛠 Installation
+### Contact 📬
+For any further inquiries or suggestions, please contact me directly via [LinkedIn](https://www.linkedin.com/in/your-linkedin) or [GitHub](https://github.com/your-github).
 
-Assurez-vous d'avoir la dernière version de [Node.js](https://nodejs.org/) et [Git](https://git-scm.com/downloads) installée sur votre ordinateur.
+## Français
 
-Pour commencer, forkez ce dépôt sur votre compte GitHub puis clonez-le sur votre machine locale.
+Bienvenue sur le projet de mon portfolio ! 🌟 Ce dépôt contient le code source de mon site portfolio personnel, actuellement en cours de développement actif.
 
-```sh
-git clone https://github.com/Bnoure/portfolio.git
-cd nom-du-depot
-```
+### État du Projet 🚧
+Le projet est proche de l'achèvement, mais certaines pages sont encore en cours de finalisation :
+- La page **Index des Projets** 📃 est fonctionnelle mais nécessite des fonctionnalités supplémentaires et des retouches finales.
+- Les pages **Détail du Projet** 🖼 sont en cours d'amélioration pour mieux mettre en valeur chaque projet, incluant des descriptions plus détaillées et des éléments interactifs.
 
-## Main folder structure
+Je travaille activement sur ces aspects et j'apprécie votre patience ainsi que tous les commentaires que vous pourriez avoir ! 🛠️
 
-- `pages/*`- All the static pages
-- `components/*`- All the components like Navbar, Footer, etc are here
-- `project/*`- It contains all the project files for bento
+### Contribuer 🤝
+Bien que ce soit un projet personnel, je suis ouvert aux suggestions et contributions qui peuvent améliorer le site. Si vous avez des idées ou remarquez des problèmes, n'hésitez pas à ouvrir un problème ou soumettre une demande de tirage.
 
-# Running locally
+### Contact 📬
+Pour toute autre question ou suggestion, veuillez me contacter directement via [LinkedIn](https://www.linkedin.com/in/your-linkedin) ou [GitHub](https://github.com/your-github).
 
-```bash
-# Clone this repository
-
-
-# Go into the repository folder
-
-
-# Install dependencies
-yarn
-
-# Run
-yarn dev
-```
 
 
 
@@ -51,5 +43,6 @@ yarn dev
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [React.js]
 
 - [Vercel](https://vercel.com)
