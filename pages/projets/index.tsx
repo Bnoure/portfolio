@@ -11,7 +11,7 @@ const ProjetPage: NextPage = () => {
 
 	return (
 		<main>
-			<section id='recent-blog'>
+			<section id='all-projets'>
 				<h1 className='section-heading custom-underline'>
 					<AnimatedText text={t('common.projects.title')} />
 				</h1>

@@ -11,7 +11,7 @@ const ProjectsList = () => {
 		<div className='container mx-auto p-4'>
 			<div className='grid grid-cols-1 gap-4 '>
 				{projects.map((project, index) => (
-					<ProjectCard key={index} project={project} />
+					<ProjectCard key={index} project={project} index={index} />
 				))}
 			</div>
 		</div>

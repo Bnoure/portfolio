@@ -8,7 +8,9 @@ import {
 	SiCss3,
 } from 'react-icons/si'
 
-const techIconStyles = 'text-xl'
+import { JavascriptOriginal } from 'devicons-react'
+
+const techIconStyles = 'rounded-full hover:bg-gray-200 p-1 transition-colors'
 
 export const TechIcons = ({ tech }: { tech: string }) => {
 	switch (tech) {
@@ -21,7 +23,7 @@ export const TechIcons = ({ tech }: { tech: string }) => {
 		case 'Rails':
 			return <SiRubyonrails className={techIconStyles} />
 		case 'Javascript':
-			return <SiJavascript className={techIconStyles} />
+			return <JavascriptOriginal className={techIconStyles} />
 		case 'Postgresql':
 			return <SiPostgresql className={techIconStyles} />
 		// case 'Ruby':
