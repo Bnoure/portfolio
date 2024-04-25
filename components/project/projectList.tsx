@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import ProjectCard from './projectCard'
-import { features } from '../bento/bento'
+import { getProjectData } from './projectData'
 
 const ProjectsList = () => {
 	const { t } = useTranslation('common')
-	const projects = features(t)
+	const projects = getProjectData(t)
 
 	return (
 		<div className='container mx-auto p-4'>

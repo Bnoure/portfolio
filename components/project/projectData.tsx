@@ -3,20 +3,28 @@ export interface Project {
 	title: string
 	description: string
 	tech_stack: string[]
-	github_url: string
-	demo_url?: string
+	projetSlug: string
+
 	building?: string
 }
 
 export const getProjectData = (t: (key: string) => string): Project[] => {
 	return [
 		{
+			img: '/images/Arcgrand.png',
+			title: t('common.projects.titlePortfolio'),
+			description: t('common.projects.descriptionPortfolio'),
+			tech_stack: ['React', 'Node.js', 'CSS'],
+			projetSlug: '/projets/portfolio',
+			building: 'Completed',
+		},
+
+		{
 			img: '/images/2nd.jpeg',
 			title: t('common.projects.title2ndRound'),
 			description: t('common.projects.description2ndRound'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
-			github_url: 'https://github.com/Bnoure/2ndRound.git',
-			demo_url: '',
+			projetSlug: '/projets/2nd-round',
 			building: 'Completed',
 		},
 		{
@@ -24,8 +32,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			title: t('common.projects.titleKoalapp'),
 			description: t('common.projects.descriptionKoalapp'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
-			github_url: 'https://github.com/Bnoure/koala.git',
-			demo_url: 'https://stackkoala.online/',
+			projetSlug: '/projets/koalapp',
 			building: 'Completed',
 		},
 		{
@@ -33,8 +40,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			title: t('common.projects.titleArc'),
 			description: t('common.projects.descriptionArc'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
-			github_url: 'https://github.com/Bnoure/Arc.git',
-			demo_url: 'https://stackarc.online/',
+			projetSlug: '/projets/arc',
 			building: 'Completed',
 		},
 		{
@@ -42,8 +48,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			title: t('common.projects.titleRental'),
 			description: t('common.projects.descriptionRental'),
 			tech_stack: ['Rails', 'Javascript', 'Postgresql', 'Ruby', 'HTML', 'CSS'],
-			github_url: 'https://github.com/Bnoure/rental.git',
-			demo_url: 'https://www.stackrental.online/',
+			projetSlug: '/projets/rental',
 			building: 'Completed',
 		},
 	]
