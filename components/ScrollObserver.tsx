@@ -1,9 +1,9 @@
-import {
-	createContext,
+import React, {
 	ReactNode,
 	useCallback,
 	useEffect,
 	useState,
+	createContext,
 } from 'react'
 
 interface ScrollValue {
@@ -11,10 +11,12 @@ interface ScrollValue {
 	scrollHeight: number
 }
 
-export const ScrollContext = createContext<ScrollValue>({
+const defaultValue: ScrollValue = {
 	scrollY: 0,
 	scrollHeight: 0,
-})
+}
+
+export const ScrollContext = createContext<ScrollValue>(defaultValue)
 
 interface ScrollObserverProps {
 	children: ReactNode

@@ -54,6 +54,9 @@ export default {
         red: twColors.rose,
         purple: twColors.violet,
       },
+      margin: {
+        '-0.6': '-0.6rem',
+      },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
         manrope: [
@@ -61,6 +64,8 @@ export default {
         ],
         mono: ['monospace', ...fontFamily.mono],
       },
+
+
       spacing: {
         ...spacing,
         px: '0.0625rem',
@@ -71,6 +76,7 @@ export default {
         22: '5.5rem',
         30: '7.5rem',
         nice: '69ch',
+
       },
       borderRadius: {
         half: '50%',

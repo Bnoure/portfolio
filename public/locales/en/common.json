@@ -101,6 +101,13 @@
       "reseau": "Socials",
       "cv":"Resume"
 
+    },
+    "errorTitle": "Error",
+    "errorWithCode": "Error {{statusCode}}",
+    "oopsMessage": "Oops, it looks like you made a wrong turn! Don't worry, we'll get you back on track.",
+    "nonExistentPage": "This page may not exist on my website, but that doesn't mean we can't still connect. Feel free to explore the rest of my ",
+    "siteLink": "site",
+    "turnDetour": ". Let's turn this little detour into an exciting and fun adventure!"
+
     }
-  }
 }

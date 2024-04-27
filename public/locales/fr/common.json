@@ -99,6 +99,16 @@
       },
       "reseau": "Réseaux Sociaux",
       "cv": "CV"
-    }
+    },
+
+
+      "errorTitle": "Erreur",
+      "errorWithCode": "Erreur {{statusCode}}",
+      "oopsMessage": "Oups, il semble que vous ayez fait un faux pas ! Ne vous inquiétez pas, nous allons vous remettre sur la bonne voie.",
+      "nonExistentPage": "Cette page peut ne pas exister sur mon site web, mais cela ne signifie pas que nous ne pouvons pas encore nous connecter. N'hésitez pas à explorer le reste de mon ",
+      "siteLink": "site",
+      "turnDetour": ". Transformons ce petit détour en une aventure amusante et excitante !"
+
+
   }
 }
