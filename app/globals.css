@@ -33,6 +33,10 @@ body {
 	--tint: 255, 0, 0;
 	--opacity-tint-bg: 0.05;
 	--opacity-tint-border: 0.1;
+	--main-color: #fff;
+	--caret-color: #1f2222;
+	--sub-color: #eaeaea;
+	--preview-color: var(--sub-color);
 }
 ::selection {
 	background-color: #05b19a30;

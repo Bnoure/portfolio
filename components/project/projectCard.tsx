@@ -22,53 +22,155 @@ interface TechIconType {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
-	const [isExpanded, setIsExpanded] = useState(false)
-	const isEven = index % 2 === 0
-
+	const [showDescription, setShowDescription] = useState(false)
+	const [isHovered, setIsHovered] = useState(false)
 	return (
-		<div
-			className={`row-span-1 rounded-xl overflow-hidden group hover:shadow-xl transition-shadow duration-200 shadow-input dark:shadow-none dark:bg-black bg-white border border-transparent flex ${
-				isEven ? 'flex-row' : 'flex-row-reverse'
-			} gap-4 space-x-4 space-x-reverse`}
-		>
-			<Image
-				className='relative w-2/4 rounded-lg object-cover'
-				src={project.img}
-				alt={project.title}
-				width={500}
-				height={300}
-				loading='eager'
-			/>
-
-			<div className='w-1/2 flex flex-col justify-between p-5'>
-				<div className='relative'>
-					<h3 className='font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2'>
-						{project.title}
-					</h3>
-
-					<p className='font-sans text-neutral-600 text-sm dark:text-neutral-300'>
-						{isExpanded
-							? project.description
-							: `${project.description.substring(0, 100)}...`}
-					</p>
-				</div>
-				<div className='flex flex-col space-y-2'>
-					<div className='flex space-x-2' style={{ marginLeft: '-0.6rem' }}>
-						{project.tech_stack.map((tech) => (
-							<TechIcons key={tech} tech={tech as keyof TechIconType} />
-						))}
-					</div>
-					<button
-						onClick={() => setIsExpanded(!isExpanded)}
-						className='self-start text-neutral-600 dark:text-neutral-200 transition duration-150 ease-in-out flex items-center'
+		<div className='flex flex-col  rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl'>
+			<div
+				className='relative overflow-hidden rounded-t-lg'
+				style={{
+					padding: '1rem',
+					backgroundColor: 'var(--preview-color)',
+					marginTop: '-1px',
+					borderRadius: '10px 10px 0px 0px',
+					position: 'relative',
+					height: isHovered ? '300px' : '100px', // Contrôle de la hauteur basé sur l'état de survol
+					transition: 'height 0.3s ease-in-out', // Transition pour la hauteur
+				}}
+				onMouseEnter={() => {
+					setIsHovered(true) // Mettre à jour l'état lors du survol
+				}}
+				onMouseLeave={() => {
+					setIsHovered(false) // Réinitialiser l'état après le survol
+				}}
+			>
+				<Image
+					src={project.img}
+					alt={project.title}
+					layout='fill'
+					objectFit='cover'
+					sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
+					quality={75}
+					loading='lazy'
+				/>
+			</div>
+			<div className=' flex-grow'>
+				<div
+					style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat(3, 1fr)',
+						alignItems: 'center',
+					}}
+				>
+					{/* Name section */}
+					<div
+						id='nameSection'
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+							borderRight: '1px solid var(--caret-color)',
+							borderBottom: '1px solid var(--caret-color)',
+							padding: '0.5rem 1rem',
+						}}
 					>
-						{isExpanded ? (
-							<TfiAngleDoubleUp size={20} />
-						) : (
-							<TfiAngleDoubleDown size={20} />
-						)}
-					</button>
+						<h5
+							className='text-lg font-bold'
+							style={{ color: 'var(--main-color)', margin: '0 1px 0 0' }}
+						>
+							name
+						</h5>
+						<p style={{ margin: 0 }}>{project.title}</p>
+					</div>
+					{/* Building section */}
+					<div
+						id='buildingSection'
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+							borderRight: '1px solid var(--caret-color)',
+							borderBottom: '1px solid var(--caret-color)',
+							padding: '0.5rem 1rem',
+						}}
+					>
+						<h5
+							className='text-lg font-bold'
+							style={{ color: 'var(--main-color)', margin: 0 }}
+						>
+							phase
+						</h5>
+						<p style={{ margin: 0 }}>{project.building}</p>
+					</div>
+					{/* Stack section */}
+					<div
+						id='stackSection'
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+							borderBottom: '1px solid var(--caret-color)',
+							padding: '5px',
+						}}
+					>
+						<h5
+							className='text-lg font-bold'
+							style={{ color: 'var(--main-color)', margin: 0 }}
+						>
+							stack
+						</h5>
+						<div className='flex -space-x-4 z-0'>
+							{project.tech_stack.map((tech, idx) => (
+								<div
+									className='z-[1] p-1'
+									key={idx}
+									onMouseEnter={(e) => (e.currentTarget.style.zIndex = '10')}
+									onMouseLeave={(e) => (e.currentTarget.style.zIndex = '1')}
+								>
+									<TechIcons tech={tech} />
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
+
+				<div
+					className={`p-4 mt-4 transition-all duration-300 ease-in-out
+
+					`}
+				>
+					<h5
+						className='text-lg font-bold'
+						style={{ color: 'var(--main-color)' }}
+					>
+						What
+					</h5>
+					<p>I did this project for </p>
+				</div>
+
+				<div className='p-4 mt-4'>
+					<div
+						className={`  transition-all duration-300 ease-in-out ${
+							showDescription ? 'max-h-screen' : 'max-h-0 overflow-hidden'
+						}`}
+					>
+						<h5
+							className='text-lg font-bold'
+							style={{ color: 'var(--main-color)' }}
+						>
+							Details
+						</h5>
+						<p>{project.description}</p>
+					</div>
+				</div>
+			</div>
+			<div
+				className='p-4 text-center cursor-pointer rounded-b-lg'
+				onClick={() => setShowDescription(!showDescription)}
+			>
+				<h4 className='text-lg font-bold'>
+					{showDescription ? 'View Less' : 'View More'}
+				</h4>
 			</div>
 		</div>
 	)

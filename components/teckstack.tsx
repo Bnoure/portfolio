@@ -36,8 +36,8 @@ export const TechIcons = ({ tech }: TechIconsProps) => {
 		alignItems: 'center',
 		borderRadius: '50%',
 		backgroundColor: techColors[tech] || 'rgb(0, 172, 193)',
-		width: '1.6rem',
-		height: '1.6rem',
+		width: '1.4rem',
+		height: '1.4rem',
 		cursor: 'pointer',
 		boxShadow: 'rgba(0, 0, 0, 0.2) 2px 2px 5px',
 	}
