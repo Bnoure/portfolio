@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { Project } from './projectData'
 import { TechIcons } from '../teckstack'
-import { TfiAngleDoubleDown, TfiAngleDoubleUp } from 'react-icons/tfi'
+import { useTheme } from 'next-themes'
 
 interface ProjectCardProps {
 	project: Project
@@ -14,38 +14,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 	const [isHovered, setIsHovered] = useState(false)
 	const cardStyles = {
 		transform: isHovered ? 'scale(1.005) translateZ(0px)' : 'none',
-		transition: 'transform 1s ease, height 1s ease, z-index 0s',
+		transition: 'transform 0.5s ease, height 0.3s ease, z-index 0s',
 		zIndex: isHovered ? 50 : 1,
 		cursor: 'pointer',
 		height: isHovered ? '200px' : '100px',
 	}
 	return (
 		<div className='flex flex-col  rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl'>
-			<div
-				className=' bg-black p-1 relative overflow-hidden rounded-t-lg'
-				style={{
-					padding: '1rem',
-					backgroundColor: 'var(--preview-color)',
-					marginTop: '-1px',
-					borderRadius: '10px 10px 0px 0px',
-					position: 'relative',
-					...cardStyles,
-				}}
-				onMouseEnter={() => {
-					setIsHovered(true) // Mettre à jour l'état lors du survol
-				}}
-				onMouseLeave={() => {
-					setIsHovered(false) // Réinitialiser l'état après le survol
-				}}
-			>
-				<Image
-					src={project.img}
-					alt={project.title}
-					layout='fill'
-					sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
-					quality={75}
-					loading='lazy'
-				/>
+			<div className=' bg-slate-200 p-2 relative overflow-hidden rounded-t-lg'>
+				<div
+					className=''
+					style={{
+						padding: '1rem',
+						backgroundColor: 'var(--preview-color)',
+						marginTop: '-1px',
+						borderRadius: '10px 10px 0px 0px',
+						position: 'relative',
+						...cardStyles,
+					}}
+					onMouseEnter={() => {
+						setIsHovered(true) // Mettre à jour l'état lors du survol
+					}}
+					onMouseLeave={() => {
+						setIsHovered(false) // Réinitialiser l'état après le survol
+					}}
+				>
+					<Image
+						src={project.img}
+						alt={project.title}
+						width={800}
+						height={450}
+						sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
+						quality={75}
+						loading='lazy'
+					/>
+				</div>
 			</div>
 			<div className=' flex-grow'>
 				<div
@@ -62,14 +65,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 							display: 'flex',
 							flexDirection: 'column',
 							justifyContent: 'center',
-							borderRight: '1px solid var(--caret-color)',
-							borderBottom: '1px solid var(--caret-color)',
+							borderRight: 'border-2 border-borderLight dark:border-borderDark',
+							borderBottom:
+								'border-2 border-borderLight dark:border-borderDark',
 							padding: '0.5rem 1rem',
 						}}
 					>
 						<h5
 							className='font-bold text-dark dark:text-light '
-							style={{ color: 'var(--main-color)', margin: '0 1px 0 0' }}
+							style={{ margin: '0 1px 0 0' }}
 						>
 							name
 						</h5>
@@ -89,7 +93,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					>
 						<h5
 							className='font-bold text-dark dark:text-light '
-							style={{ color: 'var(--main-color)', margin: 0 }}
+							style={{ margin: 0 }}
 						>
 							phase
 						</h5>
@@ -108,7 +112,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					>
 						<h5
 							className='font-bold text-dark dark:text-light '
-							style={{ color: 'var(--main-color)', margin: 0 }}
+							style={{ margin: 0 }}
 						>
 							stack
 						</h5>
@@ -132,9 +136,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
 					`}
 				>
-					<h5 className=' font-bold' style={{ color: 'var(--main-color)' }}>
-						What
-					</h5>
+					<h5 className=' font-bold'>What</h5>
 					<p>I did this project for </p>
 				</div>
 
@@ -144,12 +146,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 							showDescription ? 'max-h-screen' : 'max-h-0 overflow-hidden'
 						}`}
 					>
-						<h5
-							className=' font-bold text-dark dark:text-light '
-							style={{ color: 'var(--main-color)' }}
-						>
-							Details
-						</h5>
+						<h5 className=' font-bold text-dark dark:text-light '>Details</h5>
 						<p>{project.description}</p>
 					</div>
 				</div>

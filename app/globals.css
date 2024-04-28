@@ -46,6 +46,7 @@ h5 {
 	--opacity-tint-border: 0.1;
 	--main-color: #fff;
 	--caret-color: #1f2222;
+	--caret-color: #e1e1e1 !important;
 	--sub-color: #eaeaea;
 	--preview-color: var(--sub-color);
 }
