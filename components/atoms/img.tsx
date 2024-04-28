@@ -22,7 +22,7 @@ export const Img = (props: ImageProps) => {
 					: props.placeholder
 			}
 			className={cx('object-cover object-center', props.className)}
-			loading={!props.priority ? 'eager' : undefined}
+			loading={!props.priority ? 'lazy' : undefined}
 			decoding={'async'}
 			onError={() => {
 				setErrored(true)

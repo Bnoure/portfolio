@@ -1,12 +1,14 @@
+import { useTranslation } from 'next-i18next'
 import AnimatedText from '@/components/AnimatedText'
 import Timeline from '@/components/Timeline'
 import FadeDown from '@/components/animations/FadeDown'
 import FadeUp from '@/components/animations/FadeUp'
-import Photo from '../app/about/photo'
+import Photo from '../../app/about/photo'
 
-import { useTranslation } from 'react-i18next'
-
-export default function About() {
+export default function AboutContent() {
+	const { t } = useTranslation()
+	const boldtext = t('common.about.namebold')
+	const intro = t('common.about.mePart1', { bold: boldtext })
 	const getHighlightedText = (fullText: string, highlight: string) => {
 		const parts = fullText.split(highlight)
 		return (
@@ -18,18 +20,14 @@ export default function About() {
 		)
 	}
 
-	const { t } = useTranslation()
-	const boldtext = t('common.about.namebold')
-	const intro = t('common.about.mePart1', { bold: boldtext })
 	return (
 		<>
-			<section className='prose  prose-neutral dark:prose-invert my-10'>
+			<section className='prose prose-neutral dark:prose-invert my-10'>
 				<FadeDown duration={0.4}>
 					<h1 className='section-heading custom-underline'>
 						<AnimatedText text={t('common.about.title')} />
 					</h1>
 					<Photo />
-
 					<p className='text-justify'>{getHighlightedText(intro, boldtext)}</p>
 					<p className='text-justify'>{t('common.about.mePart2')}</p>
 					<br />
@@ -40,10 +38,9 @@ export default function About() {
 					<p className='text-justify'>{t('common.about.balance_work_play')}</p>
 				</FadeDown>
 				<FadeUp duration={0.4}>
-					<h2 className=' section-heading custom-underline text-xl md:text-2xl text-dark dark:text-light'>
+					<h2 className='section-heading custom-underline text-xl md:text-2xl text-dark dark:text-light'>
 						<AnimatedText text='Timeline' />
 					</h2>
-
 					<Timeline />
 				</FadeUp>
 			</section>

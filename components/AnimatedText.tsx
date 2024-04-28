@@ -1,6 +1,4 @@
-'use client'
-
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 const AnimatedText = ({
 	text,
@@ -13,16 +11,19 @@ const AnimatedText = ({
 	const [isAnimating, setIsAnimating] = useState(true)
 	const animatingTime = text.length * 100 > 1000 ? 1000 : text.length * 100
 
-	const generateGibberish = (index: any, timeElapsed: Number) => {
-		if (text[index] === ' ') return ' '
-		const characters =
-			'A-B*CD_EF-GH_JK*LM-NOP_QRS*TU-VWX_YZa*bcd_ef-gh_jkm_nopq_rstu_vw-xyz_023_456*789_'
+	const generateGibberish = useCallback(
+		(index: any, timeElapsed: Number) => {
+			if (text[index] === ' ') return ' '
+			const characters =
+				'A-B*CD_EF-GH_JK*LM-NOP_QRS*TU-VWX_YZa*bcd_ef-gh_jkm_nopq_rstu_vw-xyz_023_456*789_'
 
-		const randomChar = Math.floor(Math.random() * characters.length)
-		return Number(timeElapsed) >= Math.floor(Math.random() * animatingTime)
-			? text[index]
-			: characters[randomChar]
-	}
+			const randomChar = Math.floor(Math.random() * characters.length)
+			return Number(timeElapsed) >= Math.floor(Math.random() * animatingTime)
+				? text[index]
+				: characters[randomChar]
+		},
+		[text, animatingTime]
+	)
 
 	useEffect(() => {
 		let interval: NodeJS.Timeout
@@ -43,7 +44,7 @@ const AnimatedText = ({
 			clearInterval(interval)
 			setIsAnimating(false)
 		}, animatingTime + 50)
-	}, [text])
+	}, [text, animatingTime, generateGibberish])
 
 	return <span style={style}>{isAnimating ? randomizeText : text}</span>
 }

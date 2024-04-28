@@ -1,6 +1,5 @@
 import { Img } from '@/components/atoms/img'
 import cx from '@/utils/cx'
-import { useEffect, useState } from 'react'
 
 import { getAboutImage } from './img'
 
