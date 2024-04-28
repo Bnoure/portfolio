@@ -9,33 +9,27 @@ interface ProjectCardProps {
 	index: number
 }
 
-interface TechIconType {
-	React: Element
-	Javascript: Element
-	Next: Element
-	Typescript: Element
-	Tailwind: Element
-	Ruby: Element
-	Rails: Element
-	Postgresql: Element
-	Bootstrap: Element
-}
-
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 	const [showDescription, setShowDescription] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
+	const cardStyles = {
+		transform: isHovered ? 'scale(1.005) translateZ(0px)' : 'none',
+		transition: 'transform 1s ease, height 1s ease, z-index 0s',
+		zIndex: isHovered ? 50 : 1,
+		cursor: 'pointer',
+		height: isHovered ? '200px' : '100px',
+	}
 	return (
 		<div className='flex flex-col  rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl'>
 			<div
-				className='relative overflow-hidden rounded-t-lg'
+				className=' bg-black p-1 relative overflow-hidden rounded-t-lg'
 				style={{
 					padding: '1rem',
 					backgroundColor: 'var(--preview-color)',
 					marginTop: '-1px',
 					borderRadius: '10px 10px 0px 0px',
 					position: 'relative',
-					height: isHovered ? '300px' : '100px', // Contrôle de la hauteur basé sur l'état de survol
-					transition: 'height 0.3s ease-in-out', // Transition pour la hauteur
+					...cardStyles,
 				}}
 				onMouseEnter={() => {
 					setIsHovered(true) // Mettre à jour l'état lors du survol
@@ -48,7 +42,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					src={project.img}
 					alt={project.title}
 					layout='fill'
-					objectFit='cover'
 					sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
 					quality={75}
 					loading='lazy'
@@ -75,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						}}
 					>
 						<h5
-							className='text-lg font-bold'
+							className='font-bold text-dark dark:text-light '
 							style={{ color: 'var(--main-color)', margin: '0 1px 0 0' }}
 						>
 							name
@@ -95,7 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						}}
 					>
 						<h5
-							className='text-lg font-bold'
+							className='font-bold text-dark dark:text-light '
 							style={{ color: 'var(--main-color)', margin: 0 }}
 						>
 							phase
@@ -114,7 +107,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						}}
 					>
 						<h5
-							className='text-lg font-bold'
+							className='font-bold text-dark dark:text-light '
 							style={{ color: 'var(--main-color)', margin: 0 }}
 						>
 							stack
@@ -139,10 +132,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
 					`}
 				>
-					<h5
-						className='text-lg font-bold'
-						style={{ color: 'var(--main-color)' }}
-					>
+					<h5 className=' font-bold' style={{ color: 'var(--main-color)' }}>
 						What
 					</h5>
 					<p>I did this project for </p>
@@ -155,7 +145,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						}`}
 					>
 						<h5
-							className='text-lg font-bold'
+							className=' font-bold text-dark dark:text-light '
 							style={{ color: 'var(--main-color)' }}
 						>
 							Details
@@ -168,7 +158,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 				className='p-4 text-center cursor-pointer rounded-b-lg'
 				onClick={() => setShowDescription(!showDescription)}
 			>
-				<h4 className='text-lg font-bold'>
+				<h4 className=' font-bold text-dark dark:text-light '>
 					{showDescription ? 'View Less' : 'View More'}
 				</h4>
 			</div>
