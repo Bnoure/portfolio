@@ -1,33 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 
 import { Project } from './projectData'
-import { TechIcons } from '../teckstack'
+import InfoSection from './infoSection/infoCard'
+
+import TechStack from './infoSection/infotechStack'
+import { transform } from 'next/dist/build/swc'
 
 interface ProjectCardProps {
 	project: Project
-}
-
-type TechIconType = {
-	Typescript: JSX.Element
-	React: JSX.Element
-	Ruby: JSX.Element
-	Postgresql: JSX.Element
-	Javascript: JSX.Element
-	Next: JSX.Element
-	Tailwind: JSX.Element
-	Bootstrap: JSX.Element
-	Rails: JSX.Element
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	const [showDescription, setShowDescription] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
 	const { theme } = useTheme()
+	const [borderClass, setBorderClass] = useState('')
+	const [backgroundColor, setBackgroundColor] = useState('')
+	const [backgroundImageColor, setBackgroundImageColor] = useState('')
+	const [backgroundSelectionColor, setBackgroundSelectionColor] = useState('')
 
-	const borderClass = theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
-	const backgroundColor = theme === 'dark' ? 'bg-brand-900' : 'bg-slate-500'
+	useEffect(() => {
+		setBorderClass(theme === 'dark' ? 'border-gray-800' : 'border-gray-200')
+		setBackgroundColor(theme === 'dark' ? 'bg-bgcard' : 'bg-light')
+		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-bgcardimag')
+		// setBackgroundSelectionColor(transform === 'dark' ? 'bg-bgcard' : 'bg-light')
+	}, [theme])
 
 	const cardStyles = {
 		transform: isHovered ? 'scale(1.005) translateZ(0px)' : 'none',
@@ -44,9 +43,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 		>
 			<div className='relative overflow-hidden rounded-t-lg'>
 				<div
+					className={`${backgroundImageColor}`}
 					style={{
 						padding: '1rem',
-						backgroundColor: 'var(--preview-color)',
+
 						marginTop: '-1px',
 
 						borderRadius: '10px 10px 0 0',
@@ -67,7 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					/>
 				</div>
 			</div>
-			<div className='p-2 dark:text-light'>
+			<div className='p-2 dark:text-light hover:bg-preview dark:hover:bg-gray-700 transition-colors duration-300 rounded-b-sm'>
 				<div className=' grid grid-cols-3 gap-2  '>
 					<InfoSection title='Name' content={project.title} />
 					<InfoSection title='Phase' content={project.building || ''} />
@@ -98,36 +98,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 		</div>
 	)
 }
-
-const InfoSection = ({
-	title,
-	content,
-}: {
-	title: string
-	content: string
-}) => (
-	<div className='flex flex-col  '>
-		<h5 className='font-bold'>{title}</h5>
-		<p>{content}</p>
-	</div>
-)
-
-const TechStack = ({ techStack }: { techStack: any }) => (
-	<div className='flex flex-col '>
-		<h5 className='font-bold'>Stack</h5>
-		<div className='flex -space-x-4'>
-			{techStack.map((tech: string, idx: number): {} => (
-				<div
-					key={idx}
-					className='z-10 p-1'
-					onMouseEnter={(e) => (e.currentTarget.style.zIndex = '20')}
-					onMouseLeave={(e) => (e.currentTarget.style.zIndex = '10')}
-				>
-					<TechIcons tech={tech as keyof TechIconType} />
-				</div>
-			))}
-		</div>
-	</div>
-)
 
 export default ProjectCard

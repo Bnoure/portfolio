@@ -23,10 +23,15 @@ export default {
         '1/3': '33.333333%',
       },
       colors: {
+        preview:"#e1e1e1",
         dark: '#10101A',
         light: '#fcfcfc',
         primary: '#8353E2',
         secondary: '#05B19A',
+        bgcarret: '#e4e4e4',
+        bgcard: '#050510',
+        bgcardlight: "#CCCCCC",
+        bgcardimag:'#dbdbdb',
         'border-light': '#f5f5f5', // Light border color
         'border-dark': '#333333', // Dark border colorde la bordure en mode clair
         brand: {

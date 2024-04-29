@@ -46,6 +46,7 @@
 		"react-dom": "^18.2.0",
 		"react-i18next": "^14.1.1",
 		"react-icons": "^4.8.0",
+		"react-tooltip": "^5.26.4",
 		"react-twc": "^1.4.1",
 		"sass": "^1.75.0",
 		"sitemap": "^7.1.1",

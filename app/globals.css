@@ -46,6 +46,7 @@ h5 {
 	--main-color: #fff;
 	--caret-color: #1f2222;
 	--caret-color: #e1e1e1 !important;
+	--preview-color: var(--caret-color) !important;
 	--sub-color: #eaeaea;
 	--preview-color: var(--sub-color);
 }
@@ -270,4 +271,19 @@ pre {
 }
 [data-rehype-pretty-code-title] + pre {
 	@apply mt-0 rounded-t-none border-t-0;
+}
+
+.tooltip-container:hover {
+	z-index: 100; /* Assure que l'élément survolé est bien au-dessus des autres */
+}
+
+.custom-tooltip {
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.9
+	); /* Exemple de fond clair pour le tooltip */
+	color: black; /* Couleur du texte */
+	border: 1px solid grey; /* Bordure du tooltip */
 }
