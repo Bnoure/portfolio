@@ -63,6 +63,7 @@ export default {
       },
       margin: {
         '-0.6': '-0.6rem',
+        '-0.5': '-0.5rem',
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],

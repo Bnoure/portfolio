@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
+import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa'
 
 import { Project } from './projectData'
 import InfoSection from './infoSection/infoCard'
@@ -73,25 +74,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					<InfoSection title='Phase' content={project.building || ''} />
 					<TechStack techStack={project.tech_stack} />
 				</div>
-				<div className='mt-4 border-b border-borderblack'>
-					<h5 className='font-bold dark:text-light ml-2 '>
+				<div className='mt-2 border-b border-borderblack'>
+					<h5 className='font-bold dark:text-light ml-2  mb-2 '>
 						What I did for this project:
 					</h5>
-					<p className='ml-2  '>test</p>
+					<p className='ml-2 mb-2 font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 '>
+						test
+					</p>
 				</div>
 
 				{showDescription && (
-					<div className='mt-4 border-b border-borderblack'>
-						<h5 className='font-bold ml-2'>Details</h5>
-						<p className='ml-2'>{project.description}</p>
+					<div className='mt-2 border-b border-borderblack'>
+						<h5 className='font-bold ml-2 mb-2'>Details</h5>
+						<p className='ml-2 font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 mb-2'>
+							{project.description}
+						</p>
 					</div>
 				)}
 				<div
-					className='text-center cursor-pointer mt-4 '
+					className=' text-center cursor-pointer mt-4 '
 					onClick={() => setShowDescription(!showDescription)}
 				>
-					<h4 className='font-bold'>
-						{showDescription ? 'View Less' : 'View More'}
+					<h4 className='font-bold mb-2 flex justify-center items-center'>
+						{showDescription ? (
+							<>
+								<FaLongArrowAltUp className='mr-2' /> View Less
+							</>
+						) : (
+							<>
+								<FaLongArrowAltDown className='mr-2' /> View More
+							</>
+						)}
 					</h4>
 				</div>
 			</div>

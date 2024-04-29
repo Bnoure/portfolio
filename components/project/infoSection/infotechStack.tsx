@@ -35,12 +35,12 @@ type TechIconType = {
 
 const TechStack = ({ techStack }: { techStack: any }) => (
 	<div className='flex flex-col  border-b border-borderblack  '>
-		<h5 className='font-bold ml-2 '>Stack</h5>
+		<h5 className='font-bold mt-2 ml-2 '>Stack</h5>
 		<div className='flex'>
 			{techStack.map((tech: string, idx: number) => (
 				<div
 					key={idx}
-					className='z-[1] p-2'
+					className='z-[1]  p-2'
 					style={{
 						marginLeft: idx === 0 ? '0px' : '-20px',
 						zIndex: techStack.length - idx,
