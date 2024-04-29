@@ -1,43 +1,60 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
+
 import { Project } from './projectData'
 import { TechIcons } from '../teckstack'
-import { useTheme } from 'next-themes'
 
 interface ProjectCardProps {
 	project: Project
-	index: number
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+type TechIconType = {
+	Typescript: JSX.Element
+	React: JSX.Element
+	Ruby: JSX.Element
+	Postgresql: JSX.Element
+	Javascript: JSX.Element
+	Next: JSX.Element
+	Tailwind: JSX.Element
+	Bootstrap: JSX.Element
+	Rails: JSX.Element
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	const [showDescription, setShowDescription] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
+	const { theme } = useTheme()
+
+	const borderClass = theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
+	const backgroundColor = theme === 'dark' ? 'bg-brand-900' : 'bg-slate-500'
+
 	const cardStyles = {
 		transform: isHovered ? 'scale(1.005) translateZ(0px)' : 'none',
 		transition: 'transform 0.5s ease, height 0.3s ease, z-index 0s',
 		zIndex: isHovered ? 50 : 1,
 		cursor: 'pointer',
-		height: isHovered ? '200px' : '100px',
+		// Dynamiquement ajuster la hauteur basée sur le survol et si les détails sont affichés
+		height: isHovered ? (window.innerWidth < 768 ? '400px' : '250px') : '100px',
 	}
+
 	return (
-		<div className='flex flex-col  rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl'>
-			<div className=' bg-slate-200 p-2 relative overflow-hidden rounded-t-lg'>
+		<div
+			className={`flex flex-col rounded-lg shadow-lg   hover:-translate-y-1 hover:shadow-2xl transition-transform- transform-none  duration-500 ${backgroundColor} ${borderClass}`}
+		>
+			<div className='relative overflow-hidden rounded-t-lg'>
 				<div
-					className=''
 					style={{
 						padding: '1rem',
 						backgroundColor: 'var(--preview-color)',
 						marginTop: '-1px',
-						borderRadius: '10px 10px 0px 0px',
+
+						borderRadius: '10px 10px 0 0',
 						position: 'relative',
 						...cardStyles,
 					}}
-					onMouseEnter={() => {
-						setIsHovered(true) // Mettre à jour l'état lors du survol
-					}}
-					onMouseLeave={() => {
-						setIsHovered(false) // Réinitialiser l'état après le survol
-					}}
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
 				>
 					<Image
 						src={project.img}
@@ -50,117 +67,67 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					/>
 				</div>
 			</div>
-			<div className=' flex-grow'>
-				<div
-					style={{
-						display: 'grid',
-						gridTemplateColumns: 'repeat(3, 1fr)',
-						alignItems: 'center',
-					}}
-				>
-					{/* Name section */}
-					<div
-						id='nameSection'
-						style={{
-							display: 'flex',
-							flexDirection: 'column',
-							justifyContent: 'center',
-							borderRight: 'border-2 border-borderLight dark:border-borderDark',
-							borderBottom:
-								'border-2 border-borderLight dark:border-borderDark',
-							padding: '0.5rem 1rem',
-						}}
-					>
-						<h5
-							className='font-bold text-dark dark:text-light '
-							style={{ margin: '0 1px 0 0' }}
-						>
-							name
-						</h5>
-						<p style={{ margin: 0 }}>{project.title}</p>
-					</div>
-					{/* Building section */}
-					<div
-						id='buildingSection'
-						style={{
-							display: 'flex',
-							flexDirection: 'column',
-							justifyContent: 'center',
-							borderRight: '1px solid var(--caret-color)',
-							borderBottom: '1px solid var(--caret-color)',
-							padding: '0.5rem 1rem',
-						}}
-					>
-						<h5
-							className='font-bold text-dark dark:text-light '
-							style={{ margin: 0 }}
-						>
-							phase
-						</h5>
-						<p style={{ margin: 0 }}>{project.building}</p>
-					</div>
-					{/* Stack section */}
-					<div
-						id='stackSection'
-						style={{
-							display: 'flex',
-							flexDirection: 'column',
-							justifyContent: 'center',
-							borderBottom: '1px solid var(--caret-color)',
-							padding: '5px',
-						}}
-					>
-						<h5
-							className='font-bold text-dark dark:text-light '
-							style={{ margin: 0 }}
-						>
-							stack
-						</h5>
-						<div className='flex -space-x-4 z-0'>
-							{project.tech_stack.map((tech, idx) => (
-								<div
-									className='z-[1] p-1'
-									key={idx}
-									onMouseEnter={(e) => (e.currentTarget.style.zIndex = '10')}
-									onMouseLeave={(e) => (e.currentTarget.style.zIndex = '1')}
-								>
-									<TechIcons tech={tech} />
-								</div>
-							))}
-						</div>
-					</div>
+			<div className='p-2 dark:text-light'>
+				<div className=' grid grid-cols-3 gap-2  '>
+					<InfoSection title='Name' content={project.title} />
+					<InfoSection title='Phase' content={project.building || ''} />
+					<TechStack techStack={project.tech_stack} />
+				</div>
+				<div className=''>
+					<h5 className='font-bold dark:text-light '>
+						What I did for this project:
+					</h5>
+					<p>test</p>
 				</div>
 
-				<div
-					className={`p-4 mt-4 transition-all duration-300 ease-in-out
-
-					`}
-				>
-					<h5 className=' font-bold'>What</h5>
-					<p>I did this project for </p>
-				</div>
-
-				<div className='p-4 mt-4'>
-					<div
-						className={`  transition-all duration-300 ease-in-out ${
-							showDescription ? 'max-h-screen' : 'max-h-0 overflow-hidden'
-						}`}
-					>
-						<h5 className=' font-bold text-dark dark:text-light '>Details</h5>
+				{showDescription && (
+					<div className=''>
+						<h5 className='font-bold'>Details</h5>
 						<p>{project.description}</p>
 					</div>
+				)}
+				<div
+					className='text-center cursor-pointer'
+					onClick={() => setShowDescription(!showDescription)}
+				>
+					<h4 className='font-bold'>
+						{showDescription ? 'View Less' : 'View More'}
+					</h4>
 				</div>
-			</div>
-			<div
-				className='p-4 text-center cursor-pointer rounded-b-lg'
-				onClick={() => setShowDescription(!showDescription)}
-			>
-				<h4 className=' font-bold text-dark dark:text-light '>
-					{showDescription ? 'View Less' : 'View More'}
-				</h4>
 			</div>
 		</div>
 	)
 }
+
+const InfoSection = ({
+	title,
+	content,
+}: {
+	title: string
+	content: string
+}) => (
+	<div className='flex flex-col  '>
+		<h5 className='font-bold'>{title}</h5>
+		<p>{content}</p>
+	</div>
+)
+
+const TechStack = ({ techStack }: { techStack: any }) => (
+	<div className='flex flex-col '>
+		<h5 className='font-bold'>Stack</h5>
+		<div className='flex -space-x-4'>
+			{techStack.map((tech: string, idx: number): {} => (
+				<div
+					key={idx}
+					className='z-10 p-1'
+					onMouseEnter={(e) => (e.currentTarget.style.zIndex = '20')}
+					onMouseLeave={(e) => (e.currentTarget.style.zIndex = '10')}
+				>
+					<TechIcons tech={tech as keyof TechIconType} />
+				</div>
+			))}
+		</div>
+	</div>
+)
 
 export default ProjectCard

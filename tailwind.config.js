@@ -27,8 +27,8 @@ export default {
         light: '#fcfcfc',
         primary: '#8353E2',
         secondary: '#05B19A',
-        borderDark: '#1f2222', // couleur de la bordure en mode sombre
-        borderLight: '#e1e1e1', // couleur de la bordure en mode clair
+        'border-light': '#f5f5f5', // Light border color
+        'border-dark': '#333333', // Dark border colorde la bordure en mode clair
         brand: {
           DEFAULT: '#3867D6',
           950: '#050f20',
