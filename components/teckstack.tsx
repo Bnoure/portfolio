@@ -46,6 +46,7 @@ export const TechIcons = ({ tech }: TechIconsProps) => {
 		margin: 'auto',
 		width: '1.1rem',
 		height: '1.1rem',
+		borderRadius: '50%',
 	}
 
 	const icons = {

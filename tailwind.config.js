@@ -23,7 +23,8 @@ export default {
         '1/3': '33.333333%',
       },
       colors: {
-        preview:"#e1e1e1",
+        preview:"#f5f5f5",
+        previewborder:"#e4e4e1",
         dark: '#10101A',
         light: '#fcfcfc',
         primary: '#8353E2',

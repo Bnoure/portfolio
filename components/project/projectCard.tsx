@@ -24,7 +24,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	useEffect(() => {
 		setBorderClass(theme === 'dark' ? 'border-gray-800' : 'border-gray-200')
 		setBackgroundColor(theme === 'dark' ? 'bg-bgcard' : 'bg-light')
-		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-bgcardimag')
+		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-preview')
+		setBackgroundSelectionColor(
+			theme === 'light' ? 'bg-previewborder' : 'bg-light'
+		)
 	}, [theme])
 
 	const cardStyles = {

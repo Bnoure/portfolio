@@ -18,7 +18,7 @@ interface CheckpointProps {
 
 const Checkpoint = ({ title, children }: CheckpointProps) => (
 	<>
-		<div className='flex items-start mb-1'>
+		<div className='flex items-start mb-1 '>
 			<div className='text-green-700 dark:text-green-300 mt-1'>
 				<HiBadgeCheck className='h-5 w-5' />
 			</div>
@@ -35,7 +35,7 @@ const FullTimeline = () => {
 	const { t } = useTranslation()
 
 	return (
-		<div className='text-gray-900 dark:text-gray-400 timeline'>
+		<div className='text-gray-900 dark:text-gray-400 timeline justify-center'>
 			<Year>2024</Year>
 			<ul>
 				<Checkpoint title={t('common.checkpoints.title1')}>
