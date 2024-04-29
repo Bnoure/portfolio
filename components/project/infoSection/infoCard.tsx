@@ -5,9 +5,9 @@ const InfoSection = ({
 	title: string
 	content: string
 }) => (
-	<div className='flex flex-col  '>
-		<h5 className='font-bold'>{title}</h5>
-		<p>{content}</p>
+	<div className='flex flex-col border-r border-borderblack border-b'>
+		<h5 className='font-bold ml-2'>{title}</h5>
+		<p className='ml-2'>{content}</p>
 	</div>
 )
 

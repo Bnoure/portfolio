@@ -33,7 +33,7 @@ export default {
         bgcardlight: "#CCCCCC",
         bgcardimag:'#dbdbdb',
         'border-light': '#f5f5f5', // Light border color
-        'border-dark': '#333333', // Dark border colorde la bordure en mode clair
+        borderblack: "#1f2222", // Dark border colorde la bordure en mode clair
         brand: {
           DEFAULT: '#3867D6',
           950: '#050f20',

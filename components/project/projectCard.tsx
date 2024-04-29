@@ -44,8 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					className={`${backgroundImageColor}`}
 					style={{
 						padding: '1rem',
-
-						marginTop: '-1px',
+						margin: '1px',
 
 						borderRadius: '10px 10px 0 0',
 						position: 'relative',
@@ -65,27 +64,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					/>
 				</div>
 			</div>
-			<div className='p-2 dark:text-light hover:bg-preview dark:hover:bg-gray-700 transition-colors duration-300 rounded-b-sm'>
-				<div className=' grid grid-cols-3 gap-2  '>
+			<div className=' border-r-2 border-borderblack border-b-2 border-l-2 dark:text-light hover:bg-preview dark:hover:bg-gray-700 transition-colors duration-300 rounded-b-sm hover-rounded '>
+				<div
+					className=' grid grid-cols-3
+          border-b-slate-100 '
+				>
 					<InfoSection title='Name' content={project.title} />
 					<InfoSection title='Phase' content={project.building || ''} />
 					<TechStack techStack={project.tech_stack} />
 				</div>
-				<div className=''>
-					<h5 className='font-bold dark:text-light '>
+				<div className='mt-4 border-b border-borderblack'>
+					<h5 className='font-bold dark:text-light ml-2 '>
 						What I did for this project:
 					</h5>
-					<p>test</p>
+					<p className='ml-2  '>test</p>
 				</div>
 
 				{showDescription && (
-					<div className=''>
-						<h5 className='font-bold'>Details</h5>
-						<p>{project.description}</p>
+					<div className='mt-4 border-b border-borderblack'>
+						<h5 className='font-bold ml-2'>Details</h5>
+						<p className='ml-2'>{project.description}</p>
 					</div>
 				)}
 				<div
-					className='text-center cursor-pointer'
+					className='text-center cursor-pointer mt-4 '
 					onClick={() => setShowDescription(!showDescription)}
 				>
 					<h4 className='font-bold'>

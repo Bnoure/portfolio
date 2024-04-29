@@ -1,6 +1,26 @@
 import { TechIcons } from '../../teckstack'
 import Tooltip from '@mui/material/Tooltip'
 
+import { createTheme } from '@mui/system'
+
+const theme = createTheme({
+	palette: {
+		background: {
+			paper: '#fff',
+		},
+		text: {
+			primary: '#173A5E',
+			secondary: '#46505A',
+		},
+		action: {
+			active: '#001E3C',
+		},
+		success: {
+			dark: '#009688',
+		},
+	},
+})
+
 type TechIconType = {
 	Typescript: JSX.Element
 	React: JSX.Element
@@ -14,8 +34,8 @@ type TechIconType = {
 }
 
 const TechStack = ({ techStack }: { techStack: any }) => (
-	<div className='flex flex-col'>
-		<h5 className='font-bold'>Stack</h5>
+	<div className='flex flex-col  border-b border-borderblack  '>
+		<h5 className='font-bold ml-2 '>Stack</h5>
 		<div className='flex'>
 			{techStack.map((tech: string, idx: number) => (
 				<div
@@ -40,11 +60,11 @@ const TechStack = ({ techStack }: { techStack: any }) => (
 						arrow
 						placement='top'
 						sx={{
-							'& .MuiTooltip-tooltip': {
-								backgroundColor: 'white',
-								color: 'black',
-								fontWeight: '700',
-							},
+							bgcolor: 'background.paper',
+							boxShadow: 1,
+							borderRadius: 2,
+							p: 2,
+							minWidth: 300,
 						}}
 					>
 						<div>
