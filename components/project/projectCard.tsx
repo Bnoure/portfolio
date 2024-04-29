@@ -6,7 +6,6 @@ import { Project } from './projectData'
 import InfoSection from './infoSection/infoCard'
 
 import TechStack from './infoSection/infotechStack'
-import { transform } from 'next/dist/build/swc'
 
 interface ProjectCardProps {
 	project: Project
@@ -25,7 +24,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 		setBorderClass(theme === 'dark' ? 'border-gray-800' : 'border-gray-200')
 		setBackgroundColor(theme === 'dark' ? 'bg-bgcard' : 'bg-light')
 		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-bgcardimag')
-		// setBackgroundSelectionColor(transform === 'dark' ? 'bg-bgcard' : 'bg-light')
 	}, [theme])
 
 	const cardStyles = {
@@ -33,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 		transition: 'transform 0.5s ease, height 0.3s ease, z-index 0s',
 		zIndex: isHovered ? 50 : 1,
 		cursor: 'pointer',
-		// Dynamiquement ajuster la hauteur basée sur le survol et si les détails sont affichés
+
 		height: isHovered ? (window.innerWidth < 768 ? '400px' : '250px') : '100px',
 	}
 

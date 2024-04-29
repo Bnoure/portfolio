@@ -1,5 +1,5 @@
 import { TechIcons } from '../../teckstack'
-import { Tooltip } from 'react-tooltip'
+import Tooltip from '@mui/material/Tooltip'
 
 type TechIconType = {
 	Typescript: JSX.Element
@@ -19,7 +19,6 @@ const TechStack = ({ techStack }: { techStack: any }) => (
 		<div className='flex'>
 			{techStack.map((tech: string, idx: number) => (
 				<div
-					data-tooltip-id={`${tech}-${idx}`}
 					key={idx}
 					className='z-[1] p-2'
 					style={{
@@ -31,23 +30,27 @@ const TechStack = ({ techStack }: { techStack: any }) => (
 						(e.currentTarget.style.zIndex = (techStack.length - idx).toString())
 					} // Remettre le z-index initial après survol
 				>
-					<TechIcons tech={tech as keyof TechIconType} />
 					<Tooltip
-						place='top'
-						id={`${tech}-${idx}`}
-						content={
+						title={
 							<div style={{ display: 'flex', alignItems: 'center' }}>
 								<TechIcons tech={tech as keyof TechIconType} />
 								<span>{tech}</span>
 							</div>
 						}
-						style={{
-							backgroundColor: 'rgb(0, 255, 30)',
-							color: '#222',
-							fontWeight: '700',
-							zIndex: 1000,
+						arrow
+						placement='top'
+						sx={{
+							'& .MuiTooltip-tooltip': {
+								backgroundColor: 'white',
+								color: 'black',
+								fontWeight: '700',
+							},
 						}}
-					/>
+					>
+						<div>
+							<TechIcons tech={tech as keyof TechIconType} />
+						</div>
+					</Tooltip>
 				</div>
 			))}
 		</div>
