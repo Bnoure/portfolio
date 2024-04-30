@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
 	const cardStyles = {
 		transform: isHovered ? 'scale(1.005) translateZ(0px)' : 'none',
-		transition: 'transform 0.5s ease, height 0.3s ease, z-index 0s',
+		transition: 'transform 0.2s ease, height 0.2s ease, z-index 0s',
 		zIndex: isHovered ? 50 : 1,
 		cursor: 'pointer',
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { getProjectData } from '../../components/project/projectData' // Assurez-vous que le chemin est correct
+import { getProjectData } from '../../components/project/projectData'
 import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,7 +10,7 @@ import Link from 'next/link'
 const ProjectDetails = () => {
 	const { t } = useTranslation('common')
 	const router = useRouter()
-	const { slug } = router.query // slug est maintenant un titre de projet
+	const { slug } = router.query
 	const project = getProjectData(t).find(
 		(p) => p.title.replace(/\s+/g, '-').toLowerCase() === slug
 	)
@@ -39,7 +39,7 @@ const ProjectDetails = () => {
 							alt='Project Cover'
 							width={800}
 							height={450}
-							layout='responsive' // Assurez-vous que Image peut gérer ce layout
+							layout='responsive'
 						/>
 						<Link href='/projets' legacyBehavior>
 							<a className='mt-4 inline-block px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600'>
@@ -55,7 +55,6 @@ const ProjectDetails = () => {
 	)
 }
 export const getStaticPaths = async () => {
-	// Simulez ou obtenez des données fixes pour les chemins
 	const projects = [
 		{ slug: 'portfolio' },
 		{ slug: '2nd-round' },
@@ -88,21 +87,18 @@ export const getStaticProps = async ({
 	const fakeTranslations: Translations = {
 		en: {
 			'common.projects.titlePortfolio': 'Portfolio',
-			// autres traductions nécessaires
 		},
 		fr: {
 			'common.projects.titlePortfolio': 'Portefeuille',
-			// autres traductions nécessaires
 		},
 	}
 
-	// Fonction de traduction simulée
 	const t = (key: string) => {
 		const translationByLocale = fakeTranslations[locale]
 		if (translationByLocale) {
-			return translationByLocale[key] || key // Fallback to key if translation is missing
+			return translationByLocale[key] || key
 		}
-		return key // Fallback to key if locale is not found
+		return key
 	}
 
 	const projects = getProjectData(t)

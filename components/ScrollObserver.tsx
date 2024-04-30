@@ -1,4 +1,4 @@
-import React, {
+import {
 	ReactNode,
 	useCallback,
 	useEffect,
@@ -6,6 +6,7 @@ import React, {
 	createContext,
 } from 'react'
 
+import React from 'react'
 interface ScrollValue {
 	scrollY: number
 	scrollHeight: number

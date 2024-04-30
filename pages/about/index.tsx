@@ -6,7 +6,7 @@ const AboutContent = dynamic(() => import('../../components/about/about'), {
 	ssr: false,
 })
 
-const LoadingPlaceholder = () => <div>Chargement...</div> // Placeholder pendant le chargement
+const LoadingPlaceholder = () => <div>Chargement...</div>
 
 function AboutPage() {
 	return (
@@ -19,7 +19,7 @@ function AboutPage() {
 export async function getStaticProps({ locale }: { locale: string }) {
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['common'])), // Assurez-vous d'inclure tous les namespaces nécessaires
+			...(await serverSideTranslations(locale, ['common'])),
 		},
 	}
 }

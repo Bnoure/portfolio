@@ -1,5 +1,5 @@
 'use client'
-import { ReactElement } from 'react'
+import { ReactElement, useState, useEffect } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
@@ -15,10 +15,18 @@ export default function Hero(): ReactElement {
 	const { t } = useTranslation('common')
 	const { locale } = useRouter()
 	const aboutUrl = `/${locale}/about`
-	const { theme } = useTheme()
+	const { theme, setTheme, systemTheme } = useTheme()
 
-	const isDark = theme === 'dark'
-	const isLight = theme === 'light'
+	const [activeTheme, setActiveTheme] = useState(theme)
+
+	useEffect(() => {
+		if (theme) {
+			setActiveTheme(theme)
+		}
+	}, [theme])
+
+	const isDark = activeTheme === 'dark'
+	const isLight = activeTheme === 'light'
 
 	const darkGradientStyle = {
 		backgroundImage: '-webkit-linear-gradient(-45deg, #48cb8a, #8353e2)',
