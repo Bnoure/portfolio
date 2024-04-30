@@ -31,7 +31,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 	// Grande carte en haut à gauche
 	{
 		header: <Skeleton />,
-		iconPath: '/images/Arcgrand.png',
+		iconPath: '/images/Portoflio.jpg',
 		name: t('common.projects.titlePortfolio'),
 		description: t('common.projects.descriptionPortfolio'),
 		href: '/',
@@ -68,7 +68,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 	// Petite carte  à gauche
 	{
 		header: <Skeleton />,
-		iconPath: '/images/Arcgrand.png',
+		iconPath: '/images/Arc.jpg',
 		name: t('common.projects.titleArc'),
 		description: t('common.projects.descriptionArc'),
 		href: 'https://github.com/Bnoure/Arc.git',
@@ -80,7 +80,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 	// Grande carte milieu à droite
 	{
 		header: <Skeleton />,
-		iconPath: 'images/Rental.svg',
+		iconPath: 'images/Rental.jpg',
 		name: t('common.projects.titleRental'),
 		description: t('common.projects.descriptionRental'),
 		href: 'https://github.com/Bnoure/rental.git',
@@ -93,7 +93,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 	// Grande carte dernière ligne
 	{
 		header: <Skeleton />,
-		iconPath: 'images/Koalapp.svg',
+		iconPath: 'images/Koalapp.jpg',
 		name: t('common.projects.titleKoalapp'),
 		description: t('common.projects.descriptionKoalapp'),
 		href: 'https://github.com/Bnoure/koala.git',
