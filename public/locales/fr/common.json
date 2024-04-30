@@ -31,15 +31,15 @@
     "projects": {
       "title": "Mes Projets",
       "titlePortfolio": "Portfolio",
-        "descriptionPortfolio": "Mon Portfolio est une application web réactive, conçue pour présenter mes compétences et mes projets. Créée avec React, elle est un exemple de mon acharnement à apprendre de nouvelle technologie en tant que développeur full-stack.",
-      "title2ndRound": "2ndRound",
-      "description2ndRound": "SecondRound révolutionne le marché du jeu vidéo d'occasion avec une application web mobile, fruit d'un challenge de développement de 10 jours, simplifiant les échanges pour vendeurs et joueurs.",
+        "descriptionPortfolio": "Portfolio interactif en React, TypeScript et Next.js démontrant mes compétences full-stack.",
+      "title2ndRound": "2ndR",
+      "description2ndRound": "SecondRound, une app mobile qui simplifie le commerce de jeux vidéo d'occasion, développée en 10 jours.",
       "titleKoalapp": "Koalapp",
       "descriptionKoalapp": "Visitez stackkoala.online pour explorer Koalapp : des articles provenant d'un appel API vers News API et personnalisés par l'IA. Créée en un sprint de codage de 24 heures.",
       "titleArc": "Arc",
       "descriptionArc": "Explorez des séjours uniques avec Arc, votre solution facile pour réserver des hôtels en France, créée en un sprint de codage de 24 heures.",
       "titleRental": "Rental",
-      "descriptionRental": "Explorez Rental sur stackrental.online : des locations de voitures intuitives et faciles, des berlines aux SUV, conçues pour un parcours en ligne sans accroc. Créée en un sprint de codage de 24 heures."
+      "descriptionRental": "Rental : location de voitures en ligne, de berlines à SUV, développée en 24 heures."
     },
     "about": {
       "title": "À Propos",

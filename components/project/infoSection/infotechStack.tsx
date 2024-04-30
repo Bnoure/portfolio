@@ -1,26 +1,6 @@
 import { TechIcons } from '../../teckstack'
 import Tooltip from '@mui/material/Tooltip'
 
-import { createTheme } from '@mui/system'
-
-const theme = createTheme({
-	palette: {
-		background: {
-			paper: '#fff',
-		},
-		text: {
-			primary: '#173A5E',
-			secondary: '#46505A',
-		},
-		action: {
-			active: '#001E3C',
-		},
-		success: {
-			dark: '#009688',
-		},
-	},
-})
-
 type TechIconType = {
 	Typescript: JSX.Element
 	React: JSX.Element
@@ -44,11 +24,11 @@ const TechStack = ({ techStack }: { techStack: any }) => (
 					style={{
 						marginLeft: idx === 0 ? '0px' : '-20px',
 						zIndex: techStack.length - idx,
-					}} // Plus haute z-index pour l'élément à gauche
-					onMouseEnter={(e) => (e.currentTarget.style.zIndex = '100')} // Temporairement augmenter z-index au survol
+					}}
+					onMouseEnter={(e) => (e.currentTarget.style.zIndex = '100')}
 					onMouseLeave={(e) =>
 						(e.currentTarget.style.zIndex = (techStack.length - idx).toString())
-					} // Remettre le z-index initial après survol
+					}
 				>
 					<Tooltip
 						title={

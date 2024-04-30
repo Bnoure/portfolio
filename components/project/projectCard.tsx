@@ -47,9 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 				<div
 					className={`${backgroundImageColor}`}
 					style={{
-						padding: '1rem',
 						margin: '1px',
-
 						borderRadius: '10px 10px 0 0',
 						position: 'relative',
 						...cardStyles,
@@ -65,6 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 						sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
 						quality={75}
 						loading='lazy'
+						className='scale-100 rounded-t-3xl'
 					/>
 				</div>
 			</div>

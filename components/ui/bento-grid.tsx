@@ -6,6 +6,8 @@ import { TfiZoomIn } from 'react-icons/tfi'
 
 import Link from 'next/link'
 
+import IconTechStack from './iconStack'
+
 export const BentoGrid = ({
 	className,
 	children,
@@ -31,9 +33,10 @@ export const BentoGridItem = ({
 	iconPath,
 	description,
 	href,
-	imgStyle,
+	imageClassName,
 	textStyle,
 	projetSlug,
+	techStack,
 }: {
 	name: string
 	className?: string
@@ -41,22 +44,33 @@ export const BentoGridItem = ({
 	description: string
 	href: string
 	projetSlug: string
-	imgStyle?: any
+	imageClassName?: string
 	textStyle?: any
+	techStack?: string[]
 }) => {
 	const { t } = useTranslation()
 
 	return (
 		<div
 			className={cn(
-				' row-span-1 rounded-xl group/bento group hover:shadow-xl  dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4',
+				' row-span-1 rounded-xl group/bento group hover:shadow-xl  p-4 dark:shadow-none  dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col ',
 				className
 			)}
 		>
-			<img src={iconPath} alt='' style={imgStyle} />
-			<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 flex justify-between items-center'>
+			<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200   flex justify-between items-center'>
 				<span>{t(name)}</span>
+				{/* <IconTechStack techStack={techStack} /> */}
+			</div>
+
+			<img src={iconPath} alt='' className={imageClassName} />
+			<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200   flex justify-between items-center'>
 				<div className='flex space-x-2 items-center'>
+					<p
+						className='font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300'
+						style={textStyle}
+					>
+						{t(description)}
+					</p>
 					<Link href={`/projets/${projetSlug.replace('/projets/', '')}`}>
 						{' '}
 						<TfiZoomIn size={20} />
@@ -67,12 +81,6 @@ export const BentoGridItem = ({
 					</a>
 				</div>
 			</div>
-			<p
-				className='font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300'
-				style={textStyle}
-			>
-				{t(description)}
-			</p>
 		</div>
 	)
 }

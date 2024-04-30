@@ -24,7 +24,7 @@ interface TechIconType {
 export const getProjectData = (t: (key: string) => string): Project[] => {
 	return [
 		{
-			img: '/images/Arcgrand.png',
+			img: '/images/PortoflioDark.png',
 			title: t('common.projects.titlePortfolio'),
 			description: t('common.projects.descriptionPortfolio'),
 			tech_stack: [
@@ -39,7 +39,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 		},
 
 		{
-			img: '/images/2nd.jpeg',
+			img: '/images/2nd.png',
 			title: t('common.projects.title2ndRound'),
 			description: t('common.projects.description2ndRound'),
 			tech_stack: [
@@ -54,7 +54,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			imgStyle: 'rounded-none rounded-r',
 		},
 		{
-			img: '/images/Koalapp.svg',
+			img: '/images/Koalapppng.png',
 			title: t('common.projects.titleKoalapp'),
 			description: t('common.projects.descriptionKoalapp'),
 			tech_stack: [
@@ -68,7 +68,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			building: 'Completed',
 		},
 		{
-			img: '/images/Arc.svg',
+			img: '/images/Arc.png',
 			title: t('common.projects.titleArc'),
 			description: t('common.projects.descriptionArc'),
 			tech_stack: [
@@ -82,7 +82,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			building: 'Completed',
 		},
 		{
-			img: '/images/Rental.svg',
+			img: '/images/Rental.png',
 			title: t('common.projects.titleRental'),
 			description: t('common.projects.descriptionRental'),
 			tech_stack: [

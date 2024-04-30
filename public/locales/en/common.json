@@ -31,15 +31,15 @@
     "projects": {
       "title": "My Projects",
       "titlePortfolio": "Portfolio",
-        "descriptionPortfolio": "My Portfolio is a responsive web application, designed to showcase my skills and projects. Created with React, it is an example of my determination to learn new technology as a full-stack developer.",
-      "title2ndRound": "2ndRound",
-      "description2ndRound": "SecondRound revolutionizes the pre-owned video game market with a mobile web app born from a 10-day development challenge, streamlining the trade for sellers and gamers alike.",
+        "descriptionPortfolio": "Dynamic React, TypeScript and Next.js portfolio showcasing my full-stack development skills and projects.",
+      "title2ndRound": "2ndR",
+      "description2ndRound": "SecondRound, a mobile app streamlining pre-owned video game trade, developed in 10 days.",
       "titleKoalapp": "Koalapp",
       "descriptionKoalapp": "Visit stackkoala.online to explore Koalapp: Dynamic, personalized news articles. Articles are fetched from the News API and modified with AI to be more personalized.",
       "titleArc": "Arc",
       "descriptionArc": "Explore unique stays with Arc, your go-to for easy hotel bookings in France, crafted in a 24-hour coding sprint.",
       "titleRental": "Rental",
-      "descriptionRental": "Explore Rental on stackrental.online: Easy, intuitive car rentals from sedans to SUVs, designed for a seamless online journey."
+      "descriptionRental": "Rental: Online car rentals from sedans to SUVs, developed in 24 hours."
     },
 
     "about": {
