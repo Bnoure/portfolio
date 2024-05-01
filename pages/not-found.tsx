@@ -2,18 +2,13 @@ import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 
-interface ErrorPageProps {
-	statusCode: number | undefined
-}
-
-export default function Custom404({ statusCode }: ErrorPageProps) {
+export default function NotFound() {
 	const { t } = useTranslation()
 	return (
 		<div className='h-[calc(100vh-400px)] mt-10'>
 			<h2 className='heading'>
-				{statusCode
-					? t('common.errorWithCode', { statusCode })
-					: t('common.errorTitle')}
+				<p>{t('common.errorWithCode')} </p>
+				<p>{t('common.errorTitle')}</p>
 			</h2>
 			<p className='mb-10'>{t('common.oopsMessage')}</p>
 			<p>

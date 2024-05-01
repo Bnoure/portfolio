@@ -3,51 +3,54 @@ import { Readable } from 'stream';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 interface Projet {
-    id: string;
-    modifiedDate: string;
-}
-
-interface SitemapLink {
-    url: string;
-    changefreq: string;
-    priority: number;
-    lastmod?: string;
+    slug: string; // Utilisez `slug` pour identifier les projets plutôt que `id`
 }
 
 const fetchProjets = async (): Promise<Projet[]> => {
     return [
-        { id: '1', modifiedDate: '2021-01-01' },
-        { id: '2', modifiedDate: '2021-02-01' }
+        { slug: 'portfolio' },
+        { slug: 'secondround' },
+        { slug: 'arc' },
+        { slug: 'rental' },
+        { slug: 'koalapp' }
     ];
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { locale } = req.query;
+    const { locale } = req.query as { locale?: string };
+    const hostname = `https://www.codeflownb.com/${locale ? `${locale}/` : ''}`;
 
-    const hostname = `https://exemple.com/${locale}`;
     const smStream = new SitemapStream({ hostname });
+    const projets = await fetchProjets();
 
-    const links: SitemapLink[] = [
-        { url: '/', changefreq: 'daily', priority: 1 },
-        { url: '/about', changefreq: 'monthly', priority: 0.8 },
-        { url: '/projets', changefreq: 'monthly', priority: 0.8 }
+    const links = [
+        { url: '/', changefreq: 'daily', priority: 1, lastmodISO: new Date().toISOString() },
+        { url: '/about', changefreq: 'monthly', priority: 0.8, lastmodISO: new Date().toISOString() },
+        { url: '/projets', changefreq: 'monthly', priority: 0.8, lastmodISO: new Date().toISOString() },
+        // Ajoutez d'autres pages statiques si nécessaire
     ];
 
-    const projets = await fetchProjets();
     projets.forEach(projet => {
         links.push({
-            url: `/projets/${projet.id}`,
+            url: `/projets/${projet.slug}`,
             changefreq: 'monthly',
             priority: 0.7,
-            lastmod: projet.modifiedDate
+            lastmodISO: new Date().toISOString() // Supposons que vous mettez à jour la dernière modification lors de l'exécution de cette fonction
         });
     });
 
+    // Gérer les locales pour les URL
+    const locales = ['en', 'fr', ''];
+    locales.forEach(loc => {
+        links.forEach(link => {
+            smStream.write({ ...link, url: `/${loc}${link.url}`.replace('//', '/') });
+        });
+    });
 
+    // Stream les liens au sitemap
     Readable.from(links).pipe(smStream).on('end', () => {
         res.end();
     });
-
 
     res.writeHead(200, { 'Content-Type': 'application/xml' });
     const sitemapOutput = await streamToPromise(smStream);
