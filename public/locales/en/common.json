@@ -42,6 +42,49 @@
       "descriptionRental": "Rental: Online car rentals from sedans to SUVs, developed in 24 hours."
     },
 
+
+
+    "projectDetail"
+    : {
+      "about": "what ?",
+      "detail": "description",
+      "show": " View More",
+      "hide" : "View Less",
+      "name": "Name",
+      "phase": "Phase",
+      "ongoing": "Ongoing",
+      "completed": "Completed",
+
+      "rental" : {
+        "title": "Rental Challenge: 24-Hour Code Sprint to Revolutionize Car Rentals",
+        "description": "Rental was crafted in a 24-hour coding challenge, aiming to streamline the car rental process with an innovative online interface."
+      },
+      "arc" : {
+        "title": "Arc Challenge: Building a Hotel Booking Site in 24 Hours",
+        "description": "Arc was born from a 24-hour coding challenge to craft an intuitive hotel booking platform, simplifying user interactions and reservations."
+
+      },
+      "koalapp" : {
+        "title": "Koalapp Challenge: Reinventing News Delivery in a Day",
+        "description": "Conceived in a 24-hour hackathon, Koalapp revolutionizes how we consume news by integrating AI to dynamically update articles."
+
+      },
+      "secondround" : {
+        "title": "SecondRound Challenge: Transforming the Gaming Resale Market in 10 Days",
+        "description": "SecondRound transforms the second-hand gaming market through a 10-day coding challenge, enhancing buyer and seller interactions."
+
+      },
+      "portfolio" : {
+        "title": "Portfolio Challenge: Mastering New Technologies through Practical Application",
+        "description": "This portfolio is the culmination of a personal challenge to learn and master React, Next.js, and TypeScript by building a dynamic and interactive online portfolio that showcases projects and skills."
+
+      }
+
+    },
+
+
+
+
     "about": {
       "title": "About Me",
       "mePart1": "My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",

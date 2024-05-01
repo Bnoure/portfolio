@@ -1,6 +1,7 @@
 export interface Project {
 	img: string
 	title: string
+	what: string
 	description: string
 	tech_stack: (keyof TechIconType)[]
 	projetSlug: string
@@ -26,7 +27,8 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 		{
 			img: '/images/PortoflioDark.png',
 			title: t('common.projects.titlePortfolio'),
-			description: t('common.projects.descriptionPortfolio'),
+			description: t('common.projectDetail.portfolio.title'),
+			what: t('common.projectDetail.portfolio.description'),
 			tech_stack: [
 				'React',
 				'Javascript',
@@ -35,27 +37,14 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Tailwind',
 			] as (keyof TechIconType)[],
 			projetSlug: '/projets/portfolio',
-			building: 'Completed',
+			building: t('common.projectDetail.ongoing'),
 		},
 
 		{
-			img: '/images/2nd.png',
-			title: t('common.projects.title2ndRound'),
-			description: t('common.projects.description2ndRound'),
-			tech_stack: [
-				'Javascript',
-				'Ruby',
-				'Rails',
-				'Postgresql',
-				'Bootstrap',
-			] as (keyof TechIconType)[],
-			projetSlug: '/projets/secondround',
-			building: 'Completed',
-		},
-		{
 			img: '/images/Koalapppng.png',
 			title: t('common.projects.titleKoalapp'),
-			description: t('common.projects.descriptionKoalapp'),
+			description: t('common.projectDetail.koalapp.title'),
+			what: t('common.projectDetail.koalapp.description'),
 			tech_stack: [
 				'Javascript',
 				'Ruby',
@@ -64,12 +53,13 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Bootstrap',
 			] as (keyof TechIconType)[],
 			projetSlug: '/projets/koalapp',
-			building: 'Completed',
+			building: t('common.projectDetail.completed'),
 		},
 		{
 			img: '/images/Arc.png',
 			title: t('common.projects.titleArc'),
-			description: t('common.projects.descriptionArc'),
+			description: t('common.projectDetail.arc.title'),
+			what: t('common.projectDetail.arc.description'),
 			tech_stack: [
 				'Javascript',
 				'Ruby',
@@ -78,12 +68,13 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Bootstrap',
 			] as (keyof TechIconType)[],
 			projetSlug: '/projets/arc',
-			building: 'Completed',
+			building: t('common.projectDetail.completed'),
 		},
 		{
 			img: '/images/Rental.png',
 			title: t('common.projects.titleRental'),
-			description: t('common.projects.descriptionRental'),
+			description: t('common.projectDetail.rental.title'),
+			what: t('common.projectDetail.rental.description'),
 			tech_stack: [
 				'Javascript',
 				'Ruby',
@@ -92,7 +83,23 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Bootstrap',
 			] as (keyof TechIconType)[],
 			projetSlug: '/projets/rental',
-			building: 'Completed',
+			building: t('common.projectDetail.completed'),
+		},
+
+		{
+			img: '/images/2nd.png',
+			title: t('common.projects.title2ndRound'),
+			description: t('common.projectDetail.secondround.title'),
+			what: t('common.projectDetail.secondround.description'),
+			tech_stack: [
+				'Javascript',
+				'Ruby',
+				'Rails',
+				'Postgresql',
+				'Bootstrap',
+			] as (keyof TechIconType)[],
+			projetSlug: '/projets/secondround',
+			building: t('common.projectDetail.completed'),
 		},
 	]
 }

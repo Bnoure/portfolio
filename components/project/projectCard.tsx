@@ -2,32 +2,30 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa'
-
 import { Project } from './projectData'
 import InfoSection from './infoSection/infoCard'
-
+import { useTranslation } from 'react-i18next'
 import TechStack from './infoSection/infotechStack'
+import Link from 'next/link'
 
 interface ProjectCardProps {
 	project: Project
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+	const { t } = useTranslation()
 	const [showDescription, setShowDescription] = useState(false)
 	const [isHovered, setIsHovered] = useState(false)
 	const { theme } = useTheme()
 	const [borderClass, setBorderClass] = useState('')
 	const [backgroundColor, setBackgroundColor] = useState('')
 	const [backgroundImageColor, setBackgroundImageColor] = useState('')
-	const [backgroundSelectionColor, setBackgroundSelectionColor] = useState('')
+
 	const [borderColor, setBorderColor] = useState('')
 
 	useEffect(() => {
 		setBackgroundColor(theme === 'dark' ? 'bg-bgcard' : 'bg-light')
 		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-preview')
-		setBackgroundSelectionColor(
-			theme === 'light' ? 'bg-previewborder' : 'bg-light'
-		)
 		setBorderColor(
 			theme === 'dark' ? 'border-borderblack' : 'border-borderlight'
 		)
@@ -58,16 +56,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
-					<Image
-						src={project.img}
-						alt={project.title}
-						width={800}
-						height={450}
-						sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
-						quality={75}
-						loading='lazy'
-						className='scale-100 rounded-t-3xl'
-					/>
+					<Link href={project.projetSlug}>
+						<Image
+							src={project.img}
+							alt={project.title}
+							width={800}
+							height={450}
+							sizes='(min-width: 75em) 33vw, (min-width: 48em) 50vw, 100vw'
+							quality={75}
+							loading='lazy'
+							className='scale-100 rounded-t-3xl'
+						/>
+					</Link>
 				</div>
 			</div>
 			<div
@@ -77,24 +77,35 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					className=' grid grid-cols-3
           border-b-slate-100 '
 				>
-					<InfoSection title='Name' content={project.title} />
-					<InfoSection title='Phase' content={project.building || ''} />
+					<InfoSection
+						title={t('common.projectDetail.name')}
+						content={project.title}
+					/>
+					<InfoSection
+						title={t('common.projectDetail.phase')}
+						content={project.building || ''}
+						project={project}
+					/>
+
 					<TechStack techStack={project.tech_stack} />
 				</div>
 				<div className={`mt-2 border-b ${borderColor}`}>
 					<h5 className='font-bold dark:text-light ml-2  mb-2 '>
-						What I did for this project:
+						{t('common.projectDetail.about')}
 					</h5>
 					<p className='ml-2 mb-2 font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 '>
-						test
+						{t(project.description)}
 					</p>
 				</div>
 
 				{showDescription && (
 					<div className={`mt-2 border-b ${borderColor}`}>
-						<h5 className='font-bold ml-2 mb-2'>Details</h5>
+						<h5 className='font-bold ml-2 mb-2'>
+							{' '}
+							{t('common.projectDetail.detail')}
+						</h5>
 						<p className='ml-2 font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 mb-2'>
-							{project.description}
+							{t(project.what)}
 						</p>
 					</div>
 				)}
@@ -105,11 +116,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					<h4 className='font-bold mb-2 flex justify-center items-center'>
 						{showDescription ? (
 							<>
-								<FaLongArrowAltUp className='mr-2' /> View Less
+								<FaLongArrowAltUp className='mr-2' />{' '}
+								{t('common.projectDetail.hide')}
 							</>
 						) : (
 							<>
-								<FaLongArrowAltDown className='mr-2' /> View More
+								<FaLongArrowAltDown className='mr-2' />{' '}
+								{t('common.projectDetail.show')}
 							</>
 						)}
 					</h4>

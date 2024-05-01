@@ -51,6 +51,47 @@
       "balance_work_play" : "Ne vous laissez pas tromper par toute cette discussion sur le codage, je crois fermement à l'importance d'équilibrer le travail et le jeu. C'est pourquoi vous pourriez me trouver à la salle de sport pour rester en forme, traîner avec des amis ou profiter d'une bonne séance Netflix. Je suis toujours partant pour une aventure."
     },
 
+    "projectDetail"
+    : {
+      "about": "à propos",
+      "detail": "détail",
+      "show": " En savoir plus",
+      "hide" : "Réduire",
+      "name": "Nom",
+      "phase": "Stade",
+      "ongoing": "En cours",
+      "completed": "Terminé",
+
+
+      "rental" : {
+        "title": "Défi Rental : Sprint de codage de 24 heures pour révolutionner la location de voitures",
+        "description": "Rental a été développé lors d'un sprint de codage de 24 heures, avec l'objectif de simplifier le processus de location de voitures via une interface en ligne innovante."
+      },
+      "arc" : {
+        "title": "Défi Arc : Création d'un site de réservation d'hôtels en 24 heures",
+        "description": "Arc est le résultat d'un défi de codage de 24 heures pour créer une plateforme de réservation d'hôtels intuitive, simplifiant les interactions et les réservations des utilisateurs."
+
+      },
+      "koalapp" : {
+        "title": "Défi Koalapp : Réinventer la diffusion des nouvelles en une journée",
+        "description": "Conçu lors d'un hackathon de 24 heures, Koalapp révolutionne la consommation des nouvelles en intégrant l'IA pour la mise à jour dynamique des articles."
+
+      },
+      "secondround" : {
+        "title": "Défi SecondRound : Transformer le marché de la revente de jeux en 10 jours",
+        "description": "SecondRound transforme le marché des jeux vidéo d'occasion grâce à un défi de codage de 10 jours, en améliorant les interactions entre acheteurs et vendeurs."
+
+      },
+
+      "portfolio" : {
+        "title": "Défi Portfolio : Maîtriser de nouvelles technologies par l'application pratique",
+        "description": "Ce portfolio est le résultat d'un défi personnel visant à apprendre et maîtriser React, Next.js et TypeScript en construisant un portfolio en ligne dynamique et interactif qui présente des projets et des compétences."
+
+      }
+
+
+    },
+
 
     "checkpoints": {
 

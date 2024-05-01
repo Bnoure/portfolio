@@ -10,7 +10,6 @@ interface HeadProps {
 }
 
 const Head = ({ title, description, imageUrl }: HeadProps) => {
-	// Appel de createMetadata avec les props spécifiques
 	const metadata = createMetadata({
 		title: title || 'Benkerroum Nour-Eddine',
 		description: description || 'Full-Stack Developer and Enthusiast geek',

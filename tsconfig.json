@@ -38,7 +38,7 @@
     "lib/renderCanvas.js",
     "lib/prisma.js",
     "lang/LanguageProvider.tsx"
-  ],
+, "pages/_middleware.js"  ],
   "exclude": [
     "node_modules"
   ]
