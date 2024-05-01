@@ -45,7 +45,7 @@ export const SOCIAL: Array<SocialItem> = [
 	},
   {
     label: 'CV',
-    href: '/cvnourF.pdf',
+    href: '/NourB.pdf',
     icon: TfiIdBadge,
   },
 ]

@@ -23,7 +23,7 @@ const navigation = {
 		{
 			name: 'common.footer.cv',
 			title: 'View my resume',
-			href: '/cvnourF.pdf',
+			href: '/NourB.pdf',
 		},
 	],
 	social: [
