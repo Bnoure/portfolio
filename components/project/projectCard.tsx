@@ -20,13 +20,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	const [backgroundColor, setBackgroundColor] = useState('')
 	const [backgroundImageColor, setBackgroundImageColor] = useState('')
 	const [backgroundSelectionColor, setBackgroundSelectionColor] = useState('')
+	const [borderColor, setBorderColor] = useState('')
 
 	useEffect(() => {
-		setBorderClass(theme === 'dark' ? 'border-gray-800' : 'border-gray-200')
 		setBackgroundColor(theme === 'dark' ? 'bg-bgcard' : 'bg-light')
 		setBackgroundImageColor(theme === 'dark' ? 'bg-light' : 'bg-preview')
 		setBackgroundSelectionColor(
 			theme === 'light' ? 'bg-previewborder' : 'bg-light'
+		)
+		setBorderColor(
+			theme === 'dark' ? 'border-borderblack' : 'border-borderlight'
 		)
 	}, [theme])
 
@@ -67,7 +70,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					/>
 				</div>
 			</div>
-			<div className=' border-r-2 border-borderblack border-b-2 border-l-2 dark:text-light hover:bg-preview dark:hover:bg-gray-700 transition-colors duration-300 rounded-b-sm hover-rounded '>
+			<div
+				className={` border-r-2 ${borderColor} border-b-2 border-l-2 dark:text-light hover:bg-preview dark:hover:bg-gray-700 transition-colors duration-300 rounded-b-sm hover-rounded `}
+			>
 				<div
 					className=' grid grid-cols-3
           border-b-slate-100 '
@@ -76,7 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					<InfoSection title='Phase' content={project.building || ''} />
 					<TechStack techStack={project.tech_stack} />
 				</div>
-				<div className='mt-2 border-b border-borderblack'>
+				<div className={`mt-2 border-b ${borderColor}`}>
 					<h5 className='font-bold dark:text-light ml-2  mb-2 '>
 						What I did for this project:
 					</h5>
@@ -86,7 +91,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 				</div>
 
 				{showDescription && (
-					<div className='mt-2 border-b border-borderblack'>
+					<div className={`mt-2 border-b ${borderColor}`}>
 						<h5 className='font-bold ml-2 mb-2'>Details</h5>
 						<p className='ml-2 font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 mb-2'>
 							{project.description}

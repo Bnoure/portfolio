@@ -33,7 +33,7 @@ export default {
         bgcard: '#050510',
         bgcardlight: "#CCCCCC",
         bgcardimag:'#dbdbdb',
-        'border-light': '#f5f5f5',
+        borderlight: '#e1e1e1',
         borderblack: "#1f2222",
         brand: {
           DEFAULT: '#3867D6',
