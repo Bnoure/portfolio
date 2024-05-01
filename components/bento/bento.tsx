@@ -47,7 +47,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 		name: t('common.projects.title2ndRound'),
 		description: t('common.projects.description2ndRound'),
 		href: 'https://github.com/Bnoure/2ndRound.git',
-		projetSlug: '/projets/2nd-round',
+		projetSlug: '/projets/secondround',
 		className: 'md:col-span-1',
 		imageClassName: 'object-fill w-full h-3/5',
 		techStack: ['Javascript', 'Ruby', 'Rails', 'Postgresql', 'Bootstrap'],

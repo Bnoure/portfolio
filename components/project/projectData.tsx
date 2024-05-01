@@ -49,9 +49,8 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Postgresql',
 				'Bootstrap',
 			] as (keyof TechIconType)[],
-			projetSlug: '/projets/2nd-round',
+			projetSlug: '/projets/secondround',
 			building: 'Completed',
-			imgStyle: 'rounded-none rounded-r',
 		},
 		{
 			img: '/images/Koalapppng.png',

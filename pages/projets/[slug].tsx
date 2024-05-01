@@ -57,7 +57,7 @@ const ProjectDetails = () => {
 export const getStaticPaths = async () => {
 	const projects = [
 		{ slug: 'portfolio' },
-		{ slug: '2nd-round' },
+		{ slug: 'secondround' },
 		{ slug: 'arc' },
 		{ slug: 'rental' },
 		{ slug: 'koalapp' },
