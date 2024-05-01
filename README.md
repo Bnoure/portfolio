@@ -1,4 +1,4 @@
-# Portfolio Project 📂
+# Portfolio Project 📂  ---> Link https://www.codeflownb.com
 
 ## English
 
@@ -21,7 +21,7 @@ For any further inquiries or suggestions, please contact me directly via [Linked
 
 Bienvenue sur le projet de mon portfolio ! 🌟 Ce dépôt contient le code source de mon site portfolio personnel, actuellement en cours de développement actif.
 
-### État du Projet 🚧
+### État du Projet 🚧  ---> Lien https://www.codeflownb.com
 Le projet est proche de l'achèvement, mais certaines pages sont encore en cours de finalisation :
 - La page **Index des Projets** 📃 est fonctionnelle mais nécessite des fonctionnalités supplémentaires et des retouches finales.
 - Les pages **Détail du Projet** 🖼 sont en cours d'amélioration pour mieux mettre en valeur chaque projet, incluant des descriptions plus détaillées et des éléments interactifs.
