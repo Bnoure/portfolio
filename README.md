@@ -43,5 +43,5 @@ Pour toute autre question ou suggestion, veuillez me contacter directement via [
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [React.js]
+- [React.js](https;//react.com/)
 - [Vercel](https://vercel.com)
