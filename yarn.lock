@@ -1836,7 +1836,7 @@
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   "version" "0.0.1"
 
-"contentlayer@0.3.4":
+"contentlayer@^0.3.4", "contentlayer@0.3.4":
   "integrity" "sha512-FYDdTUFaN4yqep0waswrhcXjmMJnPD5iXDTtxcUCGdklfuIrXM2xLx51xl748cHmGA6IsC+27YZFxU6Ym13QIA=="
   "resolved" "https://registry.npmjs.org/contentlayer/-/contentlayer-0.3.4.tgz"
   "version" "0.3.4"
