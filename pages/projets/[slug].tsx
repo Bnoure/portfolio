@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { allProjects, Project } from '.contentlayer/generated' // Assurez-vous que le chemin est correct
+import { allProjects, Project } from '.contentlayer/generated'
 import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -24,7 +24,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const { slug } = router.query as { slug: string }
 
 	if (!project) {
-		return <div>Project not found</div> // Gérer le cas où aucun projet n'est trouvé
+		return <div>Project not found</div>
 	}
 
 	const projectIndex = allProjects.findIndex((p: Project) => p.slug === slug)
@@ -80,28 +80,37 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 }
 
 export const getStaticPaths = async () => {
-	const paths = allProjects.map((project: Project) => ({
-		params: { slug: project.slug },
-	}))
+	const locales = ['en', 'fr'] // Définissez vos locales ici
+	let paths: { params: { slug: string }; locale: string }[] = []
+
+	for (const locale of locales) {
+		const localeProjects = allProjects.filter(
+			(project) => project._raw.sourceFileDir === locale
+		)
+		const localePaths = localeProjects.map((project) => ({
+			params: { slug: project.slug },
+			locale,
+		}))
+		paths = paths.concat(localePaths)
+	}
 
 	return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps = async ({ locale, params }: StaticProps) => {
-	const project = allProjects.find((p) => p.slug === params.slug)
+	const project = allProjects.find(
+		(p) => p.slug === params.slug && p._raw.sourceFileDir === locale
+	)
 	if (!project) {
-		return {
-			notFound: true,
-		}
+		return { notFound: true }
 	}
 
-	// Serialize the raw markdown/MDX content
 	const mdxBody = await serialize(project.body.raw || '')
 
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
-			project: { ...project, mdxBody }, // Pass serialized body for MDXRemote
+			project: { ...project, mdxBody },
 		},
 	}
 }
