@@ -1,3 +1,4 @@
+const { withContentlayer } = require('next-contentlayer');
 const { i18n } = require('./next-i18next.config');
 const million = require('million/compiler');
 
@@ -27,7 +28,7 @@ const millionConfig = {
   auto: true, // if you're using RSC: auto: { rsc: true },
 };
 
-module.exports = million.next(nextConfig, millionConfig);
+
 
 const ContentSecurityPolicy = `
     default-src 'self' vercel.live;
@@ -69,3 +70,6 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=()',
   },
 ]
+
+
+module.exports = withContentlayer(million.next(nextConfig, millionConfig));
