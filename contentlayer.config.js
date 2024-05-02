@@ -1,3 +1,4 @@
+
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
 const Project = defineDocumentType(() => ({
@@ -14,7 +15,7 @@ const Project = defineDocumentType(() => ({
       type: 'string',
       resolve: (doc) => doc._raw.flattenedPath.split('/')[1]
     },
-    body: { // Capturez le contenu Markdown comme une chaîne de texte
+    body: {
       type: 'string',
       resolve: (doc) => doc.body
     }
@@ -24,4 +25,5 @@ const Project = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Project],
+  disableImportAliasWarning: true // Ajoutez cette ligne
 });

@@ -53,7 +53,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 					height={500}
 					className='rounded-lg mb-6'
 				/>
-				<MDXRemote {...project.mdxBody} />
+				{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
 				<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
 					{project.description}
 				</p>
@@ -91,18 +91,17 @@ export const getStaticProps = async ({ locale, params }: StaticProps) => {
 	const project = allProjects.find((p) => p.slug === params.slug)
 	if (!project) {
 		return {
-			props: {
-				...(await serverSideTranslations(locale, ['common'])),
-				project: null,
-			},
+			notFound: true,
 		}
 	}
-	const mdxBody = await serialize(project.body || '')
+
+	// Serialize the raw markdown/MDX content
+	const mdxBody = await serialize(project.body.raw || '')
 
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
-			project: { ...project, mdxBody },
+			project: { ...project, mdxBody }, // Pass serialized body for MDXRemote
 		},
 	}
 }
