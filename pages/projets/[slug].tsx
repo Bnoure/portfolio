@@ -11,46 +11,63 @@ const ProjectDetails = () => {
 	const { t } = useTranslation('common')
 	const router = useRouter()
 	const { slug } = router.query
-	const project = getProjectData(t).find(
+	const projects = getProjectData(t)
+	const projectIndex = getProjectData(t).findIndex(
 		(p) => p.title.replace(/\s+/g, '-').toLowerCase() === slug
 	)
+	const project = projects[projectIndex]
+	const nextProject = projects[projectIndex + 1]
+	const prevProject = projects[projectIndex - 1]
 
 	return (
-		<div className='container mx-auto px-4'>
+		<div className='flex flex-col items-center justify-center min-h-screen py-2'>
 			<Head>
 				<title>
-					{project
-						? `Portfolio de Nour-Eddine - ${project.title}`
-						: 'Project not found'}
+					{project ? `${project.title} | Project Details` : 'Project not found'}
 				</title>
 				<meta
 					name='description'
-					content={`Détails du projet ${project?.title}`}
+					content={
+						project
+							? `Learn more about ${project.title}`
+							: 'Project description not available'
+					}
 				/>
+				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			{project ? (
-				<main className='mt-8'>
-					<h1 className='text-3xl font-bold'>{project.title}</h1>
-					<p className='mt-4 text-lg text-gray-700'>{project.description}</p>
-					<div className='mt-8'>
-						<Image
-							src={project.img}
-							alt='Project Cover'
-							width={800}
-							height={450}
-							layout='responsive'
-						/>
-						<Link href='/projets' legacyBehavior>
-							<a className='mt-4 inline-block px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600'>
-								Retour à la liste des projets
+			<main className='bg-white dark:bg-gray-800 rounded-lg shadow p-8 text-center'>
+				<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
+					{project ? project.title : 'Project not found'}
+				</h1>
+				<Image
+					src={project ? project.img : '/images/default.png'}
+					alt='Project image'
+					width={750}
+					height={500}
+					className='rounded-lg mb-6'
+				/>
+				<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
+					{project ? project.description : 'No additional details available.'}
+				</p>
+
+				<div className='flex justify-between items-center w-full mt-4'>
+					{prevProject && (
+						<Link href={`/${prevProject.projetSlug}`} legacyBehavior>
+							<a className='text-blue-500 hover:underline'>
+								Previous Project - {prevProject.title}
 							</a>
 						</Link>
-					</div>
-				</main>
-			) : (
-				<p>Project not found.</p>
-			)}
+					)}
+					{nextProject && (
+						<Link href={`/${nextProject.projetSlug}`} legacyBehavior>
+							<a className='text-blue-500 hover:underline'>
+								Next Project - {nextProject.title}
+							</a>
+						</Link>
+					)}
+				</div>
+			</main>
 		</div>
 	)
 }
