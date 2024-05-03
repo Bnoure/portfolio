@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import NotFound from '../not-found'
 
 interface StaticProps {
 	locale: string
@@ -24,7 +25,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const { slug } = router.query as { slug: string }
 
 	if (!project) {
-		return <div>Project not found</div>
+		NotFound()
 	}
 
 	const projectIndex = allProjects.findIndex((p: Project) => p.slug === slug)
