@@ -32,7 +32,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const prevProject = allProjects[projectIndex - 1] || null
 
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen py-2'>
+		<div className='flex flex-col items-center text-justify min-h-screen py-2'>
 			<Head>
 				<title>{`${project.title} | Project Details`}</title>
 				<meta
@@ -41,40 +41,40 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+			<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 text-justify '>
+				<main className='  rounded-lg shadow p-8 text-center'>
+					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6 '>
+						{project.title}
+					</h1>
+					<Image
+						src={project.img}
+						alt='Project image'
+						width={750}
+						height={500}
+						className='rounded-lg mb-6'
+					/>
+					<div className='text-justify'>
+						{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
+					</div>
 
-			<main className='  rounded-lg shadow p-8 text-center'>
-				<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
-					{project.title}
-				</h1>
-				<Image
-					src={project.img}
-					alt='Project image'
-					width={750}
-					height={500}
-					className='rounded-lg mb-6'
-				/>
-				{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
-				<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
-					{project.description}
-				</p>
-
-				<div className='flex justify-between items-center w-full mt-4'>
-					{prevProject && (
-						<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
-							<a className='text-blue-500 hover:underline'>
-								{prevProject.title}
-							</a>
-						</Link>
-					)}
-					{nextProject && (
-						<Link href={`/projets/${nextProject.slug}`} legacyBehavior>
-							<a className='text-blue-500 hover:underline'>
-								{nextProject.title}
-							</a>
-						</Link>
-					)}
-				</div>
-			</main>
+					<div className='flex justify-between items-center w-full mt-4'>
+						{prevProject && (
+							<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
+								<a className='text-blue-500 hover:underline'>
+									{prevProject.title}
+								</a>
+							</Link>
+						)}
+						{nextProject && (
+							<Link href={`/projets/${nextProject.slug}`} legacyBehavior>
+								<a className='text-blue-500 hover:underline'>
+									{nextProject.title}
+								</a>
+							</Link>
+						)}
+					</div>
+				</main>
+			</article>
 		</div>
 	)
 }
