@@ -8,7 +8,8 @@ const Project = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     description: { type: 'string', required: true },
     slug: { type: 'string', required: true },
-    img: { type: 'string', required: true }
+    img: { type: 'string', required: true },
+    sumtitle : { type: 'string', required: true }
   },
   computedFields: {
     projectId: {

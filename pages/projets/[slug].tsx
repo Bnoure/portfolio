@@ -46,29 +46,29 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6 '>
 						{project.title}
 					</h1>
+
+					<div className='text-justify'>
+						{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
+					</div>
 					<Image
 						src={project.img}
 						alt='Project image'
 						width={750}
 						height={500}
-						className='rounded-lg mb-6'
+						className='rounded-lg mb-6  '
 					/>
-					<div className='text-justify'>
-						{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
-					</div>
-
 					<div className='flex justify-between items-center w-full mt-4'>
 						{prevProject && (
 							<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
 								<a className='text-blue-500 hover:underline'>
-									{prevProject.title}
+									{prevProject.sumtitle}
 								</a>
 							</Link>
 						)}
 						{nextProject && (
 							<Link href={`/projets/${nextProject.slug}`} legacyBehavior>
 								<a className='text-blue-500 hover:underline'>
-									{nextProject.title}
+									{nextProject.sumtitle}
 								</a>
 							</Link>
 						)}

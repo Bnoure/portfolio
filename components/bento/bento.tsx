@@ -86,7 +86,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 		href: 'https://github.com/Bnoure/koala.git',
 		projetSlug: '/projets/koalapp',
 		className: 'md:col-span-3',
-		imageClassName: 'object-fill w-full h-4/5',
+		imageClassName: 'object-fill mx-auto w-4/5 h-4/5 ',
 		techStack: ['Javascript', 'Ruby', 'Rails', 'Postgresql', 'Bootstrap'],
 	},
 ]
@@ -95,7 +95,7 @@ export function BentoDemo() {
 	const { t } = useTranslation()
 	return (
 		<div className='container '>
-			<BentoGrid className='max-w-4xl mx-auto md:auto-rows-[20rem]'>
+			<BentoGrid className='max-w-4xl  md:auto-rows-[20rem]'>
 				{features(t).map((feature) => (
 					<BentoGridItem
 						key={feature.name}
