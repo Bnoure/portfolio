@@ -6,6 +6,20 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
+
+/**@type {import('@contentlayer/source-files').ComputedFields} */
+
+const computedFields = {
+  projectId: {
+    type: 'string',
+    resolve: (doc) => doc._raw.flattenedPath.split('/')[1]
+  },
+  body: {
+    type: 'string',
+    resolve: (doc) => doc.body
+  }
+}
+
 const Project = defineDocumentType(() => ({
   name: 'Project',
   filePathPattern: '**/*.mdx',
