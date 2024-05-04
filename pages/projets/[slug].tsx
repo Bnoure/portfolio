@@ -6,9 +6,8 @@ import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import NotFound from '../not-found'
+import { Mdx } from '../../components/mdx'
 
 interface StaticProps {
 	locale: string
@@ -16,15 +15,17 @@ interface StaticProps {
 }
 
 interface Props {
-	project: Project & { mdxBody: MDXRemoteSerializeResult }
+	project: Project
 }
 
 const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const { t } = useTranslation('common')
 	const router = useRouter()
 	const { slug } = router.query as { slug: string }
+	console.log('Slug from router:', slug)
 
 	if (!project) {
+
 		NotFound()
 	}
 
@@ -43,20 +44,19 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 text-justify '>
-				<main className='  rounded-lg shadow p-8 text-center'>
-					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6 '>
+				<main className='rounded-lg shadow p-8 text-center'>
+					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-
 					<div className='text-justify'>
-						{project && project.mdxBody && <MDXRemote {...project.mdxBody} />}
+						<Mdx code={project.body.code} />
 					</div>
 					<Image
 						src={project.img}
 						alt='Project image'
 						width={750}
 						height={500}
-						className='rounded-lg mb-6  '
+						className='rounded-lg mb-6'
 					/>
 					<div className='flex justify-between items-center w-full mt-4'>
 						{prevProject && (
@@ -81,7 +81,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 }
 
 export const getStaticPaths = async () => {
-	const locales = ['en', 'fr'] // Définissez vos locales ici
+	const locales = ['en', 'fr']
 	let paths: { params: { slug: string }; locale: string }[] = []
 
 	for (const locale of locales) {
@@ -99,19 +99,19 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ locale, params }: StaticProps) => {
+	console.log('Locale:', locale, 'Slug:', params.slug)
 	const project = allProjects.find(
 		(p) => p.slug === params.slug && p._raw.sourceFileDir === locale
 	)
+	console.log('Project:', project)
 	if (!project) {
 		return { notFound: true }
 	}
 
-	const mdxBody = await serialize(project.body.raw || '')
-
 	return {
 		props: {
 			...(await serverSideTranslations(locale, ['common'])),
-			project: { ...project, mdxBody },
+			project,
 		},
 	}
 }
