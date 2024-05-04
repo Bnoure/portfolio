@@ -25,7 +25,6 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	console.log('Slug from router:', slug)
 
 	if (!project) {
-
 		NotFound()
 	}
 
@@ -43,8 +42,8 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 text-justify '>
-				<main className='rounded-lg shadow p-8 text-center'>
+			<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 text-justify justify-center '>
+				<main className='rounded-lg shadow  text-center'>
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
