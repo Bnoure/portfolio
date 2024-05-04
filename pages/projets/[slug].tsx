@@ -8,6 +8,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NotFound from '../not-found'
 import { Mdx } from '../../components/mdx'
+import FadeDown from '../../components/animations/FadeDown'
+import FadeUp from '../../components/animations/FadeUp'
 
 interface StaticProps {
 	locale: string
@@ -22,7 +24,6 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const { t } = useTranslation('common')
 	const router = useRouter()
 	const { slug } = router.query as { slug: string }
-	console.log('Slug from router:', slug)
 
 	if (!project) {
 		NotFound()
@@ -33,7 +34,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const prevProject = allProjects[projectIndex - 1] || null
 
 	return (
-		<div className='flex flex-col items-center text-justify min-h-screen py-2'>
+		<>
 			<Head>
 				<title>{`${project.title} | Project Details`}</title>
 				<meta
@@ -42,12 +43,12 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 text-justify justify-center '>
-				<main className='rounded-lg shadow  text-center'>
+			<section className='prose prose-neutral dark:prose-invert p-2'>
+				<FadeDown duration={0.4}>
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-					<div className='text-justify'>
+					<div>
 						<Mdx code={project.body.code} />
 					</div>
 					<Image
@@ -55,9 +56,9 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 						alt='Project image'
 						width={750}
 						height={500}
-						className='rounded-lg mb-6'
+						className='rounded-lg mb-6 max-w-full h-auto'
 					/>
-					<div className='flex justify-between items-center w-full mt-4'>
+					<div className='flex flex-col sm:flex-row justify-between items-center w-full mt-4'>
 						{prevProject && (
 							<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
 								<a className='text-blue-500 hover:underline'>
@@ -73,9 +74,9 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 							</Link>
 						)}
 					</div>
-				</main>
-			</article>
-		</div>
+				</FadeDown>
+			</section>
+		</>
 	)
 }
 
@@ -98,11 +99,9 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ locale, params }: StaticProps) => {
-	console.log('Locale:', locale, 'Slug:', params.slug)
 	const project = allProjects.find(
 		(p) => p.slug === params.slug && p._raw.sourceFileDir === locale
 	)
-	console.log('Project:', project)
 	if (!project) {
 		return { notFound: true }
 	}
