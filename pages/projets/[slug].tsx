@@ -43,7 +43,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<section className='prose prose-neutral dark:prose-invert p-2'>
+			<section className='prose prose-neutral dark:prose-invert p-2 justify-center text-justify'>
 				<FadeDown duration={0.4}>
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
