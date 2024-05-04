@@ -1,9 +1,9 @@
 ---
 title: 'My Portfolio: Discovering and Mastering Modern Technologies'
 slug: 'portfolio'
-description: 'The goal of this portfolio is to present my skills and learn to structure a project around a technology ecosystem that I was not fully mastering.'
+description: 'The objective of this portfolio is to present my skills and learn to structure a project around a technology ecosystem that I was not fully mastering.'
 img: '/images/PortoflioDark.png'
-sumtitle: '📬 Le projet de mon portfolio'
+sumtitle: '📬 My Portfolio Project'
 ---
 
 <div align="center">
@@ -12,83 +12,94 @@ sumtitle: '📬 Le projet de mon portfolio'
 
 </div>
 
-Ce portfolio représente un défi personnel où j'ai exploré et maîtrisé des technologies telles que React, Typescript, Next.js, ContentLayer, et Prisma. Il a été conçu non seulement pour mettre en valeur mes compétences techniques mais aussi pour servir d'apprentissage actif à travers la mise en œuvre de ces technologies.
+This portfolio represents a personal challenge where I explored and mastered technologies such as React, TypeScript, Next.js, ContentLayer, and Prisma. It was designed not only to showcase my technical skills but also to serve as active learning through the implementation of these technologies.
 
 <div align="center">
 
-### Objectifs du Projet
+### Project Objectives
 
 </div>
 
-Le principal objectif de ce portfolio est de démontrer ma capacité à développer une application web complète tout en apprenant et en structurant un projet autour de technologies spécifiques. Ce projet sert également de vitrine pour mes compétences en développement web, en mettant en avant mon travail et mes projets.
+The main objective of this portfolio is to demonstrate my ability to develop a complete web application while learning and structuring a project around specific technologies. This project also serves as a showcfase for my web development skills, highlighting my work and projects.
 
 <div align="center">
 
-### Technologies Utilisées
+### Technologies Used
 
 </div>
 
-- **React & Next.js :** Choisies pour leur efficacité dans la construction d'applications web modernes et dynamiques.
-- **Typescript :** Utilisé pour renforcer la sécurité et la maintenabilité du code grâce à son système de types.
-- **ContentLayer :** Employé pour organiser le contenu du site de manière efficace et scalable.
-- **Prisma :** Utilisé pour interagir avec la base de données de manière robuste et typée.
-- **i18n :** Implémenté pour offrir une expérience multilingue, rendant le portfolio accessible à un public plus large.
+**React & Next.js:** Chosen for their effectiveness in building modern and dynamic web applications.
+**TypeScript:** Used to enhance code security and maintainability through its type system.
+**ContentLayer:** Employed to efficiently and scalably organize site content.
+**Prisma:** Used to interact robustly and typographically with the database.
+**i18n:** Implemented to offer a multilingual experience, making the portfolio accessible to a broader audience.
 
 <div align="center">
 
-### Configuration et Structure du Projet
+### Project Configuration and Structure
 
 </div>
 
-Le projet est structuré en utilisant une approche modulaire, où chaque composant est conçu pour être réutilisable et maintenable. La structure du dossier suit une organisation logique qui sépare clairement la logique métier de la présentation UI, facilitant ainsi les tests et les mises à jour.
+The project is structured using a modular approach, where each component is designed to be reusable and maintainable. The folder structure follows a logical organization that clearly separates business logic from UI presentation, thus facilitating testing and updates.
 
 <div align="center">
 
-### Fonctionnalités Clés
+### Key Features
 
 </div>
 
-- **Changement de langue en temps réel :** Permet aux utilisateurs de basculer entre l'anglais et le français, améliorant l'accessibilité et l'engagement.
-- **UI simple et intuitive :** Conçue pour offrir une navigation fluide et une interaction sans friction avec le contenu.
+- **Real-time language switching:** Allows users to switch between English and French, improving accessibility and engagement.
+- **Simple and intuitive UI:** Designed to provide smooth navigation and frictionless interaction with the content.
 
 <div align="center">
 
-### Défis et Solutions
+### Challenges and Solutions
 
 </div>
 
-Le principal défi était l'adoption de Typescript pour un projet complet, ce qui nécessitait une compréhension approfondie des types avancés et de leurs implémentations. Ce défi a été relevé grâce à une combinaison de recherche autodidacte et d'échanges avec la communauté en ligne, me permettant de surmonter les obstacles et d'intégrer efficacement Typescript dans le projet.
+The main challenge was adopting TypeScript for a full project, which required an in-depth understanding of advanced types and their implementations. This challenge was overcome through a combination of self-directed research and exchanges with the online community, allowing me to effectively integrate TypeScript into the project.
 
 <div align="center">
 
-### Installation et Configuration
+### Dynamic Route Management and Page Generation
 
 </div>
 
-**Prérequis :**
+I used Next.js's `getStaticPaths` and `getStaticProps` functions to manage dynamic routing and static page generation, key aspects for a high-performance and SEO-optimized site. These methods allowed me to pre-generate pages for each project at build time, ensuring ultra-fast load times and an enhanced user experience. Here is an excerpt of the code I used:
 
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
+```js
+export const getStaticPaths = async () => {
+  const locales = ['en', 'fr']
+  let paths = []
+  for each locale of locales {
+    const localeProjects = allProjects.filter(project =>
+    project._raw.sourceFileDir === locale)
+    const localePaths = localeProjects.map(project => ({
+      params: { slug: project.slug },
+      locale,
+    }))
+    paths = paths.concat(localePaths)
+  }
+  return { paths, fallback: 'blocking' }
+}
+export const getStaticProps = async ({ locale, params }) => {
+  const project = allProjects.find(p => p.slug === params.slug && p._raw.sourceFileDir === locale)
+  if (!project) {
+    return { notFound: true }
+  }
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      project,
+    },
+  }
+}
+```
 
 <div align="center">
 
-### Réflexions
+### Reflections
 
 </div>
 
-Ce projet m'a permis d'acquérir une compréhension profonde des technologies frontales modernes et de la gestion de projet en environnement réel. J'ai appris à internationaliser une application, à utiliser efficacement les hooks React et à gérer des routes dynamiques, des compétences essentielles pour mes futurs projets et opportunités professionnelles.
+This project allowed me to gain a deep understanding of modern frontend technologies and project management in a real-world environment. I learned to internationalize an application, effectively use React hooks, and manage dynamic routes, essential skills for my future projects and professional opportunities.

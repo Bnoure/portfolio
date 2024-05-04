@@ -1,7 +1,7 @@
 ---
 title: 'Mon Portfolio : Découverte et Maîtrise de Technologies Modernes'
 slug: 'portfolio'
-description: "L'objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
+description: "L&apos;objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
 img: '/images/PortoflioDark.png'
 sumtitle: '📬 Le projet de mon portfolio'
 ---
@@ -61,29 +61,41 @@ Le principal défi était l'adoption de Typescript pour un projet complet, ce qu
 
 <div align="center">
 
-### Installation et Configuration
+### Gestion Dynamique des Routes et Génération de Pages
 
 </div>
 
-**Prérequis :**
+J'ai utilisé les fonctions `getStaticPaths` et `getStaticProps` de Next.js pour gérer le routage dynamique et la génération de pages statiques, des aspects clés pour un site performant et optimisé pour le SEO. Ces méthodes m'ont permis de pré-générer les pages de chaque projet à la compilation, assurant ainsi des chargements ultra-rapides et une meilleure expérience utilisateur. Voici un extrait du code que j'ai utilisé :
 
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
+```js
+export const getStaticPaths = async () => {
+  const locales = ['en', 'fr']
+  let paths = []
+  for each locale of locales {
+    const localeProjects = allProjects.filter(project =>
+                    project._raw.sourceFileDir === locale)
+    const localePaths = localeProjects.map(project => ({
+      params: { slug: project.slug },
+      locale,
+    }))
+    paths = paths.concat(localePaths)
+  }
+  return { paths, fallback: 'blocking' }
+}
+export const getStaticProps = async ({ locale, params }) => {
+  const project = allProjects.find(p => p.slug === params.slug
+                            && p._raw.sourceFileDir === locale)
+  if (!project) {
+    return { notFound: true }
+  }
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      project,
+    },
+  }
+}
+```
 
 <div align="center">
 
