@@ -43,12 +43,12 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<section className=' prose prose-quoteless prose-neutral dark:prose-invert mb-2 mr-2 p-2 justify-center text-center '>
+			<article className=' prose prose-quoteless prose-neutral dark:prose-invert mb-2 mr-2 p-2 justify-center text-center '>
 				<FadeDown duration={0.4}>
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-					<div className='text-justify'>
+					<div className='item-center text-justify'>
 						<Mdx code={project.body.code} />
 					</div>
 					<Image
@@ -75,7 +75,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 						)}
 					</div>
 				</FadeDown>
-			</section>
+			</article>
 		</>
 	)
 }
