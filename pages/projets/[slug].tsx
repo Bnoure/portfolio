@@ -11,6 +11,7 @@ import { Mdx } from '../../components/mdx'
 import FadeDown from '../../components/animations/FadeDown'
 import FadeUp from '../../components/animations/FadeUp'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
+import { Suspense } from 'react'
 
 interface StaticProps {
 	locale: string
@@ -27,7 +28,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 	const { slug } = router.query as { slug: string }
 
 	if (!project) {
-		NotFound()
+		return <NotFound />
 	}
 
 	const projectIndex = allProjects.findIndex((p: Project) => p.slug === slug)
@@ -109,7 +110,12 @@ export const getStaticProps = async ({ locale, params }: StaticProps) => {
 		(p) => p.slug === params.slug && p._raw.sourceFileDir === locale
 	)
 	if (!project) {
-		return { notFound: true }
+		return {
+			redirect: {
+				destination: '/404',
+				permanent: false,
+			},
+		}
 	}
 
 	return {
