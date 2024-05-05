@@ -6,27 +6,15 @@ img: '/images/PortoflioDark.png'
 sumtitle: '📬 My Portfolio Project'
 ---
 
-<div align="center">
-
 ### Introduction
-
-</div>
 
 This portfolio represents a personal challenge where I explored and mastered technologies such as React, TypeScript, Next.js, ContentLayer, and Prisma. It was designed not only to showcase my technical skills but also to serve as active learning through the implementation of these technologies.
 
-<div align="center">
-
 ### Project Objectives
-
-</div>
 
 The main objective of this portfolio is to demonstrate my ability to develop a complete web application while learning and structuring a project around specific technologies. This project also serves as a showcfase for my web development skills, highlighting my work and projects.
 
-<div align="center">
-
 ### Technologies Used
-
-</div>
 
 - **React & Next.js:** Chosen for their effectiveness in building modern and dynamic web applications.
 - **TypeScript:** Used to enhance code security and maintainability through its type system.
@@ -34,40 +22,24 @@ The main objective of this portfolio is to demonstrate my ability to develop a c
 - **Prisma:** Used to interact robustly and typographically with the database.
 - **i18n:** Implemented to offer a multilingual experience, making the portfolio accessible to a broader audience.
 
-<div align="center">
-
 ### Project Configuration and Structure
-
-</div>
 
 The project is structured using a modular approach, where each component is designed to be reusable and maintainable. The folder structure follows a logical organization that clearly separates business logic from UI presentation, thus facilitating testing and updates.
 
-<div align="center">
-
 ### Key Features
-
-</div>
 
 - **Real-time language switching:** Allows users to switch between English and French, improving accessibility and engagement.
 - **Simple and intuitive UI:** Designed to provide smooth navigation and frictionless interaction with the content.
 
-<div align="center">
-
 ### Challenges and Solutions
-
-</div>
 
 The main challenge was adopting TypeScript for a full project, which required an in-depth understanding of advanced types and their implementations. This challenge was overcome through a combination of self-directed research and exchanges with the online community, allowing me to effectively integrate TypeScript into the project.
 
-<div align="center">
-
 ### Dynamic Route Management and Page Generation
-
-</div>
 
 I used Next.js's `getStaticPaths` and `getStaticProps` functions to manage dynamic routing and static page generation, key aspects for a high-performance and SEO-optimized site. These methods allowed me to pre-generate pages for each project at build time, ensuring ultra-fast load times and an enhanced user experience. Here is an excerpt of the code I used:
 
-```js
+```tsx title="[slug].tsx"
 export const getStaticPaths = async () => {
   const locales = ['en', 'fr']
   let paths = []
@@ -83,23 +55,21 @@ export const getStaticPaths = async () => {
   return { paths, fallback: 'blocking' }
 }
 export const getStaticProps = async ({ locale, params }) => {
-  const project = allProjects.find(p => p.slug === params.slug && p._raw.sourceFileDir === locale)
-  if (!project) {
-    return { notFound: true }
-  }
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      project,
-    },
-  }
+	const project = allProjects.find(
+		(p) => p.slug === params.slug && p._raw.sourceFileDir === locale
+	)
+	if (!project) {
+		return { notFound: true }
+	}
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+			project,
+		},
+	}
 }
 ```
 
-<div align="center">
-
 ### Reflections
-
-</div>
 
 This project allowed me to gain a deep understanding of modern frontend technologies and project management in a real-world environment. I learned to internationalize an application, effectively use React hooks, and manage dynamic routes, essential skills for my future projects and professional opportunities.

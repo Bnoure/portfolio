@@ -91,6 +91,7 @@ export default function Hero(): ReactElement {
 							/>
 						</h1>
 						<h4 className='text-base lg:text-lg'>
+							{' '}
 							{t('common.navigation.About')}
 						</h4>
 					</div>

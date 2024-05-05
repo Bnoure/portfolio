@@ -10,6 +10,7 @@ import NotFound from '../not-found'
 import { Mdx } from '../../components/mdx'
 import FadeDown from '../../components/animations/FadeDown'
 import FadeUp from '../../components/animations/FadeUp'
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
 
 interface StaticProps {
 	locale: string
@@ -43,14 +44,17 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<article className=' prose prose-quoteless prose-neutral dark:prose-invert mb-2 mr-2 p-2 justify-center text-center '>
-				<FadeDown duration={0.4}>
+
+			<section className='mb-10 mt-10'>
+				<FadeDown duration={0.2}>
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-					<div className='item-center text-justify'>
-						<Mdx code={project.body.code} />
-					</div>
+					<FadeUp duration={0.2}>
+						<div className=' mx-autoitem-center text-justify'>
+							<Mdx code={project.body.code} />
+						</div>
+					</FadeUp>
 					<Image
 						src={project.img}
 						alt='Project image'
@@ -58,24 +62,26 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 						height={500}
 						className='rounded-lg mb-6 max-w-full h-auto'
 					/>
-					<div className='flex flex-col sm:flex-row justify-between items-center w-full mt-4'>
+					<div className='flex flex-col sm:flex-row justify-between items-center w-full mt-4 pt-4 md:pt-8'>
 						{prevProject && (
 							<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
-								<a className='text-blue-500 hover:underline'>
+								<a className=' hover:underline'>
+									<FaLongArrowAltLeft />
 									{prevProject.sumtitle}
 								</a>
 							</Link>
 						)}
 						{nextProject && (
 							<Link href={`/projets/${nextProject.slug}`} legacyBehavior>
-								<a className='text-blue-500 hover:underline'>
+								<a className=' hover:underline'>
+									<FaLongArrowAltRight />
 									{nextProject.sumtitle}
 								</a>
 							</Link>
 						)}
 					</div>
 				</FadeDown>
-			</article>
+			</section>
 		</>
 	)
 }

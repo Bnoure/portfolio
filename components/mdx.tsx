@@ -24,6 +24,7 @@ const CustomLink = (props: any) => {
 
 const components = {
 	Image: RoundedImage,
+	a: CustomLink,
 }
 
 interface MdxProps {
@@ -34,7 +35,7 @@ export function Mdx({ code }: MdxProps) {
 	const Component = useMDXComponent(code)
 
 	return (
-		<article className=''>
+		<article className='prose prose-quoteless prose-neutral dark:prose-invert mb-2 mr-2'>
 			<Component components={{ ...components }} />
 		</article>
 	)

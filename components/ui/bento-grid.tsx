@@ -59,7 +59,6 @@ export const BentoGridItem = ({
 		>
 			<div className='font-sans font-bold text-neutral-600 dark:text-neutral-200   flex justify-between items-center'>
 				<span>{t(name)}</span>
-				{/* <IconTechStack techStack={techStack} /> */}
 			</div>
 
 			<img src={iconPath} alt='iconPath' className={imageClassName} />
