@@ -5,10 +5,11 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import AnimatedText from '@/components/AnimatedText'
 import '../../app/globals.css'
+import NotFound from '../not-found'
 
 const ProjetPage: NextPage = () => {
 	const { t } = useTranslation('common')
-
+	const projectsFound = true
 	return (
 		<main>
 			<section id='all-projets'>
@@ -16,7 +17,7 @@ const ProjetPage: NextPage = () => {
 					<AnimatedText text={t('common.projects.title')} />
 				</h1>
 
-				<ProjectsList />
+				{projectsFound ? <ProjectsList /> : <NotFound />}
 			</section>
 		</main>
 	)
