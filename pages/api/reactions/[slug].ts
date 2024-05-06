@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { createHash } from "crypto";
-import  prisma  from "@/lib/prisma";
+import prisma from "@/lib/prisma";
 import { REACTION } from "@/constants";
 
 export default async function handler(
@@ -41,7 +41,6 @@ export default async function handler(
           create: {
             id: sessionId,
             isLiked: likesCount > 0,
-
           },
           update: {
             isLiked: likesCount > 0,
@@ -55,9 +54,24 @@ export default async function handler(
       });
     }
 
+    if (method === 'GET') {
+      const [reactions, user] = await Promise.all([
+        prisma.reactions.findUnique({
+          where: { projectSlug: slug },
+        }),
+        prisma.session.findUnique({
+          where: { id: sessionId },
+        })
+      ])
 
+      return res.status(200).json({
+        likes: (reactions?.likes || 0).toString(),
 
+        isLiked: Boolean(user?.isLiked),
+
+      })
+    }
   } catch (e: any) {
-    return res.status(500).json({ message: e.message });
+    return res.status(500).json({ message: e.message })
   }
 }

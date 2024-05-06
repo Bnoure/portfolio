@@ -3,7 +3,7 @@ import React from 'react'
 import { useDebounce } from 'react-use'
 import useSWR, { SWRConfiguration } from 'swr'
 
-const API_URL = `/projets/api/reactions`
+const API_URL = `/api/reactions`
 
 
 type MetricsPayload = {
