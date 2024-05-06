@@ -1,4 +1,4 @@
-'use client'
+'use client '
 
 import confetti from 'canvas-confetti'
 import clsx from 'clsx'

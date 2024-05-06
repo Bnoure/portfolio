@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { createHash } from "crypto";
-import { prisma } from "@/lib/prisma";
+import  prisma  from "@/lib/prisma";
 import { REACTION } from "@/constants";
 
 export default async function handler(
@@ -41,7 +41,7 @@ export default async function handler(
           create: {
             id: sessionId,
             isLiked: likesCount > 0,
-            projectSlug: slug,
+
           },
           update: {
             isLiked: likesCount > 0,

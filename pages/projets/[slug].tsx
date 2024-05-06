@@ -37,6 +37,9 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 
 	return (
 		<>
+			<script type='application/ld+json' suppressHydrationWarning>
+				{JSON.stringify(project.structuredData)}
+			</script>
 			<Head>
 				<title>{`${project.title} | Project Details`}</title>
 				<meta
