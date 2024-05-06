@@ -11,6 +11,7 @@ import { Mdx } from '../../components/mdx'
 import FadeDown from '../../components/animations/FadeDown'
 import FadeUp from '../../components/animations/FadeUp'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
+import Reaction from '@/components/reaction/reac'
 
 interface StaticProps {
 	locale: string
@@ -50,6 +51,7 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
+					<Reaction slug={project.slug} />
 					<FadeUp duration={0.2}>
 						<div className=' mx-autoitem-center text-justify'>
 							<Mdx code={project.body.code} />
