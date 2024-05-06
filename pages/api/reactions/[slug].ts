@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { createHash } from "crypto";
-import prisma from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import { REACTION } from "@/constants";
 
 export default async function handler(
@@ -55,7 +55,7 @@ export default async function handler(
       });
     }
 
-    // Ajouter une gestion pour GET si nécessaire ici
+
 
   } catch (e: any) {
     return res.status(500).json({ message: e.message });

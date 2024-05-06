@@ -2,15 +2,15 @@ import { REACTION } from '@/constants'
 import React from 'react'
 import { useDebounce } from 'react-use'
 import useSWR, { SWRConfiguration } from 'swr'
-import prisma  from './prisma' // Import your Prisma client
+import { prisma } from './prisma'
 
 const API_URL = `/api/reactions`
 
 type MetricsPayload = {
-    views: string
-    likes: string,
-    isViewed: boolean,
-    isLiked: boolean,
+  views: string
+  likes: string,
+  isViewed: boolean,
+  isLiked: boolean,
 }
 
 async function getPostReactions(slug: string): Promise<MetricsPayload> {

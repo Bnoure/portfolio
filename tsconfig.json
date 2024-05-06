@@ -38,7 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "lib/renderCanvas.js",
-    "lib/prisma.js",
+    "lib/prisma.ts",
     "lang/LanguageProvider.tsx",],
   "exclude": [
     "node_modules"
