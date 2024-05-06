@@ -11,7 +11,6 @@ import { Mdx } from '../../components/mdx'
 import FadeDown from '../../components/animations/FadeDown'
 import FadeUp from '../../components/animations/FadeUp'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
-import { Suspense } from 'react'
 
 interface StaticProps {
 	locale: string

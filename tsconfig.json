@@ -39,8 +39,7 @@
     ".next/types/**/*.ts",
     "lib/renderCanvas.js",
     "lib/prisma.js",
-    "lang/LanguageProvider.tsx"
-, "pages/_middleware.js"  ],
+    "lang/LanguageProvider.tsx",],
   "exclude": [
     "node_modules"
   ]
