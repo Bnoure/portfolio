@@ -12,3 +12,22 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Views {
+  slug        Int    @id @default(autoincrement())
+  count       BigInt @default(1)
+  projectSlug String
+}
+
+model Reactions {
+  slug        Int    @id @default(autoincrement())
+  likes       BigInt @default(1)
+  projectSlug String
+}
+
+model Session {
+  id          String   @id
+  createdAt   DateTime @default(now())
+  isLiked     Boolean  @default(false)
+  projectSlug String
+}

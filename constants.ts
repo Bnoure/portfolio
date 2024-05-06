@@ -49,3 +49,8 @@ export const SOCIAL: Array<SocialItem> = [
     icon: TfiIdBadge,
   },
 ]
+
+export const REACTION = {
+	like: "LIKE",
+  view: "VIEW",
+}
