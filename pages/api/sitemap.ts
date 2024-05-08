@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             url: `/projets/${projet.slug}`,
             changefreq: 'monthly',
             priority: 0.7,
-            lastmodISO: new Date().toISOString() // Supposons que vous mettez à jour la dernière modification lors de l'exécution de cette fonction
+            lastmodISO: new Date().toISOString()
         });
     });
 
