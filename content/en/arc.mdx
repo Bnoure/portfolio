@@ -1,94 +1,51 @@
 ---
-title: 'Mon Portfolio : Découverte et Maîtrise de Technologies Modernes'
+title: 'Arc - Hotel Room Booking'
 slug: 'arc'
-description: "L'objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
+description: 'Project completed in 24 hours to create a platform for searching and booking hotel rooms by city and date.'
 img: '/images/Arc.png'
-sumtitle: '🏨 Arc - Défis 24h '
+sumtitle: '🏨 Arc Project - Hotel Room Booking'
 ---
-
-<div align="center">
 
 ### Introduction
 
-</div>
+The "Arc" project was developed as part of a 24-hour challenge. The goal was to create a platform that allows users to search for and book hotel rooms based on city and date of stay. This project implements technologies such as Rails, JavaScript, Stimulus, Bootstrap, flatpickr, and Swal.
 
-Ce portfolio représente un défi personnel où j'ai exploré et maîtrisé des technologies telles que React, Typescript, Next.js, ContentLayer, et Prisma. Il a été conçu non seulement pour mettre en valeur mes compétences techniques mais aussi pour servir d'apprentissage actif à travers la mise en œuvre de ces technologies.
+### Project Objectives
 
-<div align="center">
+The main objective of this project was to demonstrate my mastery of web development within a limited timeframe. By implementing a functional solution for hotel room search and booking, I was able to put my skills in JS, Rails.
 
-### Objectifs du Projet
+### Technologies Used
 
-</div>
+- **Ruby on Rails:** Utilized for the backend and database interaction.
+- **JavaScript & Stimulus:** Used to make the user interface interactive and dynamic.
+- **Bootstrap:** Used for layout and styling of the application.
+- **flatpickr:** Integrated for selecting stay dates.
+- **Swal:** Used to display user-friendly alert and confirmation messages.
 
-Le principal objectif de ce portfolio est de démontrer ma capacité à développer une application web complète tout en apprenant et en structurant un projet autour de technologies spécifiques. Ce projet sert également de vitrine pour mes compétences en développement web, en mettant en avant mon travail et mes projets.
+### Project Configuration and Structure
 
-<div align="center">
+The project is configured to provide a smooth and intuitive user experience. The search and booking functionalities are easily accessible from the main application interface.
 
-### Technologies Utilisées
+### Challenges and Solutions
 
-</div>
+The main challenge of this project was to meet the 24-hour deadline while ensuring code quality and application functionality. By focusing my efforts on essential features and using predefined tools and libraries, I was able to successfully meet this challenge.
 
-- **React & Next.js :** Choisies pour leur efficacité dans la construction d'applications web modernes et dynamiques.
-- **Typescript :** Utilisé pour renforcer la sécurité et la maintenabilité du code grâce à son système de types.
-- **ContentLayer :** Employé pour organiser le contenu du site de manière efficace et scalable.
-- **Prisma :** Utilisé pour interagir avec la base de données de manière robuste et typée.
-- **i18n :** Implémenté pour offrir une expérience multilingue, rendant le portfolio accessible à un public plus large.
+### Dynamic Search Parameter Handling
 
-<div align="center">
+In this code, I used the **params** method to retrieve search parameters specified by the user. Based on these parameters, I executed an SQL query to retrieve corresponding hotels from the database. This approach optimizes performance by fetching only the necessary data for display, ensuring a responsive and enjoyable user experience.
 
-### Configuration et Structure du Projet
+```ruby title="hotel_controller.rb"
+def index
+  if params[:search] && params[:search][:city].present?
+    @search_params = search_params.to_h
+    @search_params[:start_date], @search_params[:end_date] = @search_params[:start_date].split(' au ')
+    @hotels = Hotel.joins(:rooms).where(city: @search_params[:city]).where('rooms.capacity >= ?', @search_params[:capacity]).distinct
+  else
+    @hotels = Hotel.all
+  end
+end
+```
 
-</div>
+### Reflections
 
-Le projet est structuré en utilisant une approche modulaire, où chaque composant est conçu pour être réutilisable et maintenable. La structure du dossier suit une organisation logique qui sépare clairement la logique métier de la présentation UI, facilitant ainsi les tests et les mises à jour.
-
-<div align="center">
-
-### Fonctionnalités Clés
-
-</div>
-
-- **Changement de langue en temps réel :** Permet aux utilisateurs de basculer entre l'anglais et le français, améliorant l'accessibilité et l'engagement.
-- **UI simple et intuitive :** Conçue pour offrir une navigation fluide et une interaction sans friction avec le contenu.
-
-<div align="center">
-
-### Défis et Solutions
-
-</div>
-
-Le principal défi était l'adoption de Typescript pour un projet complet, ce qui nécessitait une compréhension approfondie des types avancés et de leurs implémentations. Ce défi a été relevé grâce à une combinaison de recherche autodidacte et d'échanges avec la communauté en ligne, me permettant de surmonter les obstacles et d'intégrer efficacement Typescript dans le projet.
-
-<div align="center">
-
-### Installation et Configuration
-
-</div>
-
-**Prérequis :**
-
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
-
-<div align="center">
-
-### Réflexions
-
-</div>
-
-Ce projet m'a permis d'acquérir une compréhension profonde des technologies frontales modernes et de la gestion de projet en environnement réel. J'ai appris à internationaliser une application, à utiliser efficacement les hooks React et à gérer des routes dynamiques, des compétences essentielles pour mes futurs projets et opportunités professionnelles.
+This project allowed me to put my web development skills into practice in a constrained environment. I learned to work effectively under pressure while maintaining code quality and application functionality. It also allowed me to discover new tools and libraries to enhance my technical skills.

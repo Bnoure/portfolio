@@ -16,7 +16,7 @@ const Contact = () => {
 				<Link href='mailto:noureddine.benkerroum@gmail.com' legacyBehavior>
 					<a
 						className='flex items-center gap-2 hover:text-primary transition'
-						title='Compose an email to Nitesh'
+						title='Compose an email to Nour'
 					>
 						<FiMail />
 						<div className='flex items-center'>
