@@ -30,7 +30,7 @@ export const features = (t = (key: string) => key): Feature[] => [
 		iconPath: '/images/PortoflioDark.png',
 		name: t('common.projects.titlePortfolio'),
 		description: t('common.projects.descriptionPortfolio'),
-		href: '/',
+		href: 'https://github.com/Bnoure/portfolio.git',
 		projetSlug: '/projets/portfolio',
 		className: 'md:col-span-2',
 

@@ -1,94 +1,80 @@
 ---
-title: '🐨 Koalapp : Découverte et Maîtrise de Technologies Modernes'
+title: 'Koalapp - AI-Generated Articles'
 slug: 'koalapp'
-description: "L'objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
+description: 'Koalapp is the result of a 24-hour challenge: to create a dynamic article distribution website. Leveraging an API call on NewsAPI and the integration of ChatGPT to reinvent titles and content, Koalapp offers an enriched and personalized reading experience of the latest news.'
 img: '/images/Koalapppng.png'
-sumtitle: '🐨 Koalapp - Défis 24h'
+sumtitle: '🐨 Koalapp - 24h Challenge'
 ---
-
-<div align="center">
 
 ### Introduction
 
-</div>
+Koalapp is the result of a 24-hour challenge: to create a dynamic article distribution website. Leveraging an API call on NewsAPI and the integration of ChatGPT to reinvent titles and content, Koalapp offers an enriched and personalized reading experience of the latest news.
 
-Ce portfolio représente un défi personnel où j'ai exploré et maîtrisé des technologies telles que React, Typescript, Next.js, ContentLayer, et Prisma. Il a été conçu non seulement pour mettre en valeur mes compétences techniques mais aussi pour servir d'apprentissage actif à travers la mise en œuvre de ces technologies.
+### Project Objectives
 
-<div align="center">
+The primary goal of Koalapp was to provide an innovative reading experience by using artificial intelligence to customize articles. By implementing technologies such as Ruby on Rails, JavaScript, Bootstrap, PostgreSQL, and APIs like NewsAPI & OpenAI, I developed a platform that offers enriching and interactive reading.
 
-### Objectifs du Projet
+### Technologies Used
 
-</div>
+- **Ruby on Rails:** Utilized for backend management and business logic.
+- **JavaScript:** Used for dynamic and interactive user interface.
+- **Bootstrap:** Employed for layout and styling.
+- **PostgreSQL:** Relational database used for storing article and user data.
+- **NewsAPI & OpenAI APIs:** Integrated for fetching the latest news and reprocessing articles.
 
-Le principal objectif de ce portfolio est de démontrer ma capacité à développer une application web complète tout en apprenant et en structurant un projet autour de technologies spécifiques. Ce projet sert également de vitrine pour mes compétences en développement web, en mettant en avant mon travail et mes projets.
+### Project Configuration and Structure
 
-<div align="center">
+Koalapp is configured to provide a smooth and intuitive reading experience. The homepage allows users to browse articles directly and leave comments. The integrated commenting feature encourages interaction and discussions around articles.
 
-### Technologies Utilisées
+### Challenges and Solutions
 
-</div>
+The main challenge of Koalapp was the limited development time due to the 24-hour challenge. This required quick decision-making and a focus on essential features.
 
-- **React & Next.js :** Choisies pour leur efficacité dans la construction d'applications web modernes et dynamiques.
-- **Typescript :** Utilisé pour renforcer la sécurité et la maintenabilité du code grâce à son système de types.
-- **ContentLayer :** Employé pour organiser le contenu du site de manière efficace et scalable.
-- **Prisma :** Utilisé pour interagir avec la base de données de manière robuste et typée.
-- **i18n :** Implémenté pour offrir une expérience multilingue, rendant le portfolio accessible à un public plus large.
+### Utilizing NewsAPI for Articles
 
-<div align="center">
+NewsAPI is utilized to gather articles on tourism in French. Articles are filtered based on specific criteria such as topic, language, and relevance. Each article is then individually analyzed. If the title or content is empty, a GPT-3.5 model is used to generate a title and continue the article using the existing content as a base. This approach revitalizes articles and offers a more engaging reading experience.
 
-### Configuration et Structure du Projet
+```ruby title="seed.rb"
+newsapi = News.new("XXXXXXXXXXXXXXXXXX")
+all_articles = newsapi.get_everything(q: 'tourisme',
+                                      language: 'fr',
+                                      sortBy: 'relevancy',
+                                      excludeDomains: 'en.wikipedia.org')
 
-</div>
+all_articles.sample(25).each do |article|
+  article.title = "Default Title" if article.title.blank?
+  article.content = "Default Content" if article.content.blank?
 
-Le projet est structuré en utilisant une approche modulaire, où chaque composant est conçu pour être réutilisable et maintenable. La structure du dossier suit une organisation logique qui sépare clairement la logique métier de la présentation UI, facilitant ainsi les tests et les mises à jour.
+  # Check if the title is empty and replace it with a value generated by GPT-3
+  if article.title.blank?
+    response_title = client.chat(
+      parameters: {
+        model: "gpt-3.5-turbo-0301",
+        messages: [
+          { role: "system", content: "You are a journalist." },
+          { role: "user", content: "Content: #{article['content']}\n\nCreate a title for this article:" }
+        ],
+        temperature: 0.5,
+        max_tokens: 60
+      }
+    )
+    article.title = response_title['choices'].first['message']['content']
+  end
 
-<div align="center">
+  response = client.chat(
+    parameters: {
+      model: "gpt-3.5-turbo-0301",
+      messages: [
+        { role: "system", content: "You are a journalist." },
+        { role: "user", content: "Title: #{article.title}\nContent: #{article.content}\n\nContinue the article with exactly 2000 characters:" }
+      ],
+      temperature: 0.5,
+      max_tokens: 800
+    }
+  )
+  generated_text = response['choices'].first['message']['content']
+```
 
-### Fonctionnalités Clés
+### Reflections
 
-</div>
-
-- **Changement de langue en temps réel :** Permet aux utilisateurs de basculer entre l'anglais et le français, améliorant l'accessibilité et l'engagement.
-- **UI simple et intuitive :** Conçue pour offrir une navigation fluide et une interaction sans friction avec le contenu.
-
-<div align="center">
-
-### Défis et Solutions
-
-</div>
-
-Le principal défi était l'adoption de Typescript pour un projet complet, ce qui nécessitait une compréhension approfondie des types avancés et de leurs implémentations. Ce défi a été relevé grâce à une combinaison de recherche autodidacte et d'échanges avec la communauté en ligne, me permettant de surmonter les obstacles et d'intégrer efficacement Typescript dans le projet.
-
-<div align="center">
-
-### Installation et Configuration
-
-</div>
-
-**Prérequis :**
-
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
-
-<div align="center">
-
-### Réflexions
-
-</div>
-
-Ce projet m'a permis d'acquérir une compréhension profonde des technologies frontales modernes et de la gestion de projet en environnement réel. J'ai appris à internationaliser une application, à utiliser efficacement les hooks React et à gérer des routes dynamiques, des compétences essentielles pour mes futurs projets et opportunités professionnelles.
+Koalapp was a rewarding experience that allowed me to push the boundaries of web development within a constrained timeframe. This project not only allowed us to apply our technical skills but also explore new possibilities offered by artificial intelligence.

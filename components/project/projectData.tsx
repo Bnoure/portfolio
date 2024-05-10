@@ -31,7 +31,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 			what: t('common.projectDetail.portfolio.description'),
 			tech_stack: [
 				'React',
-				'Javascript',
+				'Prisma',
 				'Next',
 				'Typescript',
 				'Tailwind',
