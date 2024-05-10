@@ -52,10 +52,10 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 
 			<section className='mb-10 mt-10'>
 				<FadeDown duration={0.2}>
-					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
+					<h1 className='text-4xl text-center  font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-					<div className='flex flex-row justify-between w-full'>
+					<div className='flex flex-row justify-between w-full items-center pb-1'>
 						<Reaction slug={project.slug} />
 						<Views slug={project.slug} trackView={true} />
 					</div>
@@ -75,17 +75,17 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 					<div className='flex flex-col sm:flex-row justify-between items-center w-full mt-4 pt-4 md:pt-8'>
 						{prevProject && (
 							<Link href={`/projets/${prevProject.slug}`} legacyBehavior>
-								<a className=' hover:underline'>
-									<FaLongArrowAltLeft />
+								<a className='flex items-center hover:underline'>
+									<FaLongArrowAltLeft className='mr-2' />
 									{prevProject.sumtitle}
 								</a>
 							</Link>
 						)}
 						{nextProject && (
 							<Link href={`/projets/${nextProject.slug}`} legacyBehavior>
-								<a className=' hover:underline'>
-									<FaLongArrowAltRight />
+								<a className='flex items-center hover:underline'>
 									{nextProject.sumtitle}
+									<FaLongArrowAltRight className='ml-2' />
 								</a>
 							</Link>
 						)}
