@@ -1,4 +1,5 @@
 {
+  "views": "views",
   "common": {
     "navigation": {
       "Project": "Recent Project",

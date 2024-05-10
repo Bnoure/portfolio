@@ -55,8 +55,11 @@ const ProjectDetails: React.FC<Props> = ({ project }) => {
 					<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-6'>
 						{project.title}
 					</h1>
-					<Views slug={project.slug} trackView={true} />
-					<Reaction slug={project.slug} />
+					<div className='flex flex-row justify-between w-full'>
+						<Reaction slug={project.slug} />
+						<Views slug={project.slug} trackView={true} />
+					</div>
+
 					<FadeUp duration={0.2}>
 						<div className=' mx-autoitem-center text-justify'>
 							<Mdx code={project.body.code} />

@@ -2,6 +2,7 @@
 
 import useSWR from 'swr'
 import { useEffect } from 'react'
+import { useTranslation } from 'next-i18next'
 
 import fetcher from '@/lib/fetcher'
 
@@ -17,6 +18,7 @@ export default function ViewCounter({
 	slug: string
 	trackView: boolean
 }) {
+	const { t } = useTranslation()
 	const { data } = useSWR<PostView>(`/api/views/${slug}`, fetcher)
 	const views = new Number(data?.total || 0)
 
@@ -31,5 +33,9 @@ export default function ViewCounter({
 		}
 	}, [slug, trackView])
 
-	return <span>{data ? `${views.toLocaleString()} views` : '- views​'}</span>
+	return (
+		<span>
+			{data ? `${views.toLocaleString()} ${t('views')}` : `${t('views')} ​`}
+		</span>
+	)
 }
