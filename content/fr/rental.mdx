@@ -1,94 +1,84 @@
 ---
-title: 'Mon Portfolio : Découverte et Maîtrise de Technologies Modernes'
+title: 'Rental - Plateforme de location de voitures'
 slug: 'rental'
-description: "L'objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
+description: "Rental est une plateforme développée pour simplifier la location de voitures. Créée comme un projet de fin d'études pour un diplôme de développeur full stack, cette application a été réalisée en 24 heures et permet aux utilisateurs de trouver des voitures basées sur la ville, le modèle et la marque."
 img: '/images/Rental.png'
-sumtitle: '🚗 Rental : 24h défis '
+sumtitle: '🚗 Rental - Challenge de 24h'
 ---
-
-<div align="center">
 
 ### Introduction
 
-</div>
-
-Ce portfolio représente un défi personnel où j'ai exploré et maîtrisé des technologies telles que React, Typescript, Next.js, ContentLayer, et Prisma. Il a été conçu non seulement pour mettre en valeur mes compétences techniques mais aussi pour servir d'apprentissage actif à travers la mise en œuvre de ces technologies.
-
-<div align="center">
+Rental est née de la nécessité de créer une solution pratique et efficace pour la location de voitures, répondant à un exercice de diplôme pour développeurs full stack. Conçue en seulement 24 heures, cette plateforme permet une recherche facile de véhicules par ville, modèle et marque, offrant une réponse rapide aux besoins de mobilité urbaine.
 
 ### Objectifs du Projet
 
-</div>
-
-Le principal objectif de ce portfolio est de démontrer ma capacité à développer une application web complète tout en apprenant et en structurant un projet autour de technologies spécifiques. Ce projet sert également de vitrine pour mes compétences en développement web, en mettant en avant mon travail et mes projets.
-
-<div align="center">
+L'objectif principal de Rental était de développer une interface intuitive permettant aux utilisateurs de louer des voitures facilement. Le challenge de le faire en 24 heures a ajouté une dimension de rapidité et d'efficacité à la mission, tout en intégrant des fonctionnalités essentielles pour une expérience utilisateur optimale.
 
 ### Technologies Utilisées
 
-</div>
-
-**React & Next.js :** Choisies pour leur efficacité dans la construction d'applications web modernes et dynamiques.
-**Typescript :** Utilisé pour renforcer la sécurité et la maintenabilité du code grâce à son système de types.
-**ContentLayer :** Employé pour organiser le contenu du site de manière efficace et scalable.
-**Prisma :** Utilisé pour interagir avec la base de données de manière robuste et typée.
-**i18n :** Implémenté pour offrir une expérience multilingue, rendant le portfolio accessible à un public plus large.
-
-<div align="center">
-
-### Configuration et Structure du Projet
-
-</div>
-
-Le projet est structuré en utilisant une approche modulaire, où chaque composant est conçu pour être réutilisable et maintenable. La structure du dossier suit une organisation logique qui sépare clairement la logique métier de la présentation UI, facilitant ainsi les tests et les mises à jour.
-
-<div align="center">
-
-### Fonctionnalités Clés
-
-</div>
-
-- **Changement de langue en temps réel :** Permet aux utilisateurs de basculer entre l'anglais et le français, améliorant l'accessibilité et l'engagement.
-- **UI simple et intuitive :** Conçue pour offrir une navigation fluide et une interaction sans friction avec le contenu.
-
-<div align="center">
+- **Ruby on Rails :** Pour la gestion du backend et la logique métier.
+- **JavaScript :** Pour dynamiser l'interface utilisateur.
+- **Bootstrap :** Pour le design et la mise en page.
+- **PostgreSQL :** Base de données pour stocker les données des utilisateurs et des réservations.
 
 ### Défis et Solutions
 
-</div>
+Le principal défi était le délai de 24 heures imposé pour le développement, qui exigeait une grande efficacité et une priorisation stricte des fonctionnalités. De plus, l'intégration d'options avancées comme la prise de photo pour lister une voiture était complexe mais essentielle. Pour surmonter ces défis, j'adopté une approche modulaire, permettant d'ajouter rapidement des fonctionnalités sans compromettre la qualité globale de l'application.
 
-Le principal défi était l'adoption de Typescript pour un projet complet, ce qui nécessitait une compréhension approfondie des types avancés et de leurs implémentations. Ce défi a été relevé grâce à une combinaison de recherche autodidacte et d'échanges avec la communauté en ligne, me permettant de surmonter les obstacles et d'intégrer efficacement Typescript dans le projet.
+### Configuration et Structure du Projet
 
-<div align="center">
+Rental est structurée pour faciliter la navigation et l'utilisation. Les utilisateurs peuvent créer des comptes, rechercher des véhicules, et réserver directement sur la plateforme. L'interface est simple mais complète, avec des fonctionnalités claires pour la gestion des réservations et la visualisation des détails des véhicules.
 
-### Installation et Configuration
+### Extrait de Code: Seed Script
 
-</div>
+```ruby title="seed.rb"
+# Ce script popule la base de données avec des voitures et des réservations de manière dynamique
+CITIES.each do |city|
+  selected_brands.each do |brand|
+    selected_models.each do |model|
+      car = Car.new({
+        brand: brand,
+        model: model,
+        year_of_production: Faker::Vehicle.year,
+        address: "#{Faker::Address.street_address}, #{city}",
+        city: city,
+        price_per_day: rand(50..350)
+      })
+      user = users.sample
+      car.user = user
+      if ENV["CLOUDINARY_URL"]
+        file = URI.open(IMAGES_URL.shuffle.pop)
+        car.photo.attach(io: file, filename: "#{rand(1000)}.png", content_type: "image/png")
+      end
+      car.save!
+      puts "Créé #{car_counter} voitures"
+    end
+  end
+end
+puts "----- Fin de la création des voitures -----"
 
-**Prérequis :**
-
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
-
-<div align="center">
+puts "----- Création de 25 réservations -----"
+10.times do
+  duration = rand(1..5).to_i
+  car = Car.all.sample
+  existing_bookings = car.bookings.order(:starts_at)
+  start_date = Date.today
+  existing_bookings.each do |booking|
+    break unless start_date >= booking.starts_at && start_date < booking.ends_at
+    start_date = booking.ends_at + 1
+  end
+  end_date = start_date + duration.days
+  new_booking = Booking.new({
+    car: car,
+    starts_at: start_date,
+    ends_at: end_date
+  })
+  new_booking.user = users.sample
+  new_booking.save!
+end
+puts "----- Fin de la création de 25 réservations -----"
+```
 
 ### Réflexions
 
-</div>
-
-Ce projet m'a permis d'acquérir une compréhension profonde des technologies frontales modernes et de la gestion de projet en environnement réel. J'ai appris à internationaliser une application, à utiliser efficacement les hooks React et à gérer des routes dynamiques, des compétences essentielles pour mes futurs projets et opportunités professionnelles.
+Le développement de Rental a été une expérience extrêmement enrichissante, mettant à l'épreuve mes compétences en développement rapide et mes capacités à intégrer des fonctionnalités complexes dans un laps de temps très court. Ce projet a non seulement affirmé mes compétences en tant que développeur full stack mais a également souligné l'importance de la planification et de l'adaptabilité dans le développement de logiciels.

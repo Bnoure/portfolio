@@ -1,94 +1,54 @@
 ---
-title: 'Mon Portfolio : Découverte et Maîtrise de Technologies Modernes'
+title: 'SecondRound - The World of Pre-owned Video Games'
 slug: 'secondround'
-description: "L'objectif de ce portfolio est de présenter mes compétences et d'apprendre à structurer un projet autour d'un écosystème de technologies que je ne maîtrisais pas totalement."
+description: 'The goal is to transform the experience of buying and selling pre-owned video games. This project is the result of an intense 10-day challenge carried out in collaboration with two other Full Stack developers.'
 img: '/images/2nd.png'
-sumtitle: '🚀 À Propos du Projet SecondRound'
+sumtitle: '🎮 SecondRound - 10 Day Challenge'
 ---
 
-<div align="center">
+### About the Project
 
-### Introduction
+SecondRound is a mobile web app designed to transform the buying and selling experience of pre-owned video games. This project was created during an intense 10-day challenge in collaboration with two other Full Stack developers. Together, we covered every aspect of development, from visual design to production, aiming to simplify and enrich interactions between video game store owners and players.
 
-</div>
+### Features for Sellers
 
-Ce portfolio représente un défi personnel où j'ai exploré et maîtrisé des technologies telles que React, Typescript, Next.js, ContentLayer, et Prisma. Il a été conçu non seulement pour mettre en valeur mes compétences techniques mais aussi pour servir d'apprentissage actif à travers la mise en œuvre de ces technologies.
+- **Auto-generation of product sheets:** Photograph games and automatically obtain detailed product sheets ready for sale.
+- **Reservation management:** View and easily accept ongoing reservations directly from the homepage.
+- **Stock and modifications:** A dedicated space to manage stock and update video game sheets.
 
-<div align="center">
+### Features for Players
 
-### Objectifs du Projet
+- **Simplified search:** Find pre-owned video games near you thanks to search and auto-localization features.
+- **Route and timer:** View the route to retrieve your game and follow the retrieval timer on the homepage.
 
-</div>
+### Technologies Used
 
-Le principal objectif de ce portfolio est de démontrer ma capacité à développer une application web complète tout en apprenant et en structurant un projet autour de technologies spécifiques. Ce projet sert également de vitrine pour mes compétences en développement web, en mettant en avant mon travail et mes projets.
+- **Ruby on Rails:** Used for backend management and business logic.
+- **JavaScript:** Used to make the user interface dynamic and interactive.
+- **Bootstrap:** Used for layout and styling.
+- **PostgreSQL:** Relational database used to store user and product data.
+- **Redis:** Used to cache information taken via the user's camera.
+- **GiantBomb & OpenAI APIs:** Integrated to retrieve game jackets and send them to ChatGPT for product sheet generation.
 
-<div align="center">
+### Job Logic
 
-### Technologies Utilisées
+The main logic of the application is encapsulated in `GetGameInfosJob`, a scheduled job that processes video game data from photos taken by users. This job uses `GetGameInfos`, a service to extract information via an external API and update the game data accordingly. Then, `AttachGamePicture` is called if the game's English title is present, adding a picture to the game sheet. Finally, the result is broadcast in real time via `ActionCable` to update the user on the status of the processing.
 
-</div>
+```ruby title="get_game_infos_job.rb"
+class GetGameInfosJob < ApplicationJob
+  queue_as :default
+  retry_on ArgumentError, wait: 5.seconds, attempts: 1
 
-- **React & Next.js :** Choisies pour leur efficacité dans la construction d'applications web modernes et dynamiques.
-- **Typescript :** Utilisé pour renforcer la sécurité et la maintenabilité du code grâce à son système de types.
-- **ContentLayer :** Employé pour organiser le contenu du site de manière efficace et scalable.
-- **Prisma :** Utilisé pour interagir avec la base de données de manière robuste et typée.
-- **i18n :** Implémenté pour offrir une expérience multilingue, rendant le portfolio accessible à un public plus large.
+  def perform(game, game_user_photo, game_uuid)
+    game_infos_service = GetGameInfos.new(game_user_photo: game_user_photo)
+    game_infos = game_infos_service.call
+    game.update_with_api_data(game_infos)
+    AttachGamePicture.new(game: game).call if game.english_title.present?
+    ActionCable.server.broadcast("get_game_infos_channel_#{game_uuid}", { gameId: game.id })
+  end
+end
+```
 
-<div align="center">
+### Reflections
 
-### Configuration et Structure du Projet
-
-</div>
-
-Le projet est structuré en utilisant une approche modulaire, où chaque composant est conçu pour être réutilisable et maintenable. La structure du dossier suit une organisation logique qui sépare clairement la logique métier de la présentation UI, facilitant ainsi les tests et les mises à jour.
-
-<div align="center">
-
-### Fonctionnalités Clés
-
-</div>
-
-- **Changement de langue en temps réel :** Permet aux utilisateurs de basculer entre l'anglais et le français, améliorant l'accessibilité et l'engagement.
-- **UI simple et intuitive :** Conçue pour offrir une navigation fluide et une interaction sans friction avec le contenu.
-
-<div align="center">
-
-### Défis et Solutions
-
-</div>
-
-Le principal défi était l'adoption de Typescript pour un projet complet, ce qui nécessitait une compréhension approfondie des types avancés et de leurs implémentations. Ce défi a été relevé grâce à une combinaison de recherche autodidacte et d'échanges avec la communauté en ligne, me permettant de surmonter les obstacles et d'intégrer efficacement Typescript dans le projet.
-
-<div align="center">
-
-### Installation et Configuration
-
-</div>
-
-**Prérequis :**
-
-- Node.js installé sur votre machine.
-- Un gestionnaire de paquets tel que npm ou yarn.
-
-**Étapes pour l'installation et l'exécution locale :**
-
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/Bnoure/portfolio.git
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
-
-<div align="center">
-
-### Réflexions
-
-</div>
-
-Ce projet m'a permis d'acquérir une compréhension profonde des technologies frontales modernes et de la gestion de projet en environnement réel. J'ai appris à internationaliser une application, à utiliser efficacement les hooks React et à gérer des routes dynamiques, des compétences essentielles pour mes futurs projets et opportunités professionnelles.
+SecondRound was a challenging and educational experience, offering deep dives into the mechanics of web and mobile development under time constraints. This project not only improved our technical skills but also allowed us to test new approaches to enhance user interaction in the pre-owned video game commerce sector.

@@ -12,31 +12,18 @@
     "hero": {
       "introductionSmallScreen": "Salut, je suis {{bold}} et je crée des choses pour le web.",
       "introduction": "Bonjour ! Je suis {{bold}} passionné par le numérique. Fort de mon expérience en gestion de projets informatiques, j'apporte ma compétence technique et un esprit collaboratif au service de projets innovants.",
-      "introductionBold": "Développeur Full-Stack",
+      "introductionBold": "Développeur Full-Stack"
 
-      "developer": "Développeur Full-Stack, auparavant chef de projet IT pendant 5 ans.",
-      "education": "Titulaire de diplômes en Développement d'Applications Web & Mobile et en Gestion de Projets.",
-      "adapt": "Toujours en apprentissage et évolution face à chaque nouveau défi.",
-      "thinker": "Un résolveur de problèmes qui aime démêler la complexité.",
-      "geek": "Simplement un passionné de technologie dans l'âme. Et oui !",
-      "hangOn": "Attendez...",
-      "moreThanCode": "Je suis bien plus que du code et des logs de débogage.",
-      "checkProjects": "Peut-être est-il temps de jeter un œil à mes projets ci-dessous ?",
-      "worthScroll": "Croyez-moi, ça vaut le détour !",
-      "stillHere": "Toujours là, hein ?",
-      "caughtInterest": "Je dois avoir capté votre intérêt.",
-      "loopTime": "Eh bien, c'est reparti pour un tour...",
-      "reachOut": "Et si vous preniez contact ? Créons quelque chose de grand ensemble !",
-      "catchYou": "À la prochaine ! :)"
+
     },
     "projects": {
       "title": "Mes Projets",
       "titlePortfolio": "Portfolio",
         "descriptionPortfolio": "Portfolio interactif en React, TypeScript et Next.js démontrant mes compétences full-stack.",
       "title2ndRound": "SecondRound",
-      "description2ndRound": "SecondRound, une app mobile qui simplifie le commerce de jeux vidéo d'occasion, développée en 10 jours.",
+      "description2ndRound": "SecondRound est une app mobile qui simplifie le commerce de jeux vidéo d'occasion, développée en 10 jours.",
       "titleKoalapp": "Koalapp",
-      "descriptionKoalapp": "Visitez stackkoala.online pour explorer Koalapp : des articles provenant d'un appel API vers News API et personnalisés par l'IA. Créée en un sprint de codage de 24 heures.",
+      "descriptionKoalapp": "Visitez stackkoala.online pour explorer Koalapp : des articles provenant d'un appel API vers News API et personnalisés par l'IA. Créé en un sprint de codage de 24 heures.",
       "titleArc": "Arc",
       "descriptionArc": "Explorez des séjours uniques avec Arc, votre solution facile pour réserver des hôtels en France, créée en un sprint de codage de 24 heures.",
       "titleRental": "Rental",
@@ -75,7 +62,7 @@
       },
       "koalapp" : {
         "title": "Défi Koalapp : Réinventer la diffusion des nouvelles en une journée",
-        "description": "Conçu lors d'un hackathon de 24 heures, Koalapp révolutionne la consommation des nouvelles en intégrant l'IA pour la mise à jour dynamique des articles."
+        "description": "Conçu lors d'un hackathon de 24 heures, Koalapp révolutionne la consommation des nouvelles et en intégrant l'IA pour la mise à jour dynamique des articles."
 
       },
       "secondround" : {
@@ -105,7 +92,7 @@
 
           "title2":"Chef de projet informatique chez Atos pour un client externe 🚀",
 
-          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cible suite à une fusion, gérant plus de 10 déploiements à travers l'Europe.",
+          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cibles suite à une fusion, gérant plus de 10 déploiements à travers l'Europe.",
 
 
 
