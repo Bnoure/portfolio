@@ -15,15 +15,17 @@ export default function Hero(): ReactElement {
 	const { t } = useTranslation('common')
 	const { locale } = useRouter()
 	const aboutUrl = `/${locale}/about`
-	const { theme, setTheme, systemTheme } = useTheme()
+	const { theme,  systemTheme } = useTheme()
 
-	const [activeTheme, setActiveTheme] = useState(theme)
+	const [activeTheme, setActiveTheme] = useState<string | undefined>(undefined)
 
 	useEffect(() => {
 		if (theme) {
 			setActiveTheme(theme)
+		} else if (systemTheme) {
+			setActiveTheme(systemTheme)
 		}
-	}, [theme])
+	}, [theme, systemTheme])
 
 	const isDark = activeTheme === 'dark'
 	const isLight = activeTheme === 'light'
