@@ -37,7 +37,7 @@ export const getProjectData = (t: (key: string) => string): Project[] => {
 				'Tailwind',
 			] as (keyof TechIconType)[],
 			projetSlug: '/projets/portfolio',
-			building: t('common.projectDetail.ongoing'),
+			building: t('common.projectDetail.completed'),
 		},
 
 		{
