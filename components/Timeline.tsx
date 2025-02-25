@@ -36,6 +36,12 @@ const FullTimeline = () => {
 
 	return (
 		<div className='text-gray-900 dark:text-gray-400 timeline justify-center'>
+			<ul>
+				<Year>2024 - today</Year>
+				<Checkpoint title={t('common.checkpoints.title')}>
+					{t('common.checkpoints.description')}
+				</Checkpoint>
+			</ul>
 			<Year>2024</Year>
 			<ul>
 				<Checkpoint title={t('common.checkpoints.title1')}>

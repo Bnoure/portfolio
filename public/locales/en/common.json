@@ -1,145 +1,122 @@
 {
-  "views": "views",
-  "common": {
-    "navigation": {
-      "Project": "Recent Project",
-      "About": "Full-Stack Developer | Former IT Project Manager",
-      "Contact": "Contact",
-      "Resume": "Resume",
-      "Learn": "Learn more about me",
-      "Projects": "See Project Details"
-    },
-    "hero": {
-      "introductionSmallScreen": "Hi, I'm a {{bold}} and I craft things for the web.",
-      "introduction": "Hi there! I'm a {{bold}} with a zest for all things digital. Leveraging my IT project management background, I bring a blend of leadership and technical savvy to the vibrant world of software development.",
-      "introductionBold": "Full-Stack Developer"
+	"views": "views",
+	"common": {
+		"navigation": {
+			"Project": "Recent Project",
+			"About": "Full-Stack Developer | Former IT Project Manager",
+			"Contact": "Contact",
+			"Resume": "Resume",
+			"Learn": "Learn more about me",
+			"Projects": "See Project Details"
+		},
+		"hero": {
+			"introductionSmallScreen": "Hi, I'm a {{bold}} and I craft things for the web.",
+			"introduction": "Hi there! I'm a {{bold}} with a zest for all things digital. Leveraging my IT project management background, I bring a blend of leadership and technical savvy to the vibrant world of software development.",
+			"introductionBold": "Full-Stack Developer"
+		},
 
+		"projects": {
+			"title": "My Projects",
+			"titlePortfolio": "Portfolio",
+			"descriptionPortfolio": "Dynamic React, TypeScript and Next.js portfolio showcasing my full-stack development skills and projects.",
+			"title2ndRound": "SecondRound",
+			"description2ndRound": "SecondRound, a mobile app streamlining pre-owned video game trade, developed in 10 days.",
+			"titleKoalapp": "Koalapp",
+			"descriptionKoalapp": "Visit stackkoala.online to explore Koalapp: Dynamic, personalized news articles. Articles are fetched from the News API and modified with AI to be more personalized.",
+			"titleArc": "Arc",
+			"descriptionArc": "Explore unique stays with Arc, your go-to for easy hotel bookings in France, crafted in a 24-hour coding sprint.",
+			"titleRental": "Rental",
+			"descriptionRental": "Rental: Online car rentals from sedans to SUVs, developed in 24 hours."
+		},
 
-    },
+		"projectDetail": {
+			"about": "what ?",
+			"detail": "description",
+			"show": " View More",
+			"hide": "View Less",
+			"name": "Name",
+			"phase": "Phase",
+			"ongoing": "Ongoing",
+			"completed": "Completed",
 
-    "projects": {
-      "title": "My Projects",
-      "titlePortfolio": "Portfolio",
-        "descriptionPortfolio": "Dynamic React, TypeScript and Next.js portfolio showcasing my full-stack development skills and projects.",
-      "title2ndRound": "SecondRound",
-      "description2ndRound": "SecondRound, a mobile app streamlining pre-owned video game trade, developed in 10 days.",
-      "titleKoalapp": "Koalapp",
-      "descriptionKoalapp": "Visit stackkoala.online to explore Koalapp: Dynamic, personalized news articles. Articles are fetched from the News API and modified with AI to be more personalized.",
-      "titleArc": "Arc",
-      "descriptionArc": "Explore unique stays with Arc, your go-to for easy hotel bookings in France, crafted in a 24-hour coding sprint.",
-      "titleRental": "Rental",
-      "descriptionRental": "Rental: Online car rentals from sedans to SUVs, developed in 24 hours."
-    },
+			"rental": {
+				"title": "Rental Challenge: 24-Hour Code Sprint to Revolutionize Car Rentals",
+				"description": "Rental was crafted in a 24-hour coding challenge, aiming to streamline the car rental process with an innovative online interface."
+			},
+			"arc": {
+				"title": "Arc Challenge: Building a Hotel Booking Site in 24 Hours",
+				"description": "Arc was born from a 24-hour coding challenge to craft an intuitive hotel booking platform, simplifying user interactions and reservations."
+			},
+			"koalapp": {
+				"title": "Koalapp Challenge: Reinventing News Delivery in a Day",
+				"description": "Conceived in a 24-hour hackathon, Koalapp revolutionizes how we consume news by integrating AI to dynamically update articles."
+			},
+			"secondround": {
+				"title": "SecondRound Challenge: Transforming the Gaming Resale Market in 10 Days",
+				"description": "SecondRound transforms the second-hand gaming market through a 10-day coding challenge, enhancing buyer and seller interactions."
+			},
+			"portfolio": {
+				"title": "Portfolio Challenge: Mastering New Technologies through Practical Application",
+				"description": "This portfolio is the culmination of a personal challenge to learn and master React, Next.js, and TypeScript by building a dynamic and interactive online portfolio that showcases projects and skills."
+			}
+		},
 
+		"about": {
+			"title": "About Me",
+			"mePart1": "My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
+			"namebold": "Nour-Eddine Benkerroum",
+			"mePart2": "My transition to full-stack development stemmed from a desire for fresh challenges and a commitment to innovation. Through my training, I've gained proficiency in technologies like Ruby on Rails, JavaScript, React, HTML, and CSS. Drawing on my experience as an IT project manager, where I led complex system migration programs, I'm well-equipped to oversee significant software development projects. I'm particularly eager to deepen my expertise in the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development isn't just a career path for me; it's a passion that I'm excited to explore and expand upon.",
+			"not_at_desk": "When I'm not at my desk...",
+			"balance_work_play": "Don't be fooled by all the coding talk—I firmly believe in the importance of balancing work and play. That's why you might find me at the gym staying fit, hanging out with friends, or enjoying a good Netflix session. I'm always up for an adventure."
+		},
 
+		"checkpoints": {
+			"title": " 🦊 API Development and Custom Migration Engineer at Boond",
+			"description": "Responsible for large-scale data migrations and data modifications for client companies to Boond, as well as developing automations to optimize client processes.",
 
-    "projectDetail"
-    : {
-      "about": "what ?",
-      "detail": "description",
-      "show": " View More",
-      "hide" : "View Less",
-      "name": "Name",
-      "phase": "Phase",
-      "ongoing": "Ongoing",
-      "completed": "Completed",
+			"title1": "Full-Stack Developer Graduation from Le Wagon 🎓",
 
-      "rental" : {
-        "title": "Rental Challenge: 24-Hour Code Sprint to Revolutionize Car Rentals",
-        "description": "Rental was crafted in a 24-hour coding challenge, aiming to streamline the car rental process with an innovative online interface."
-      },
-      "arc" : {
-        "title": "Arc Challenge: Building a Hotel Booking Site in 24 Hours",
-        "description": "Arc was born from a 24-hour coding challenge to craft an intuitive hotel booking platform, simplifying user interactions and reservations."
+			"description1": "Earning a Bachelor's level certification in web development. Now fully equipped with skills in Ruby on Rails, JavaScript, React, HTML, and CSS, I'm diving into the world of full-stack development with enthusiasm and a rich background in IT project management.",
 
-      },
-      "koalapp" : {
-        "title": "Koalapp Challenge: Reinventing News Delivery in a Day",
-        "description": "Conceived in a 24-hour hackathon, Koalapp revolutionizes how we consume news by integrating AI to dynamically update articles."
+			"title2": "IT Project Manager at Atos for an External Client 🚀",
 
-      },
-      "secondround" : {
-        "title": "SecondRound Challenge: Transforming the Gaming Resale Market in 10 Days",
-        "description": "SecondRound transforms the second-hand gaming market through a 10-day coding challenge, enhancing buyer and seller interactions."
+			"description2": "Leading an IT migration program for Opel and PCD to target environments following a merger, managing over 10 deployments across Europe.",
 
-      },
-      "portfolio" : {
-        "title": "Portfolio Challenge: Mastering New Technologies through Practical Application",
-        "description": "This portfolio is the culmination of a personal challenge to learn and master React, Next.js, and TypeScript by building a dynamic and interactive online portfolio that showcases projects and skills."
+			"title3": "Product Management Officer at Atos for an External Client",
 
-      }
+			"description3": "Supporting in cybersecurity project management for Airbus, enhancing project and security processes, and facilitating effective team communication and management.",
 
-    },
+			"title4": "Master's in Aeronautics and Industrial Management from Toulouse Business School",
 
+			"description4": "Graduated with a Master's degree, sharpening my management skills and laying a solid foundation for my career in the high-stakes world of aeronautics and industry.",
 
+			"title5": "BTS in International Trade at Cahors",
 
+			"description5": "Completed my BTS in International Trade, gaining crucial knowledge and experience in global commerce dynamics.",
 
-    "about": {
-      "title": "About Me",
-      "mePart1": "My name is {{bold}}. With a deep-seated curiosity and a fervent passion for the digital world, I've fully embarked on a journey as a full-stack developer. My previous experience in IT project management, within an international landscape, honed my leadership and communication skills—assets I'm now eager to apply in the dynamic realm of software development.",
-      "namebold" : "Nour-Eddine Benkerroum",
-      "mePart2": "My transition to full-stack development stemmed from a desire for fresh challenges and a commitment to innovation. Through my training, I've gained proficiency in technologies like Ruby on Rails, JavaScript, React, HTML, and CSS. Drawing on my experience as an IT project manager, where I led complex system migration programs, I'm well-equipped to oversee significant software development projects. I'm particularly eager to deepen my expertise in the JavaScript ecosystem, focusing on React, TypeScript, Node.js, and beyond. Full-stack development isn't just a career path for me; it's a passion that I'm excited to explore and expand upon.",
-      "not_at_desk":"When I'm not at my desk...",
-      "balance_work_play" : "Don't be fooled by all the coding talk—I firmly believe in the importance of balancing work and play. That's why you might find me at the gym staying fit, hanging out with friends, or enjoying a good Netflix session. I'm always up for an adventure."
-    },
+			"title6": "Birth of a Newbie 👶"
+		},
 
-    "checkpoints": {
+		"contact": {
+			"title": "Get In Touch",
+			"bottomtext": "Wooh! You have reached the bottom of the page. Looking to collaborate, discuss an opportunity, or just want to say hi? I'm all in! Just drop me an email !",
+			"sendEmail": "Send Email"
+		},
 
-
-            "title1": "Full-Stack Developer Graduation from Le Wagon 🎓",
-
-            "description1":"Earning a Bachelor's level certification in web development. Now fully equipped with skills in Ruby on Rails, JavaScript, React, HTML, and CSS, I'm diving into the world of full-stack development with enthusiasm and a rich background in IT project management.",
-
-
-            "title2":"IT Project Manager at Atos for an External Client 🚀",
-
-            "description2":"Leading an IT migration program for Opel and PCD to target environments following a merger, managing over 10 deployments across Europe.",
-
-
-
-            "title3":"Product Management Officer at Atos for an External Client",
-
-            "description3":"Supporting in cybersecurity project management for Airbus, enhancing project and security processes, and facilitating effective team communication and management.",
-
-
-            "title4":"Master's in Aeronautics and Industrial Management from Toulouse Business School",
-
-            "description4":"Graduated with a Master's degree, sharpening my management skills and laying a solid foundation for my career in the high-stakes world of aeronautics and industry.",
-
-
-            "title5":"BTS in International Trade at Cahors",
-
-            "description5":"Completed my BTS in International Trade, gaining crucial knowledge and experience in global commerce dynamics.",
-
-
-            "title6": "Birth of a Newbie 👶"
-
-
-
-    },
-
-    "contact": {
-      "title": "Get In Touch",
-      "bottomtext": "Wooh! You have reached the bottom of the page. Looking to collaborate, discuss an opportunity, or just want to say hi? I'm all in! Just drop me an email !",
-      "sendEmail": "Send Email"
-    },
-
-    "footer": {
-      "navigation": {
-        "link1": "Home",
-        "link2": "About",
-        "link3": "Projects"
-      },
-      "reseau": "Socials",
-      "cv":"Resume"
-
-    },
-    "errorTitle": "Error",
-    "errorWithCode": "Error {{statusCode}}",
-    "oopsMessage": "Oops, it looks like you made a wrong turn! Don't worry, we'll get you back on track.",
-    "nonExistentPage": "This page may not exist on my website, but that doesn't mean we can't still connect. Feel free to explore the rest of my ",
-    "siteLink": "site",
-    "turnDetour": ". Let's turn this little detour into an exciting and fun adventure!"
-
-    }
+		"footer": {
+			"navigation": {
+				"link1": "Home",
+				"link2": "About",
+				"link3": "Projects"
+			},
+			"reseau": "Socials",
+			"cv": "Resume"
+		},
+		"errorTitle": "Error",
+		"errorWithCode": "Error {{statusCode}}",
+		"oopsMessage": "Oops, it looks like you made a wrong turn! Don't worry, we'll get you back on track.",
+		"nonExistentPage": "This page may not exist on my website, but that doesn't mean we can't still connect. Feel free to explore the rest of my ",
+		"siteLink": "site",
+		"turnDetour": ". Let's turn this little detour into an exciting and fun adventure!"
+	}
 }

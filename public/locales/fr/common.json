@@ -1,143 +1,122 @@
 {
-  "views": "vues",
-  "common": {
-    "navigation": {
-      "Project": "Projets récents",
-      "About": "Développeur Full-Stack | Ancien Chef de Projets IT",
-      "Contact": "Contact",
-      "Resume": "CV",
-      "Learn": "En savoir plus sur moi",
-      "Projects": "Pour voir le détail des projets"
-    },
-    "hero": {
-      "introductionSmallScreen": "Salut, je suis {{bold}} et je crée des choses pour le web.",
-      "introduction": "Bonjour ! Je suis {{bold}} passionné par le numérique. Fort de mon expérience en gestion de projets informatiques, j'apporte ma compétence technique et un esprit collaboratif au service de projets innovants.",
-      "introductionBold": "Développeur Full-Stack"
+	"views": "vues",
+	"common": {
+		"navigation": {
+			"Project": "Projets récents",
+			"About": "Développeur Full-Stack | Ancien Chef de Projets IT",
+			"Contact": "Contact",
+			"Resume": "CV",
+			"Learn": "En savoir plus sur moi",
+			"Projects": "Pour voir le détail des projets"
+		},
+		"hero": {
+			"introductionSmallScreen": "Salut, je suis {{bold}} et je crée des choses pour le web.",
+			"introduction": "Bonjour ! Je suis {{bold}} passionné par le numérique. Fort de mon expérience en gestion de projets informatiques, j'apporte ma compétence technique et un esprit collaboratif au service de projets innovants.",
+			"introductionBold": "Développeur Full-Stack"
+		},
+		"projects": {
+			"title": "Mes Projets",
+			"titlePortfolio": "Portfolio",
+			"descriptionPortfolio": "Portfolio interactif en React, TypeScript et Next.js démontrant mes compétences full-stack.",
+			"title2ndRound": "SecondRound",
+			"description2ndRound": "SecondRound est une app mobile qui simplifie le commerce de jeux vidéo d'occasion, développée en 10 jours.",
+			"titleKoalapp": "Koalapp",
+			"descriptionKoalapp": "Visitez stackkoala.online pour explorer Koalapp : des articles provenant d'un appel API vers News API et personnalisés par l'IA. Créé en un sprint de codage de 24 heures.",
+			"titleArc": "Arc",
+			"descriptionArc": "Explorez des séjours uniques avec Arc, votre solution facile pour réserver des hôtels en France, créée en un sprint de codage de 24 heures.",
+			"titleRental": "Rental",
+			"descriptionRental": "Rental : location de voitures en ligne, de berlines à SUV, développée en 24 heures."
+		},
+		"about": {
+			"title": "À Propos",
+			"mePart1": "Je m'appelle {{bold}}. Avec une curiosité profonde et une passion fervente pour le monde numérique, je me suis pleinement lancé dans un voyage en tant que développeur full-stack. Mon expérience antérieure en gestion de projets IT, dans un contexte international, a aiguisé mes compétences en leadership et en communication - des atouts que je suis maintenant impatient d'appliquer dans le domaine dynamique du développement logiciel.",
+			"namebold": "Nour-Eddine Benkerroum",
+			"mePart2": "Ma transition vers le développement full-stack découle d'un désir de nouveaux défis et d'un engagement envers l'innovation. Grâce à ma formation, j'ai acquis une maîtrise des technologies telles que Ruby on Rails, JavaScript, React, HTML et CSS. Fort de mon expérience en tant que chef de projet informatique, où j'ai dirigé des programmes de migration de systèmes complexes, je suis bien équipé pour superviser d'importants projets de développement logiciel. Je suis particulièrement impatient d'approfondir mon expertise dans l'écosystème JavaScript, en me concentrant sur React, TypeScript, Node.js, et au-delà. Le développement full-stack n'est pas seulement une voie professionnelle pour moi ; c'est une passion que je suis enthousiaste à explorer et à développer davantage.",
 
+			"not_at_desk": "Quand je ne suis pas à mon bureau..",
+			"balance_work_play": "Ne vous laissez pas tromper par toute cette discussion sur le codage, je crois fermement à l'importance d'équilibrer le travail et le jeu. C'est pourquoi vous pourriez me trouver à la salle de sport pour rester en forme, traîner avec des amis ou profiter d'une bonne séance Netflix. Je suis toujours partant pour une aventure."
+		},
 
-    },
-    "projects": {
-      "title": "Mes Projets",
-      "titlePortfolio": "Portfolio",
-        "descriptionPortfolio": "Portfolio interactif en React, TypeScript et Next.js démontrant mes compétences full-stack.",
-      "title2ndRound": "SecondRound",
-      "description2ndRound": "SecondRound est une app mobile qui simplifie le commerce de jeux vidéo d'occasion, développée en 10 jours.",
-      "titleKoalapp": "Koalapp",
-      "descriptionKoalapp": "Visitez stackkoala.online pour explorer Koalapp : des articles provenant d'un appel API vers News API et personnalisés par l'IA. Créé en un sprint de codage de 24 heures.",
-      "titleArc": "Arc",
-      "descriptionArc": "Explorez des séjours uniques avec Arc, votre solution facile pour réserver des hôtels en France, créée en un sprint de codage de 24 heures.",
-      "titleRental": "Rental",
-      "descriptionRental": "Rental : location de voitures en ligne, de berlines à SUV, développée en 24 heures."
-    },
-    "about": {
-      "title": "À Propos",
-      "mePart1": "Je m'appelle {{bold}}. Avec une curiosité profonde et une passion fervente pour le monde numérique, je me suis pleinement lancé dans un voyage en tant que développeur full-stack. Mon expérience antérieure en gestion de projets IT, dans un contexte international, a aiguisé mes compétences en leadership et en communication - des atouts que je suis maintenant impatient d'appliquer dans le domaine dynamique du développement logiciel.",
-      "namebold" : "Nour-Eddine Benkerroum",
-      "mePart2": "Ma transition vers le développement full-stack découle d'un désir de nouveaux défis et d'un engagement envers l'innovation. Grâce à ma formation, j'ai acquis une maîtrise des technologies telles que Ruby on Rails, JavaScript, React, HTML et CSS. Fort de mon expérience en tant que chef de projet informatique, où j'ai dirigé des programmes de migration de systèmes complexes, je suis bien équipé pour superviser d'importants projets de développement logiciel. Je suis particulièrement impatient d'approfondir mon expertise dans l'écosystème JavaScript, en me concentrant sur React, TypeScript, Node.js, et au-delà. Le développement full-stack n'est pas seulement une voie professionnelle pour moi ; c'est une passion que je suis enthousiaste à explorer et à développer davantage.",
+		"projectDetail": {
+			"about": "à propos",
+			"detail": "détail",
+			"show": " En savoir plus",
+			"hide": "Réduire",
+			"name": "Nom",
+			"phase": "Stade",
+			"ongoing": "En cours",
+			"completed": "Terminé",
 
-      "not_at_desk":"Quand je ne suis pas à mon bureau..",
-      "balance_work_play" : "Ne vous laissez pas tromper par toute cette discussion sur le codage, je crois fermement à l'importance d'équilibrer le travail et le jeu. C'est pourquoi vous pourriez me trouver à la salle de sport pour rester en forme, traîner avec des amis ou profiter d'une bonne séance Netflix. Je suis toujours partant pour une aventure."
-    },
+			"rental": {
+				"title": "Défi Rental : Sprint de codage de 24 heures pour révolutionner la location de voitures",
+				"description": "Rental a été développé lors d'un sprint de codage de 24 heures, avec l'objectif de simplifier le processus de location de voitures via une interface en ligne innovante."
+			},
+			"arc": {
+				"title": "Défi Arc : Création d'un site de réservation d'hôtels en 24 heures",
+				"description": "Arc est le résultat d'un défi de codage de 24 heures pour créer une plateforme de réservation d'hôtels intuitive, simplifiant les interactions et les réservations des utilisateurs."
+			},
+			"koalapp": {
+				"title": "Défi Koalapp : Réinventer la diffusion des nouvelles en une journée",
+				"description": "Conçu lors d'un hackathon de 24 heures, Koalapp révolutionne la consommation des nouvelles et en intégrant l'IA pour la mise à jour dynamique des articles."
+			},
+			"secondround": {
+				"title": "Défi SecondRound : Transformer le marché de la revente de jeux en 10 jours",
+				"description": "SecondRound transforme le marché des jeux vidéo d'occasion grâce à un défi de codage de 10 jours, en améliorant les interactions entre acheteurs et vendeurs."
+			},
 
-    "projectDetail"
-    : {
-      "about": "à propos",
-      "detail": "détail",
-      "show": " En savoir plus",
-      "hide" : "Réduire",
-      "name": "Nom",
-      "phase": "Stade",
-      "ongoing": "En cours",
-      "completed": "Terminé",
+			"portfolio": {
+				"title": "Défi Portfolio : Maîtriser de nouvelles technologies par l'application pratique",
+				"description": "Ce portfolio est le résultat d'un défi personnel visant à apprendre et maîtriser React, Next.js et TypeScript en construisant un portfolio en ligne dynamique et interactif qui présente des projets et des compétences."
+			}
+		},
 
+		"checkpoints": {
+			"title": " 🦊 Ingénieur en développement API et migration custom chez Boond",
+			"description": "Responsable des migrations et modifications massives de données des entreprises clientes vers Boond, ainsi que du développement d'automatisations pour optimiser les processus clients",
 
-      "rental" : {
-        "title": "Défi Rental : Sprint de codage de 24 heures pour révolutionner la location de voitures",
-        "description": "Rental a été développé lors d'un sprint de codage de 24 heures, avec l'objectif de simplifier le processus de location de voitures via une interface en ligne innovante."
-      },
-      "arc" : {
-        "title": "Défi Arc : Création d'un site de réservation d'hôtels en 24 heures",
-        "description": "Arc est le résultat d'un défi de codage de 24 heures pour créer une plateforme de réservation d'hôtels intuitive, simplifiant les interactions et les réservations des utilisateurs."
+			"title1": "Diplômé Développeur Full-Stack de Le Wagon 🎓",
 
-      },
-      "koalapp" : {
-        "title": "Défi Koalapp : Réinventer la diffusion des nouvelles en une journée",
-        "description": "Conçu lors d'un hackathon de 24 heures, Koalapp révolutionne la consommation des nouvelles et en intégrant l'IA pour la mise à jour dynamique des articles."
+			"description1": "Obtention d'une certification de niveau Bachelor en développement web. Maintenant parfaitement équipé de compétences en Ruby on Rails, JavaScript, React, HTML et CSS, je me lance avec enthousiasme dans le monde du développement full-stack avec une expérience riche en gestion de projet informatique.",
 
-      },
-      "secondround" : {
-        "title": "Défi SecondRound : Transformer le marché de la revente de jeux en 10 jours",
-        "description": "SecondRound transforme le marché des jeux vidéo d'occasion grâce à un défi de codage de 10 jours, en améliorant les interactions entre acheteurs et vendeurs."
+			"title2": "Chef de projet informatique chez Atos pour un client externe 🚀",
 
-      },
+			"description2": "En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cibles suite à une fusion, gérant plus de 10 déploiements à travers l'Europe.",
 
-      "portfolio" : {
-        "title": "Défi Portfolio : Maîtriser de nouvelles technologies par l'application pratique",
-        "description": "Ce portfolio est le résultat d'un défi personnel visant à apprendre et maîtriser React, Next.js et TypeScript en construisant un portfolio en ligne dynamique et interactif qui présente des projets et des compétences."
+			"title3": "Product Management Officer chez Atos pour un client externe",
 
-      }
+			"description3": "Accompagnement dans la gestion de projet de cybersécurité pour Airbus, améliorant les processus de projet et de sécurité, et facilitant la communication,la gestion et les projets de l'équipe.",
 
+			"title4": "Master en Aéronautique et Gestion Industrielle de Toulouse Business School",
 
-    },
+			"description4": "Titulaire d'un Master, renforçant mes compétences en gestion et établissant les bases solides de ma carrière dans les domaines exigeants de l'aéronautique et de l'industrie.",
 
+			"title5": "BTS en Commerce International à Cahors",
 
-    "checkpoints": {
+			"description5": "Obtention d'un BTS en Commerce International, acquérant des connaissances dans la dynamique du commerce mondial.",
 
+			"title6": "Naissance d'un Nouveau-Né 👶"
+		},
+		"contact": {
+			"title": "Contactez-moi",
+			"bottomtext": "Wooh! Vous avez atteint le bas de la page. Vous cherchez à collaborer, discuter d'une opportunité, ou simplement dire bonjour ? Je suis tout ouïe ! Envoyez-moi simplement un email !",
+			"sendEmail": "Envoyer un Email"
+		},
 
+		"footer": {
+			"navigation": {
+				"link1": "Accueil",
+				"link2": "À propos",
+				"link3": "Projets"
+			},
+			"reseau": "Réseaux Sociaux",
+			"cv": "CV"
+		},
 
-          "title1": "Diplômé Développeur Full-Stack de Le Wagon 🎓",
-
-          "description1":"Obtention d'une certification de niveau Bachelor en développement web. Maintenant parfaitement équipé de compétences en Ruby on Rails, JavaScript, React, HTML et CSS, je me lance avec enthousiasme dans le monde du développement full-stack avec une expérience riche en gestion de projet informatique.",
-
-
-          "title2":"Chef de projet informatique chez Atos pour un client externe 🚀",
-
-          "description2":"En charge d'un programme de migration informatique pour Opel et PCD vers des environnements cibles suite à une fusion, gérant plus de 10 déploiements à travers l'Europe.",
-
-
-
-          "title3":"Product Management Officer chez Atos pour un client externe",
-
-          "description3":"Accompagnement dans la gestion de projet de cybersécurité pour Airbus, améliorant les processus de projet et de sécurité, et facilitant la communication,la gestion et les projets de l'équipe.",
-
-
-          "title4":"Master en Aéronautique et Gestion Industrielle de Toulouse Business School",
-
-          "description4":"Titulaire d'un Master, renforçant mes compétences en gestion et établissant les bases solides de ma carrière dans les domaines exigeants de l'aéronautique et de l'industrie.",
-
-          "title5":"BTS en Commerce International à Cahors",
-
-          "description5":"Obtention d'un BTS en Commerce International, acquérant des connaissances dans la dynamique du commerce mondial.",
-
-          "title6": "Naissance d'un Nouveau-Né 👶"
-
-
-
-  },
-    "contact": {
-      "title": "Contactez-moi",
-      "bottomtext":"Wooh! Vous avez atteint le bas de la page. Vous cherchez à collaborer, discuter d'une opportunité, ou simplement dire bonjour ? Je suis tout ouïe ! Envoyez-moi simplement un email !",
-      "sendEmail": "Envoyer un Email"
-    },
-
-    "footer": {
-      "navigation": {
-        "link1": "Accueil",
-        "link2": "À propos",
-        "link3": "Projets"
-      },
-      "reseau": "Réseaux Sociaux",
-      "cv": "CV"
-    },
-
-
-      "errorTitle": "Erreur",
-      "errorWithCode": "Erreur {{statusCode}}",
-      "oopsMessage": "Oups, il semble que vous ayez fait un faux pas ! Ne vous inquiétez pas, nous allons vous remettre sur la bonne voie.",
-      "nonExistentPage": "Cette page peut ne pas exister sur mon site web, mais cela ne signifie pas que nous ne pouvons pas encore nous connecter. N'hésitez pas à explorer le reste de mon ",
-      "siteLink": "site",
-      "turnDetour": ". Transformons ce petit détour en une aventure amusante et excitante !"
-
-
-  }
+		"errorTitle": "Erreur",
+		"errorWithCode": "Erreur {{statusCode}}",
+		"oopsMessage": "Oups, il semble que vous ayez fait un faux pas ! Ne vous inquiétez pas, nous allons vous remettre sur la bonne voie.",
+		"nonExistentPage": "Cette page peut ne pas exister sur mon site web, mais cela ne signifie pas que nous ne pouvons pas encore nous connecter. N'hésitez pas à explorer le reste de mon ",
+		"siteLink": "site",
+		"turnDetour": ". Transformons ce petit détour en une aventure amusante et excitante !"
+	}
 }
